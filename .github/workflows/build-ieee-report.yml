@@ -1,0 +1,36 @@
+name: Build IEEE report PDF
+
+on:
+  push:
+    branches:
+      - feature/signed-shock-propagation
+    paths:
+      - "paper/supply_chain_network_project_report.tex"
+      - ".github/workflows/build-ieee-report.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build-report:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out the report branch
+        uses: actions/checkout@v4
+        with:
+          ref: \${{ github.ref_name }}
+          persist-credentials: true
+
+      - name: Compile IEEEtran LaTeX report
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: supply_chain_network_project_report.tex
+          working_directory: paper
+          args: -pdf -interaction=nonstopmode -halt-on-error
+
+      - name: Commit regenerated PDF
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Build updated IEEE report PDF"
+          file_pattern: paper/supply_chain_network_project_report.pdf
