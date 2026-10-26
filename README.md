@@ -2,6 +2,8 @@
 
 ## New primary model: signed shock propagation
 
+**Revised plain-language report:** [paper/signed_shock_propagation_report.md](paper/signed_shock_propagation_report.md). A formatted three-page PDF is provided with the task response; rebuild the repository PDF from the updated LaTeX source when preparing a release.
+
 The legacy SIS-style model represents a disruption spreading through the supplier network, but it does not explicitly model alternative suppliers gaining a substitution opportunity. The new `code/signed_shock_propagation.py` adds a bounded signed state: negative values represent adverse pressure; positive values represent a potential opportunity signal for alternative suppliers in the same detailed ICIO activity.
 
 With (D_{ij}) equal to supplier (i)'s share of buyer (j)'s intermediate inputs and (C_{ki}) allocating a disrupted supplier's opportunity to potential substitutes, the update is
