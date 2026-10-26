@@ -2,7 +2,7 @@
 
 ## New primary model: signed shock propagation
 
-**Revised final report (IEEE conference style, two-column, A4, double-sided):** [paper/supply_chain_network_project_report.tex](paper/supply_chain_network_project_report.tex). The LaTeX source has been cleaned up to remove duplicated sections and includes the signed shock model, target experiments, worked example, prior SIS/cascade/intervention results, limitations, and references. The report PDF is regenerated on pushes to this branch by [.github/workflows/build-ieee-report.yml](.github/workflows/build-ieee-report.yml). A concise [plain-language companion](paper/signed_shock_propagation_report.md) is also available.
+**Revised final report (IEEE conference style, two-column, A4, double-sided):** [paper/supply_chain_network_project_report.tex](paper/supply_chain_network_project_report.tex). The LaTeX source has been cleaned up to remove duplicated sections and includes the signed shock model, target experiments, worked example, prior SIS/cascade/intervention results, limitations, and references. A workflow is configured to regenerate and commit the report PDF on pushes to this branch: [.github/workflows/build-ieee-report.yml](.github/workflows/build-ieee-report.yml). A concise [plain-language companion](paper/signed_shock_propagation_report.md) is also available.
 
 The legacy SIS-style model represents a disruption spreading through the supplier network, but it does not explicitly model alternative suppliers gaining a substitution opportunity. The new `code/signed_shock_propagation.py` adds a bounded signed state: negative values represent adverse pressure; positive values represent a potential opportunity signal for alternative suppliers in the same detailed ICIO activity.
 
