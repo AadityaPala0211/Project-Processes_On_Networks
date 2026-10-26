@@ -1,6 +1,25 @@
 # Global Production Network Project — Reproducible Analysis Bundle
 
-This bundle contains the revised six-page IEEE-style report, its LaTeX source and figures, Python code, and computed output tables for the OECD ICIO 2022 country–industry production network.
+## New primary model: signed shock propagation
+
+The legacy SIS-style model represents a disruption spreading through the supplier network, but it does not explicitly model alternative suppliers gaining a substitution opportunity. The new `code/signed_shock_propagation.py` adds a bounded signed state: negative values represent adverse pressure; positive values represent a potential opportunity signal for alternative suppliers in the same detailed ICIO activity.
+
+With (D_{ij}) equal to supplier (i)'s share of buyer (j)'s intermediate inputs and (C_{ki}) allocating a disrupted supplier's opportunity to potential substitutes, the update is
+
+`x(t+1) = clip(0.55*x(t) + 0.35*D.T*x(t) + 0.25*C*max(-x(t), 0), -1, 1)`.
+
+Substitute weights are based on similarities in observed buyer-flow patterns; out-strength is used only as a fallback. The coefficients are teaching assumptions, not estimated elasticities. Negative and positive indicators are dimensionless model indices, **not** actual output losses, GDP losses, or export gains. The model has no data on spare capacity, inventories, prices, or response speed.
+
+Run the signed scenario set (highest-flow activity, lowest positive-flow activity, plus Russia B06 where present) using the exact raw CSV:
+
+```bash
+python code/signed_shock_propagation.py /path/to/2022_SML.csv --out results_signed --steps 12 --severity 1.0
+python -m unittest discover -s tests -v
+```
+
+The script writes node/industry rankings, negative/positive scenario summaries, time series, per-node effects, metadata, two figures, and a 156-node instructional network (12 selected economies × 13 sector groups). The raw ICIO CSV was not bundled in this repository during this revision, so the new signed scenario numbers must be generated locally before reporting them as dataset-based results.
+
+This bundle contains the signed-shock report and source, Python code, historical baseline tables, and reproducible scenario tooling for the OECD ICIO 2022 country–industry production network.
 
 ## Input data
 
