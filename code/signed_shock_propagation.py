@@ -200,12 +200,25 @@ def main():
     base = importlib.util.module_from_spec(sp); sys.modules[sp.name] = base; sp.loader.exec_module(base)
     print("Loading raw ICIO matrix…", flush=True)
     _, nodes, Z, output = base.load_icio(args.csv.resolve())
+    output = np.maximum(np.nan_to_num(output, nan=0.0), 0.0)
     Zcross, input_totals, out_strength = flow_matrices(Z)
     D = dependency_matrix(Zcross, input_totals)
     C = substitution_matrix(Zcross, nodes, out_strength)
     scenarios, industry_totals = pick_scenarios(nodes, out_strength, np.maximum(np.nan_to_num(output), 0.0))
     ranked = sorted(industry_totals, key=lambda r: r["global_out_strength_million_USD"], reverse=True)
     write_csv(outdir / "signed_industry_ranking.csv", ranked)
+    in_strength = np.asarray(Zcross.sum(axis=0)).ravel()
+    clean_output = np.maximum(np.nan_to_num(output, nan=0.0), 0.0)
+    node_ranking = []
+    for rank, idx in enumerate(np.argsort(out_strength)[::-1], start=1):
+        country, code = split_node(nodes[int(idx)])
+        node_ranking.append({"rank_by_out_strength": rank, "node": nodes[int(idx)],
+            "country_code": country, "country_name": COUNTRY_NAMES.get(country, country),
+            "industry_code": code, "industry_name": INDUSTRY_NAMES.get(code, code),
+            "out_strength_million_USD": float(out_strength[idx]),
+            "in_strength_million_USD": float(in_strength[idx]),
+            "gross_output_million_USD": float(clean_output[idx])})
+    write_csv(outdir / "signed_node_ranking.csv", node_ranking)
     summaries, series_rows, effects = [], [], []
     severities = sorted(set([float(args.severity), float(args.severity) / 2.0]))
     for scenario in scenarios:
