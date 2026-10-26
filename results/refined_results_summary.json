@@ -1,0 +1,1151 @@
+{
+  "data": {
+    "year": 2022,
+    "nodes": 4050,
+    "positive_offdiagonal_edges": 10166696,
+    "possible_directed_links": 16398450,
+    "density": 0.6199790833889789,
+    "offdiagonal_flow_trillion_USD": 81.1278401237,
+    "all_positive_flows_trillion_USD": 103.4100848431,
+    "self_flow_share": 0.2154745811610924,
+    "weak_components": 123,
+    "largest_weak_component": 3928,
+    "strong_components": 124,
+    "largest_strong_component": 3927,
+    "isolates": 122,
+    "out_strength_gini": 0.8625271265976342,
+    "in_strength_gini": 0.8524693475099212
+  },
+  "aggregation": {
+    "countries_or_regions": 81,
+    "sector_groups": 13,
+    "nodes": 1053,
+    "flow_and_output_conservation_check_tolerance": 1e-08
+  },
+  "weighted_sis": {
+    "steps": 40,
+    "replicates": 100,
+    "gamma": 0.25,
+    "rho_weighted": 0.37146922237354835,
+    "beta_c_weighted": 0.6730032663,
+    "rho_unweighted": 1.0,
+    "beta_c_unweighted": 0.25,
+    "summary": [
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.1",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "12",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.15",
+        "cascade_nodes": "78",
+        "cascade_fraction": "0.07407407407407407",
+        "steps": "7",
+        "output_weighted_cascade_fraction": "0.2651764644759392"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.2",
+        "cascade_nodes": "77",
+        "cascade_fraction": "0.0731244064577398",
+        "steps": "11",
+        "output_weighted_cascade_fraction": "0.26515258634278843"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.025579745354002106"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.025579745354002106"
+      },
+      {
+        "source_type": "top_out_strength",
+        "source_node": "USA_Professional-admin_services",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.025579745354002106"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "4",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.1",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "11",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.15",
+        "cascade_nodes": "93",
+        "cascade_fraction": "0.08831908831908832",
+        "steps": "13",
+        "output_weighted_cascade_fraction": "0.09453835917923824"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.2",
+        "cascade_nodes": "18",
+        "cascade_fraction": "0.017094017094017096",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "0.07544280488903737"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.05150479391989187"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.05150479391989187"
+      },
+      {
+        "source_type": "top_page_rank",
+        "source_node": "CHN_Metals-machinery-electronics-transport",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.05150479391989187"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "10",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.05",
+        "cascade_nodes": "14",
+        "cascade_fraction": "0.013295346628679962",
+        "steps": "4",
+        "output_weighted_cascade_fraction": "0.000924627408687248"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.1",
+        "cascade_nodes": "14",
+        "cascade_fraction": "0.013295346628679962",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "0.000924627408687248"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.15",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "0.00092282337178196"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "6.272923232971726e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "6.272923232971726e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "6.272923232971726e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BGR_Construction",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "6.272923232971726e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "8",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "19",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.1",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.004835484406539008"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.15",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "4",
+        "output_weighted_cascade_fraction": "0.004835484406539008"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003976592934820553"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003976592934820553"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003976592934820553"
+      },
+      {
+        "source_type": "random",
+        "source_node": "AUT_Professional-admin_services",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003976592934820553"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "7",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "15",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.1",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "0.008115727824919983"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.15",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "7",
+        "output_weighted_cascade_fraction": "0.008115727824919983"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003894286376640482"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003894286376640482"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003894286376640482"
+      },
+      {
+        "source_type": "random",
+        "source_node": "TWN_Construction",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0003894286376640482"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.02",
+        "cascade_nodes": "26",
+        "cascade_fraction": "0.024691358024691357",
+        "steps": "4",
+        "output_weighted_cascade_fraction": "0.0012380190421427705"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.05",
+        "cascade_nodes": "26",
+        "cascade_fraction": "0.024691358024691357",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "0.0012380190421427705"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.1",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "SVN_Metals-machinery-electronics-transport",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012145292156076824"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.02",
+        "cascade_nodes": "26",
+        "cascade_fraction": "0.024691358024691357",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "0.0008308821511278661"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.05",
+        "cascade_nodes": "3",
+        "cascade_fraction": "0.002849002849002849",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "6.290113221693548e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.1",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CIV_Mining-quarrying",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "8",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "14",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.1",
+        "cascade_nodes": "2",
+        "cascade_fraction": "0.001899335232668566",
+        "steps": "2",
+        "output_weighted_cascade_fraction": "9.48976310001587e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "9.309359409487056e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "9.309359409487056e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "9.309359409487056e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "9.309359409487056e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "POL_Mining-quarrying",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "9.309359409487056e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.02",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.0036836821492436922"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.05",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "4",
+        "output_weighted_cascade_fraction": "0.0036836821492436922"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.1",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "PHL_Mining-quarrying",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "3.600403396315356e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "13",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.1",
+        "cascade_nodes": "26",
+        "cascade_fraction": "0.024691358024691357",
+        "steps": "9",
+        "output_weighted_cascade_fraction": "0.007861180423145292"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0007187451329985916"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0007187451329985916"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0007187451329985916"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0007187451329985916"
+      },
+      {
+        "source_type": "random",
+        "source_node": "BEL_Chemicals-petroleum-minerals",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0007187451329985916"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "6",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.05",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "10",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.1",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "20",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00029088045264678993"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00029088045264678993"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00029088045264678993"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00029088045264678993"
+      },
+      {
+        "source_type": "random",
+        "source_node": "NOR_Trade",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00029088045264678993"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.02",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.0011648058471787329"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.05",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.0011648058471787329"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.1",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "5",
+        "output_weighted_cascade_fraction": "0.0011648058471787329"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.15",
+        "cascade_nodes": "3",
+        "cascade_fraction": "0.002849002849002849",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.0003702458650914272"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0001652899562664711"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0001652899562664711"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0001652899562664711"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MAR_Food-textiles-wood-paper",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.0001652899562664711"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.02",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "2",
+        "output_weighted_cascade_fraction": "0.0005536715298776922"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.05",
+        "cascade_nodes": "13",
+        "cascade_fraction": "0.012345679012345678",
+        "steps": "3",
+        "output_weighted_cascade_fraction": "0.0005536715298776922"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.1",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "CRI_Finance-real_estate",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "5.366521700772136e-05"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.02",
+        "cascade_nodes": "1052",
+        "cascade_fraction": "0.9990503323836657",
+        "steps": "8",
+        "output_weighted_cascade_fraction": "1.0"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.05",
+        "cascade_nodes": "28",
+        "cascade_fraction": "0.026590693257359924",
+        "steps": "7",
+        "output_weighted_cascade_fraction": "0.005289040071080171"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.1",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.15",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.2",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.3",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.4",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      },
+      {
+        "source_type": "random",
+        "source_node": "MYS_Utilities",
+        "theta": "0.5",
+        "cascade_nodes": "1",
+        "cascade_fraction": "0.000949667616334283",
+        "steps": "1",
+        "output_weighted_cascade_fraction": "0.00012533457803703184"
+      }
+    ]
+  },
+  "interventions": {
+    "steps": 40,
+    "replicates": 100,
+    "beta_over_beta_c": 1.4,
+    "protection_budget_nodes": 105,
+    "protected_outgoing_transmission_factor": 0.5,
+    "summary": [
+      {
+        "strategy": "none",
+        "n_runs": "100",
+        "peak_output_weighted_disruption_mean": "0.11644839290226758",
+        "peak_output_weighted_disruption_sd": "0.07874021335283497",
+        "peak_output_weighted_disruption_median": "0.11571510110408925",
+        "cumulative_output_weighted_disruption_mean": "2.016126950109311",
+        "cumulative_output_weighted_disruption_sd": "1.6912539999351737",
+        "cumulative_output_weighted_disruption_median": "1.8209214900519815",
+        "final_output_weighted_disruption_mean": "0.05426930752601252",
+        "final_output_weighted_disruption_sd": "0.059405140691623746",
+        "final_output_weighted_disruption_median": "0.03980048355864514"
+      },
+      {
+        "strategy": "top_out_strength",
+        "n_runs": "100",
+        "peak_output_weighted_disruption_mean": "0.07371309787577643",
+        "peak_output_weighted_disruption_sd": "0.048855087550020077",
+        "peak_output_weighted_disruption_median": "0.0559695207681248",
+        "cumulative_output_weighted_disruption_mean": "0.8351212416348268",
+        "cumulative_output_weighted_disruption_sd": "0.8182125483639978",
+        "cumulative_output_weighted_disruption_median": "0.6574811427371441",
+        "final_output_weighted_disruption_mean": "0.011245613427846024",
+        "final_output_weighted_disruption_sd": "0.017590397188678913",
+        "final_output_weighted_disruption_median": "0.004450934112232848"
+      },
+      {
+        "strategy": "top_PageRank",
+        "n_runs": "100",
+        "peak_output_weighted_disruption_mean": "0.07491451080558258",
+        "peak_output_weighted_disruption_sd": "0.048741123325964565",
+        "peak_output_weighted_disruption_median": "0.0624668341411894",
+        "cumulative_output_weighted_disruption_mean": "0.8810780697421998",
+        "cumulative_output_weighted_disruption_sd": "0.84536470514814",
+        "cumulative_output_weighted_disruption_median": "0.730137902468029",
+        "final_output_weighted_disruption_mean": "0.012914187096351297",
+        "final_output_weighted_disruption_sd": "0.019905114441996292",
+        "final_output_weighted_disruption_median": "0.005633983245828155"
+      },
+      {
+        "strategy": "random_protection",
+        "n_runs": "100",
+        "peak_output_weighted_disruption_mean": "0.10661363163919521",
+        "peak_output_weighted_disruption_sd": "0.06972901747999007",
+        "peak_output_weighted_disruption_median": "0.09675548143235378",
+        "cumulative_output_weighted_disruption_mean": "1.736752243536218",
+        "cumulative_output_weighted_disruption_sd": "1.4865815598253012",
+        "cumulative_output_weighted_disruption_median": "1.5958627587099383",
+        "final_output_weighted_disruption_mean": "0.040974652278915974",
+        "final_output_weighted_disruption_sd": "0.048318332523002105",
+        "final_output_weighted_disruption_median": "0.02484365934589724"
+      }
+    ],
+    "reductions_vs_no_protection": [
+      {
+        "strategy": "top_out_strength",
+        "peak_reduction": 0.3669891353705318,
+        "cumulative_reduction": 0.5857794363645861
+      },
+      {
+        "strategy": "top_PageRank",
+        "peak_reduction": 0.3566720077583503,
+        "cumulative_reduction": 0.5629848260822915
+      },
+      {
+        "strategy": "random_protection",
+        "peak_reduction": 0.084455963864838,
+        "cumulative_reduction": 0.1385699975678346
+      }
+    ]
+  },
+  "source_impact_correlations": {
+    "out_strength_vs_peak_impact": {
+      "rho": 0.9108391608391608,
+      "pvalue": 6.742000927549565e-26
+    },
+    "out_strength_vs_cumulative_impact": {
+      "rho": 0.8822989510489511,
+      "pvalue": 2.724709668498288e-22
+    },
+    "pagerank_vs_peak_impact": {
+      "rho": 0.8714597902097901,
+      "pvalue": 3.686561159101599e-21
+    },
+    "pagerank_vs_cumulative_impact": {
+      "rho": 0.8244755244755245,
+      "pvalue": 3.1897717512719466e-17
+    },
+    "gross_output_vs_peak_impact": {
+      "rho": 0.9009178321678323,
+      "pvalue": 1.605194141814548e-24
+    },
+    "out_degree_vs_peak_impact": {
+      "rho": 0.3074912704701084,
+      "pvalue": 0.012714752931169911
+    },
+    "candidate_set_size": 65,
+    "candidate_set_note": "Stratified union of top-20 nodes by five structural/output metrics and 20 random active nodes; correlations are exploratory and not population-wide causal estimates."
+  },
+  "interpretation": "All dynamic outputs are counterfactual. Output-weighted infection share indicates the fraction of summed gross output assigned to nodes currently in disrupted state; it is not an actual production-loss estimate. Correlations use 65 stratified candidate nodes and are exploratory."
+}

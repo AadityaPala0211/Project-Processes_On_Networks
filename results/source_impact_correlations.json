@@ -1,0 +1,28 @@
+{
+  "out_strength_vs_peak_impact": {
+    "rho": 0.9108391608391608,
+    "pvalue": 6.742000927549565e-26
+  },
+  "out_strength_vs_cumulative_impact": {
+    "rho": 0.8822989510489511,
+    "pvalue": 2.724709668498288e-22
+  },
+  "pagerank_vs_peak_impact": {
+    "rho": 0.8714597902097901,
+    "pvalue": 3.686561159101599e-21
+  },
+  "pagerank_vs_cumulative_impact": {
+    "rho": 0.8244755244755245,
+    "pvalue": 3.1897717512719466e-17
+  },
+  "gross_output_vs_peak_impact": {
+    "rho": 0.9009178321678323,
+    "pvalue": 1.605194141814548e-24
+  },
+  "out_degree_vs_peak_impact": {
+    "rho": 0.3074912704701084,
+    "pvalue": 0.012714752931169911
+  },
+  "candidate_set_size": 65,
+  "candidate_set_note": "Stratified union of top-20 nodes by five structural/output metrics and 20 random active nodes; correlations are exploratory and not population-wide causal estimates."
+}

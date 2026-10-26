@@ -1,0 +1,970 @@
+{
+  "source_file": "/mnt/data/2022_SML(1).csv",
+  "year": 2022,
+  "node_count": 4050,
+  "flow_matrix_shape": [
+    4050,
+    4050
+  ],
+  "flow_values_negative_count": 0,
+  "flow_positive_total_million_current_usd": 103410084.84310001,
+  "self_flow_total_million_current_usd": 22282244.719400004,
+  "self_flow_share": 0.2154745811610924,
+  "directed_edges_excluding_self_loops": 10166696,
+  "possible_directed_edges_excluding_self_loops": 16398450,
+  "directed_density": 0.6199790833889789,
+  "reciprocity_fraction_of_edge_directions": 0.8056690197090579,
+  "weak_component_count": 123,
+  "largest_weak_component_nodes": 3928,
+  "weak_second_largest_component_nodes": 1,
+  "strong_component_count": 124,
+  "largest_strong_component_nodes": 3927,
+  "isolated_nodes": 122,
+  "source_only_nodes": 0,
+  "sink_only_nodes": 1,
+  "total_gross_output_million_current_usd": 199690648.75779998,
+  "off_diagonal_flow_total_million_current_usd": 81127840.1237,
+  "out_degree": {
+    "mean": 2510.295308641975,
+    "median": 2921.5,
+    "p90": 3782.0,
+    "max": 3913
+  },
+  "in_degree": {
+    "mean": 2510.295308641975,
+    "median": 2705.5,
+    "p90": 3422.1,
+    "max": 3858
+  },
+  "out_strength_gini": 0.8625271265976342,
+  "in_strength_gini": 0.8524693475099212,
+  "pagerank_iterations": 92,
+  "spearman_correlations": {
+    "out_degree_vs_out_strength": {
+      "rho": 0.7635843562520434,
+      "pvalue": 0.0
+    },
+    "in_degree_vs_in_strength": {
+      "rho": 0.9450684736336915,
+      "pvalue": 0.0
+    },
+    "out_strength_vs_page_rank": {
+      "rho": 0.7986206391276127,
+      "pvalue": 0.0
+    },
+    "out_strength_vs_gross_output": {
+      "rho": 0.9091194738485648,
+      "pvalue": 0.0
+    }
+  },
+  "top_out_strength": [
+    {
+      "rank": 1,
+      "node": "USA_M",
+      "country_name": "United States",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 2196.1543839
+    },
+    {
+      "rank": 2,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 1971.2845843
+    },
+    {
+      "rank": 3,
+      "node": "CHN_G",
+      "country_name": "China",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 1803.3777056999998
+    },
+    {
+      "rank": 4,
+      "node": "USA_N",
+      "country_name": "United States",
+      "industry_name": "Administrative and support services",
+      "value": 1442.3309358000001
+    },
+    {
+      "rank": 5,
+      "node": "USA_K",
+      "country_name": "United States",
+      "industry_name": "Financial and insurance activities",
+      "value": 1366.5814158
+    },
+    {
+      "rank": 6,
+      "node": "USA_L",
+      "country_name": "United States",
+      "industry_name": "Real estate activities",
+      "value": 1248.4944446999998
+    },
+    {
+      "rank": 7,
+      "node": "CHN_A01",
+      "country_name": "China",
+      "industry_name": "Agriculture and hunting",
+      "value": 1167.9736391
+    },
+    {
+      "rank": 8,
+      "node": "CHN_C20",
+      "country_name": "China",
+      "industry_name": "Chemicals manufacturing",
+      "value": 1023.0410280000001
+    },
+    {
+      "rank": 9,
+      "node": "CHN_C23",
+      "country_name": "China",
+      "industry_name": "Other non-metallic mineral products",
+      "value": 1017.1134706000001
+    },
+    {
+      "rank": 10,
+      "node": "CHN_C24A",
+      "country_name": "China",
+      "industry_name": "Basic iron and steel manufacturing",
+      "value": 1000.4663243999998
+    },
+    {
+      "rank": 11,
+      "node": "CHN_D",
+      "country_name": "China",
+      "industry_name": "Electricity, gas, steam and air conditioning",
+      "value": 902.0079389999999
+    },
+    {
+      "rank": 12,
+      "node": "CHN_M",
+      "country_name": "China",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 813.8961185
+    },
+    {
+      "rank": 13,
+      "node": "CHN_H49",
+      "country_name": "China",
+      "industry_name": "Land transport and pipelines",
+      "value": 808.9143264
+    },
+    {
+      "rank": 14,
+      "node": "CHN_K",
+      "country_name": "China",
+      "industry_name": "Financial and insurance activities",
+      "value": 806.3986748
+    },
+    {
+      "rank": 15,
+      "node": "CHN_C10T12",
+      "country_name": "China",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 766.9611282000001
+    },
+    {
+      "rank": 16,
+      "node": "USA_J62_63",
+      "country_name": "United States",
+      "industry_name": "Computer programming and information services",
+      "value": 746.692359
+    },
+    {
+      "rank": 17,
+      "node": "CHN_C25",
+      "country_name": "China",
+      "industry_name": "Fabricated metal products",
+      "value": 721.6435319000001
+    },
+    {
+      "rank": 18,
+      "node": "CHN_C19",
+      "country_name": "China",
+      "industry_name": "Coke and refined petroleum manufacturing",
+      "value": 717.4700363000001
+    },
+    {
+      "rank": 19,
+      "node": "ROW_B06",
+      "country_name": "Rest of World",
+      "industry_name": "Crude petroleum and natural gas extraction",
+      "value": 660.8703718999999
+    },
+    {
+      "rank": 20,
+      "node": "USA_B06",
+      "country_name": "United States",
+      "industry_name": "Crude petroleum and natural gas extraction",
+      "value": 629.5341388999999
+    }
+  ],
+  "top_in_strength": [
+    {
+      "rank": 1,
+      "node": "CHN_F",
+      "country_name": "China",
+      "industry_name": "Construction",
+      "value": 3263.4624154999783
+    },
+    {
+      "rank": 2,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 2058.0162272999996
+    },
+    {
+      "rank": 3,
+      "node": "USA_O",
+      "country_name": "United States",
+      "industry_name": "Public administration and defence",
+      "value": 1311.0917036000003
+    },
+    {
+      "rank": 4,
+      "node": "CHN_C10T12",
+      "country_name": "China",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 1253.3757918000038
+    },
+    {
+      "rank": 5,
+      "node": "USA_L",
+      "country_name": "United States",
+      "industry_name": "Real estate activities",
+      "value": 1201.3068926000005
+    },
+    {
+      "rank": 6,
+      "node": "USA_Q",
+      "country_name": "United States",
+      "industry_name": "Human health and social work activities",
+      "value": 964.9456933999999
+    },
+    {
+      "rank": 7,
+      "node": "CHN_C26",
+      "country_name": "China",
+      "industry_name": "Computer, electronic and optical products",
+      "value": 942.3405311999933
+    },
+    {
+      "rank": 8,
+      "node": "USA_F",
+      "country_name": "United States",
+      "industry_name": "Construction",
+      "value": 937.6705775000011
+    },
+    {
+      "rank": 9,
+      "node": "CHN_C28",
+      "country_name": "China",
+      "industry_name": "Machinery and equipment manufacturing",
+      "value": 863.9967093999913
+    },
+    {
+      "rank": 10,
+      "node": "CHN_G",
+      "country_name": "China",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 847.5437831999958
+    },
+    {
+      "rank": 11,
+      "node": "USA_K",
+      "country_name": "United States",
+      "industry_name": "Financial and insurance activities",
+      "value": 829.2280819999995
+    },
+    {
+      "rank": 12,
+      "node": "USA_C10T12",
+      "country_name": "United States",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 760.8927848999998
+    },
+    {
+      "rank": 13,
+      "node": "USA_M",
+      "country_name": "United States",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 743.4234460000002
+    },
+    {
+      "rank": 14,
+      "node": "CHN_D",
+      "country_name": "China",
+      "industry_name": "Electricity, gas, steam and air conditioning",
+      "value": 731.5433517999959
+    },
+    {
+      "rank": 15,
+      "node": "CHN_C20",
+      "country_name": "China",
+      "industry_name": "Chemicals manufacturing",
+      "value": 715.009162699998
+    },
+    {
+      "rank": 16,
+      "node": "CHN_C24A",
+      "country_name": "China",
+      "industry_name": "Basic iron and steel manufacturing",
+      "value": 710.8071076999929
+    },
+    {
+      "rank": 17,
+      "node": "CHN_C27",
+      "country_name": "China",
+      "industry_name": "C27",
+      "value": 701.3658144999914
+    },
+    {
+      "rank": 18,
+      "node": "CHN_C25",
+      "country_name": "China",
+      "industry_name": "Fabricated metal products",
+      "value": 692.2239425999935
+    },
+    {
+      "rank": 19,
+      "node": "USA_I",
+      "country_name": "United States",
+      "industry_name": "Accommodation and food services",
+      "value": 686.5204553999997
+    },
+    {
+      "rank": 20,
+      "node": "CHN_M",
+      "country_name": "China",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 634.3823474999961
+    }
+  ],
+  "top_out_degree": [
+    {
+      "rank": 1,
+      "node": "CHN_G",
+      "country_name": "China",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3913.0
+    },
+    {
+      "rank": 2,
+      "node": "ROW_H49",
+      "country_name": "Rest of World",
+      "industry_name": "Land transport and pipelines",
+      "value": 3907.0
+    },
+    {
+      "rank": 3,
+      "node": "ROW_C20",
+      "country_name": "Rest of World",
+      "industry_name": "Chemicals manufacturing",
+      "value": 3906.0
+    },
+    {
+      "rank": 4,
+      "node": "ROW_G",
+      "country_name": "Rest of World",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3906.0
+    },
+    {
+      "rank": 5,
+      "node": "SGP_H50",
+      "country_name": "SGP",
+      "industry_name": "H50",
+      "value": 3905.0
+    },
+    {
+      "rank": 6,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3901.0
+    },
+    {
+      "rank": 7,
+      "node": "CHN_H50",
+      "country_name": "China",
+      "industry_name": "H50",
+      "value": 3900.0
+    },
+    {
+      "rank": 8,
+      "node": "ROW_H50",
+      "country_name": "Rest of World",
+      "industry_name": "H50",
+      "value": 3898.0
+    },
+    {
+      "rank": 9,
+      "node": "ESP_G",
+      "country_name": "ESP",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3898.0
+    },
+    {
+      "rank": 10,
+      "node": "NLD_G",
+      "country_name": "NLD",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3895.0
+    },
+    {
+      "rank": 11,
+      "node": "CHN_C22",
+      "country_name": "China",
+      "industry_name": "C22",
+      "value": 3895.0
+    },
+    {
+      "rank": 12,
+      "node": "ROW_C19",
+      "country_name": "Rest of World",
+      "industry_name": "Coke and refined petroleum manufacturing",
+      "value": 3895.0
+    },
+    {
+      "rank": 13,
+      "node": "TUR_G",
+      "country_name": "TUR",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3893.0
+    },
+    {
+      "rank": 14,
+      "node": "FRA_G",
+      "country_name": "FRA",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3893.0
+    },
+    {
+      "rank": 15,
+      "node": "DEU_G",
+      "country_name": "DEU",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3893.0
+    },
+    {
+      "rank": 16,
+      "node": "USA_K",
+      "country_name": "United States",
+      "industry_name": "Financial and insurance activities",
+      "value": 3892.0
+    },
+    {
+      "rank": 17,
+      "node": "FRA_H49",
+      "country_name": "FRA",
+      "industry_name": "Land transport and pipelines",
+      "value": 3892.0
+    },
+    {
+      "rank": 18,
+      "node": "CHN_H49",
+      "country_name": "China",
+      "industry_name": "Land transport and pipelines",
+      "value": 3891.0
+    },
+    {
+      "rank": 19,
+      "node": "IND_G",
+      "country_name": "India",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3891.0
+    },
+    {
+      "rank": 20,
+      "node": "ITA_G",
+      "country_name": "ITA",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3891.0
+    }
+  ],
+  "top_in_degree": [
+    {
+      "rank": 1,
+      "node": "ROW_G",
+      "country_name": "Rest of World",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3858.0
+    },
+    {
+      "rank": 2,
+      "node": "ROW_C10T12",
+      "country_name": "Rest of World",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 3857.0
+    },
+    {
+      "rank": 3,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3854.0
+    },
+    {
+      "rank": 4,
+      "node": "CHN_F",
+      "country_name": "China",
+      "industry_name": "Construction",
+      "value": 3852.0
+    },
+    {
+      "rank": 5,
+      "node": "ROW_F",
+      "country_name": "Rest of World",
+      "industry_name": "Construction",
+      "value": 3851.0
+    },
+    {
+      "rank": 6,
+      "node": "USA_F",
+      "country_name": "United States",
+      "industry_name": "Construction",
+      "value": 3836.0
+    },
+    {
+      "rank": 7,
+      "node": "USA_O",
+      "country_name": "United States",
+      "industry_name": "Public administration and defence",
+      "value": 3834.0
+    },
+    {
+      "rank": 8,
+      "node": "USA_C10T12",
+      "country_name": "United States",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 3824.0
+    },
+    {
+      "rank": 9,
+      "node": "ROW_B06",
+      "country_name": "Rest of World",
+      "industry_name": "Crude petroleum and natural gas extraction",
+      "value": 3816.0
+    },
+    {
+      "rank": 10,
+      "node": "ROW_A01",
+      "country_name": "Rest of World",
+      "industry_name": "Agriculture and hunting",
+      "value": 3814.0
+    },
+    {
+      "rank": 11,
+      "node": "USA_Q",
+      "country_name": "United States",
+      "industry_name": "Human health and social work activities",
+      "value": 3814.0
+    },
+    {
+      "rank": 12,
+      "node": "ROW_O",
+      "country_name": "Rest of World",
+      "industry_name": "Public administration and defence",
+      "value": 3810.0
+    },
+    {
+      "rank": 13,
+      "node": "USA_M",
+      "country_name": "United States",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 3809.0
+    },
+    {
+      "rank": 14,
+      "node": "ROW_H49",
+      "country_name": "Rest of World",
+      "industry_name": "Land transport and pipelines",
+      "value": 3799.0
+    },
+    {
+      "rank": 15,
+      "node": "USA_L",
+      "country_name": "United States",
+      "industry_name": "Real estate activities",
+      "value": 3793.0
+    },
+    {
+      "rank": 16,
+      "node": "ROW_M",
+      "country_name": "Rest of World",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 3791.0
+    },
+    {
+      "rank": 17,
+      "node": "FRA_G",
+      "country_name": "FRA",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 3790.0
+    },
+    {
+      "rank": 18,
+      "node": "USA_I",
+      "country_name": "United States",
+      "industry_name": "Accommodation and food services",
+      "value": 3790.0
+    },
+    {
+      "rank": 19,
+      "node": "ROW_C20",
+      "country_name": "Rest of World",
+      "industry_name": "Chemicals manufacturing",
+      "value": 3788.0
+    },
+    {
+      "rank": 20,
+      "node": "IND_F",
+      "country_name": "India",
+      "industry_name": "Construction",
+      "value": 3787.0
+    }
+  ],
+  "top_weighted_pagerank": [
+    {
+      "rank": 1,
+      "node": "CHN_F",
+      "country_name": "China",
+      "industry_name": "Construction",
+      "value": 0.012084647245360099
+    },
+    {
+      "rank": 2,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 0.010293238469445506
+    },
+    {
+      "rank": 3,
+      "node": "USA_O",
+      "country_name": "United States",
+      "industry_name": "Public administration and defence",
+      "value": 0.008436908887158716
+    },
+    {
+      "rank": 4,
+      "node": "USA_L",
+      "country_name": "United States",
+      "industry_name": "Real estate activities",
+      "value": 0.005800245186388189
+    },
+    {
+      "rank": 5,
+      "node": "USA_Q",
+      "country_name": "United States",
+      "industry_name": "Human health and social work activities",
+      "value": 0.005735754287497107
+    },
+    {
+      "rank": 6,
+      "node": "CHN_G",
+      "country_name": "China",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 0.005220725712825132
+    },
+    {
+      "rank": 7,
+      "node": "USA_I",
+      "country_name": "United States",
+      "industry_name": "Accommodation and food services",
+      "value": 0.005193154497375214
+    },
+    {
+      "rank": 8,
+      "node": "CHN_C26",
+      "country_name": "China",
+      "industry_name": "Computer, electronic and optical products",
+      "value": 0.0051887935720792725
+    },
+    {
+      "rank": 9,
+      "node": "CHN_M",
+      "country_name": "China",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 0.004455358743123128
+    },
+    {
+      "rank": 10,
+      "node": "USA_F",
+      "country_name": "United States",
+      "industry_name": "Construction",
+      "value": 0.0042222620329421924
+    },
+    {
+      "rank": 11,
+      "node": "USA_M",
+      "country_name": "United States",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 0.004126353817921001
+    },
+    {
+      "rank": 12,
+      "node": "USA_C10T12",
+      "country_name": "United States",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 0.0040686963114088225
+    },
+    {
+      "rank": 13,
+      "node": "CHN_C28",
+      "country_name": "China",
+      "industry_name": "Machinery and equipment manufacturing",
+      "value": 0.003949321732038677
+    },
+    {
+      "rank": 14,
+      "node": "USA_K",
+      "country_name": "United States",
+      "industry_name": "Financial and insurance activities",
+      "value": 0.003947956945260379
+    },
+    {
+      "rank": 15,
+      "node": "CHN_C10T12",
+      "country_name": "China",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 0.0038746179828279405
+    },
+    {
+      "rank": 16,
+      "node": "DEU_C29",
+      "country_name": "DEU",
+      "industry_name": "C29",
+      "value": 0.0035683992560630964
+    },
+    {
+      "rank": 17,
+      "node": "USA_C29",
+      "country_name": "United States",
+      "industry_name": "C29",
+      "value": 0.003568007471213718
+    },
+    {
+      "rank": 18,
+      "node": "CHN_C27",
+      "country_name": "China",
+      "industry_name": "C27",
+      "value": 0.0034474395547548753
+    },
+    {
+      "rank": 19,
+      "node": "CHN_L",
+      "country_name": "China",
+      "industry_name": "Real estate activities",
+      "value": 0.003348514577825657
+    },
+    {
+      "rank": 20,
+      "node": "CHN_O",
+      "country_name": "China",
+      "industry_name": "Public administration and defence",
+      "value": 0.003329853141781187
+    }
+  ],
+  "top_gross_output": [
+    {
+      "rank": 1,
+      "node": "USA_G",
+      "country_name": "United States",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 4883.3636277000005
+    },
+    {
+      "rank": 2,
+      "node": "CHN_F",
+      "country_name": "China",
+      "industry_name": "Construction",
+      "value": 4684.1142966
+    },
+    {
+      "rank": 3,
+      "node": "USA_L",
+      "country_name": "United States",
+      "industry_name": "Real estate activities",
+      "value": 4501.7812474
+    },
+    {
+      "rank": 4,
+      "node": "USA_K",
+      "country_name": "United States",
+      "industry_name": "Financial and insurance activities",
+      "value": 3528.0940186000003
+    },
+    {
+      "rank": 5,
+      "node": "USA_O",
+      "country_name": "United States",
+      "industry_name": "Public administration and defence",
+      "value": 3428.3644137
+    },
+    {
+      "rank": 6,
+      "node": "USA_M",
+      "country_name": "United States",
+      "industry_name": "Professional, scientific and technical activities",
+      "value": 3258.6882538
+    },
+    {
+      "rank": 7,
+      "node": "USA_Q",
+      "country_name": "United States",
+      "industry_name": "Human health and social work activities",
+      "value": 3028.5297191
+    },
+    {
+      "rank": 8,
+      "node": "CHN_G",
+      "country_name": "China",
+      "industry_name": "Wholesale and retail trade; motor vehicle repair",
+      "value": 2648.7604997
+    },
+    {
+      "rank": 9,
+      "node": "CHN_A01",
+      "country_name": "China",
+      "industry_name": "Agriculture and hunting",
+      "value": 2326.3035646000003
+    },
+    {
+      "rank": 10,
+      "node": "CHN_C10T12",
+      "country_name": "China",
+      "industry_name": "Food, beverages and tobacco manufacturing",
+      "value": 2180.8314005999996
+    },
+    {
+      "rank": 11,
+      "node": "USA_F",
+      "country_name": "United States",
+      "industry_name": "Construction",
+      "value": 2164.368041
+    },
+    {
+      "rank": 12,
+      "node": "CHN_C26",
+      "country_name": "China",
+      "industry_name": "Computer, electronic and optical products",
+      "value": 2136.7211775
+    },
+    {
+      "rank": 13,
+      "node": "CHN_C13T15",
+      "country_name": "China",
+      "industry_name": "C13T15",
+      "value": 1918.5035782
+    },
+    {
+      "rank": 14,
+      "node": "USA_N",
+      "country_name": "United States",
+      "industry_name": "Administrative and support services",
+      "value": 1849.3476910000002
+    },
+    {
+      "rank": 15,
+      "node": "USA_P",
+      "country_name": "United States",
+      "industry_name": "P",
+      "value": 1717.5722331999998
+    },
+    {
+      "rank": 16,
+      "node": "CHN_C20",
+      "country_name": "China",
+      "industry_name": "Chemicals manufacturing",
+      "value": 1649.082932
+    },
+    {
+      "rank": 17,
+      "node": "CHN_K",
+      "country_name": "China",
+      "industry_name": "Financial and insurance activities",
+      "value": 1596.1869776
+    },
+    {
+      "rank": 18,
+      "node": "CHN_C28",
+      "country_name": "China",
+      "industry_name": "Machinery and equipment manufacturing",
+      "value": 1581.0297429
+    },
+    {
+      "rank": 19,
+      "node": "USA_I",
+      "country_name": "United States",
+      "industry_name": "Accommodation and food services",
+      "value": 1397.0558684
+    },
+    {
+      "rank": 20,
+      "node": "CHN_C24A",
+      "country_name": "China",
+      "industry_name": "Basic iron and steel manufacturing",
+      "value": 1391.1742023
+    }
+  ],
+  "edge_threshold_sensitivity": [
+    {
+      "min_flow_million_USD": 0.0,
+      "edge_count": 10166696,
+      "density": 0.6199790833889789,
+      "mean_out_degree": 2510.295308641975,
+      "isolates": 122,
+      "weak_component_count": 123,
+      "largest_weak_component_nodes": 3928
+    },
+    {
+      "min_flow_million_USD": 0.01,
+      "edge_count": 4531407,
+      "density": 0.2763314215672823,
+      "mean_out_degree": 1118.865925925926,
+      "isolates": 135,
+      "weak_component_count": 136,
+      "largest_weak_component_nodes": 3915
+    },
+    {
+      "min_flow_million_USD": 0.1,
+      "edge_count": 2320570,
+      "density": 0.14151154529848858,
+      "mean_out_degree": 572.9802469135802,
+      "isolates": 154,
+      "weak_component_count": 155,
+      "largest_weak_component_nodes": 3896
+    },
+    {
+      "min_flow_million_USD": 1.0,
+      "edge_count": 896358,
+      "density": 0.054661141754251165,
+      "mean_out_degree": 221.32296296296298,
+      "isolates": 207,
+      "weak_component_count": 208,
+      "largest_weak_component_nodes": 3843
+    },
+    {
+      "min_flow_million_USD": 10.0,
+      "edge_count": 256248,
+      "density": 0.015626354929886666,
+      "mean_out_degree": 63.27111111111111,
+      "isolates": 390,
+      "weak_component_count": 391,
+      "largest_weak_component_nodes": 3660
+    },
+    {
+      "min_flow_million_USD": 100.0,
+      "edge_count": 56563,
+      "density": 0.003449289414548326,
+      "mean_out_degree": 13.966172839506173,
+      "isolates": 1021,
+      "weak_component_count": 1027,
+      "largest_weak_component_nodes": 3019
+    }
+  ],
+  "units": "Flow and strength values in million current USD. Excludes self-loops for graph degree/strength metrics.",
+  "interpretation": "Structural results describe the annual 2022 ICIO table; they are not observed disruption outcomes."
+}

@@ -1,0 +1,2304 @@
+{
+  "structural": {
+    "source_file": "/mnt/data/2022_SML(1).csv",
+    "year": 2022,
+    "node_count": 4050,
+    "flow_matrix_shape": [
+      4050,
+      4050
+    ],
+    "flow_values_negative_count": 0,
+    "flow_positive_total_million_current_usd": 103410084.84310001,
+    "self_flow_total_million_current_usd": 22282244.719400004,
+    "self_flow_share": 0.2154745811610924,
+    "directed_edges_excluding_self_loops": 10166696,
+    "possible_directed_edges_excluding_self_loops": 16398450,
+    "directed_density": 0.6199790833889789,
+    "reciprocity_fraction_of_edge_directions": 0.8056690197090579,
+    "weak_component_count": 123,
+    "largest_weak_component_nodes": 3928,
+    "weak_second_largest_component_nodes": 1,
+    "strong_component_count": 124,
+    "largest_strong_component_nodes": 3927,
+    "isolated_nodes": 122,
+    "source_only_nodes": 0,
+    "sink_only_nodes": 1,
+    "total_gross_output_million_current_usd": 199690648.75779998,
+    "off_diagonal_flow_total_million_current_usd": 81127840.1237,
+    "out_degree": {
+      "mean": 2510.295308641975,
+      "median": 2921.5,
+      "p90": 3782.0,
+      "max": 3913
+    },
+    "in_degree": {
+      "mean": 2510.295308641975,
+      "median": 2705.5,
+      "p90": 3422.1,
+      "max": 3858
+    },
+    "out_strength_gini": 0.8625271265976342,
+    "in_strength_gini": 0.8524693475099212,
+    "pagerank_iterations": 92,
+    "spearman_correlations": {
+      "out_degree_vs_out_strength": {
+        "rho": 0.7635843562520434,
+        "pvalue": 0.0
+      },
+      "in_degree_vs_in_strength": {
+        "rho": 0.9450684736336915,
+        "pvalue": 0.0
+      },
+      "out_strength_vs_page_rank": {
+        "rho": 0.7986206391276127,
+        "pvalue": 0.0
+      },
+      "out_strength_vs_gross_output": {
+        "rho": 0.9091194738485648,
+        "pvalue": 0.0
+      }
+    },
+    "top_out_strength": [
+      {
+        "rank": 1,
+        "node": "USA_M",
+        "country_name": "United States",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 2196.1543839
+      },
+      {
+        "rank": 2,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 1971.2845843
+      },
+      {
+        "rank": 3,
+        "node": "CHN_G",
+        "country_name": "China",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 1803.3777056999998
+      },
+      {
+        "rank": 4,
+        "node": "USA_N",
+        "country_name": "United States",
+        "industry_name": "Administrative and support services",
+        "value": 1442.3309358000001
+      },
+      {
+        "rank": 5,
+        "node": "USA_K",
+        "country_name": "United States",
+        "industry_name": "Financial and insurance activities",
+        "value": 1366.5814158
+      },
+      {
+        "rank": 6,
+        "node": "USA_L",
+        "country_name": "United States",
+        "industry_name": "Real estate activities",
+        "value": 1248.4944446999998
+      },
+      {
+        "rank": 7,
+        "node": "CHN_A01",
+        "country_name": "China",
+        "industry_name": "Agriculture and hunting",
+        "value": 1167.9736391
+      },
+      {
+        "rank": 8,
+        "node": "CHN_C20",
+        "country_name": "China",
+        "industry_name": "Chemicals manufacturing",
+        "value": 1023.0410280000001
+      },
+      {
+        "rank": 9,
+        "node": "CHN_C23",
+        "country_name": "China",
+        "industry_name": "Other non-metallic mineral products",
+        "value": 1017.1134706000001
+      },
+      {
+        "rank": 10,
+        "node": "CHN_C24A",
+        "country_name": "China",
+        "industry_name": "Basic iron and steel manufacturing",
+        "value": 1000.4663243999998
+      },
+      {
+        "rank": 11,
+        "node": "CHN_D",
+        "country_name": "China",
+        "industry_name": "Electricity, gas, steam and air conditioning",
+        "value": 902.0079389999999
+      },
+      {
+        "rank": 12,
+        "node": "CHN_M",
+        "country_name": "China",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 813.8961185
+      },
+      {
+        "rank": 13,
+        "node": "CHN_H49",
+        "country_name": "China",
+        "industry_name": "Land transport and pipelines",
+        "value": 808.9143264
+      },
+      {
+        "rank": 14,
+        "node": "CHN_K",
+        "country_name": "China",
+        "industry_name": "Financial and insurance activities",
+        "value": 806.3986748
+      },
+      {
+        "rank": 15,
+        "node": "CHN_C10T12",
+        "country_name": "China",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 766.9611282000001
+      },
+      {
+        "rank": 16,
+        "node": "USA_J62_63",
+        "country_name": "United States",
+        "industry_name": "Computer programming and information services",
+        "value": 746.692359
+      },
+      {
+        "rank": 17,
+        "node": "CHN_C25",
+        "country_name": "China",
+        "industry_name": "Fabricated metal products",
+        "value": 721.6435319000001
+      },
+      {
+        "rank": 18,
+        "node": "CHN_C19",
+        "country_name": "China",
+        "industry_name": "Coke and refined petroleum manufacturing",
+        "value": 717.4700363000001
+      },
+      {
+        "rank": 19,
+        "node": "ROW_B06",
+        "country_name": "Rest of World",
+        "industry_name": "Crude petroleum and natural gas extraction",
+        "value": 660.8703718999999
+      },
+      {
+        "rank": 20,
+        "node": "USA_B06",
+        "country_name": "United States",
+        "industry_name": "Crude petroleum and natural gas extraction",
+        "value": 629.5341388999999
+      }
+    ],
+    "top_in_strength": [
+      {
+        "rank": 1,
+        "node": "CHN_F",
+        "country_name": "China",
+        "industry_name": "Construction",
+        "value": 3263.4624154999783
+      },
+      {
+        "rank": 2,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 2058.0162272999996
+      },
+      {
+        "rank": 3,
+        "node": "USA_O",
+        "country_name": "United States",
+        "industry_name": "Public administration and defence",
+        "value": 1311.0917036000003
+      },
+      {
+        "rank": 4,
+        "node": "CHN_C10T12",
+        "country_name": "China",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 1253.3757918000038
+      },
+      {
+        "rank": 5,
+        "node": "USA_L",
+        "country_name": "United States",
+        "industry_name": "Real estate activities",
+        "value": 1201.3068926000005
+      },
+      {
+        "rank": 6,
+        "node": "USA_Q",
+        "country_name": "United States",
+        "industry_name": "Human health and social work activities",
+        "value": 964.9456933999999
+      },
+      {
+        "rank": 7,
+        "node": "CHN_C26",
+        "country_name": "China",
+        "industry_name": "Computer, electronic and optical products",
+        "value": 942.3405311999933
+      },
+      {
+        "rank": 8,
+        "node": "USA_F",
+        "country_name": "United States",
+        "industry_name": "Construction",
+        "value": 937.6705775000011
+      },
+      {
+        "rank": 9,
+        "node": "CHN_C28",
+        "country_name": "China",
+        "industry_name": "Machinery and equipment manufacturing",
+        "value": 863.9967093999913
+      },
+      {
+        "rank": 10,
+        "node": "CHN_G",
+        "country_name": "China",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 847.5437831999958
+      },
+      {
+        "rank": 11,
+        "node": "USA_K",
+        "country_name": "United States",
+        "industry_name": "Financial and insurance activities",
+        "value": 829.2280819999995
+      },
+      {
+        "rank": 12,
+        "node": "USA_C10T12",
+        "country_name": "United States",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 760.8927848999998
+      },
+      {
+        "rank": 13,
+        "node": "USA_M",
+        "country_name": "United States",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 743.4234460000002
+      },
+      {
+        "rank": 14,
+        "node": "CHN_D",
+        "country_name": "China",
+        "industry_name": "Electricity, gas, steam and air conditioning",
+        "value": 731.5433517999959
+      },
+      {
+        "rank": 15,
+        "node": "CHN_C20",
+        "country_name": "China",
+        "industry_name": "Chemicals manufacturing",
+        "value": 715.009162699998
+      },
+      {
+        "rank": 16,
+        "node": "CHN_C24A",
+        "country_name": "China",
+        "industry_name": "Basic iron and steel manufacturing",
+        "value": 710.8071076999929
+      },
+      {
+        "rank": 17,
+        "node": "CHN_C27",
+        "country_name": "China",
+        "industry_name": "C27",
+        "value": 701.3658144999914
+      },
+      {
+        "rank": 18,
+        "node": "CHN_C25",
+        "country_name": "China",
+        "industry_name": "Fabricated metal products",
+        "value": 692.2239425999935
+      },
+      {
+        "rank": 19,
+        "node": "USA_I",
+        "country_name": "United States",
+        "industry_name": "Accommodation and food services",
+        "value": 686.5204553999997
+      },
+      {
+        "rank": 20,
+        "node": "CHN_M",
+        "country_name": "China",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 634.3823474999961
+      }
+    ],
+    "top_out_degree": [
+      {
+        "rank": 1,
+        "node": "CHN_G",
+        "country_name": "China",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3913.0
+      },
+      {
+        "rank": 2,
+        "node": "ROW_H49",
+        "country_name": "Rest of World",
+        "industry_name": "Land transport and pipelines",
+        "value": 3907.0
+      },
+      {
+        "rank": 3,
+        "node": "ROW_C20",
+        "country_name": "Rest of World",
+        "industry_name": "Chemicals manufacturing",
+        "value": 3906.0
+      },
+      {
+        "rank": 4,
+        "node": "ROW_G",
+        "country_name": "Rest of World",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3906.0
+      },
+      {
+        "rank": 5,
+        "node": "SGP_H50",
+        "country_name": "SGP",
+        "industry_name": "H50",
+        "value": 3905.0
+      },
+      {
+        "rank": 6,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3901.0
+      },
+      {
+        "rank": 7,
+        "node": "CHN_H50",
+        "country_name": "China",
+        "industry_name": "H50",
+        "value": 3900.0
+      },
+      {
+        "rank": 8,
+        "node": "ROW_H50",
+        "country_name": "Rest of World",
+        "industry_name": "H50",
+        "value": 3898.0
+      },
+      {
+        "rank": 9,
+        "node": "ESP_G",
+        "country_name": "ESP",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3898.0
+      },
+      {
+        "rank": 10,
+        "node": "NLD_G",
+        "country_name": "NLD",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3895.0
+      },
+      {
+        "rank": 11,
+        "node": "CHN_C22",
+        "country_name": "China",
+        "industry_name": "C22",
+        "value": 3895.0
+      },
+      {
+        "rank": 12,
+        "node": "ROW_C19",
+        "country_name": "Rest of World",
+        "industry_name": "Coke and refined petroleum manufacturing",
+        "value": 3895.0
+      },
+      {
+        "rank": 13,
+        "node": "TUR_G",
+        "country_name": "TUR",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3893.0
+      },
+      {
+        "rank": 14,
+        "node": "FRA_G",
+        "country_name": "FRA",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3893.0
+      },
+      {
+        "rank": 15,
+        "node": "DEU_G",
+        "country_name": "DEU",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3893.0
+      },
+      {
+        "rank": 16,
+        "node": "USA_K",
+        "country_name": "United States",
+        "industry_name": "Financial and insurance activities",
+        "value": 3892.0
+      },
+      {
+        "rank": 17,
+        "node": "FRA_H49",
+        "country_name": "FRA",
+        "industry_name": "Land transport and pipelines",
+        "value": 3892.0
+      },
+      {
+        "rank": 18,
+        "node": "CHN_H49",
+        "country_name": "China",
+        "industry_name": "Land transport and pipelines",
+        "value": 3891.0
+      },
+      {
+        "rank": 19,
+        "node": "IND_G",
+        "country_name": "India",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3891.0
+      },
+      {
+        "rank": 20,
+        "node": "ITA_G",
+        "country_name": "ITA",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3891.0
+      }
+    ],
+    "top_in_degree": [
+      {
+        "rank": 1,
+        "node": "ROW_G",
+        "country_name": "Rest of World",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3858.0
+      },
+      {
+        "rank": 2,
+        "node": "ROW_C10T12",
+        "country_name": "Rest of World",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 3857.0
+      },
+      {
+        "rank": 3,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3854.0
+      },
+      {
+        "rank": 4,
+        "node": "CHN_F",
+        "country_name": "China",
+        "industry_name": "Construction",
+        "value": 3852.0
+      },
+      {
+        "rank": 5,
+        "node": "ROW_F",
+        "country_name": "Rest of World",
+        "industry_name": "Construction",
+        "value": 3851.0
+      },
+      {
+        "rank": 6,
+        "node": "USA_F",
+        "country_name": "United States",
+        "industry_name": "Construction",
+        "value": 3836.0
+      },
+      {
+        "rank": 7,
+        "node": "USA_O",
+        "country_name": "United States",
+        "industry_name": "Public administration and defence",
+        "value": 3834.0
+      },
+      {
+        "rank": 8,
+        "node": "USA_C10T12",
+        "country_name": "United States",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 3824.0
+      },
+      {
+        "rank": 9,
+        "node": "ROW_B06",
+        "country_name": "Rest of World",
+        "industry_name": "Crude petroleum and natural gas extraction",
+        "value": 3816.0
+      },
+      {
+        "rank": 10,
+        "node": "ROW_A01",
+        "country_name": "Rest of World",
+        "industry_name": "Agriculture and hunting",
+        "value": 3814.0
+      },
+      {
+        "rank": 11,
+        "node": "USA_Q",
+        "country_name": "United States",
+        "industry_name": "Human health and social work activities",
+        "value": 3814.0
+      },
+      {
+        "rank": 12,
+        "node": "ROW_O",
+        "country_name": "Rest of World",
+        "industry_name": "Public administration and defence",
+        "value": 3810.0
+      },
+      {
+        "rank": 13,
+        "node": "USA_M",
+        "country_name": "United States",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 3809.0
+      },
+      {
+        "rank": 14,
+        "node": "ROW_H49",
+        "country_name": "Rest of World",
+        "industry_name": "Land transport and pipelines",
+        "value": 3799.0
+      },
+      {
+        "rank": 15,
+        "node": "USA_L",
+        "country_name": "United States",
+        "industry_name": "Real estate activities",
+        "value": 3793.0
+      },
+      {
+        "rank": 16,
+        "node": "ROW_M",
+        "country_name": "Rest of World",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 3791.0
+      },
+      {
+        "rank": 17,
+        "node": "FRA_G",
+        "country_name": "FRA",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 3790.0
+      },
+      {
+        "rank": 18,
+        "node": "USA_I",
+        "country_name": "United States",
+        "industry_name": "Accommodation and food services",
+        "value": 3790.0
+      },
+      {
+        "rank": 19,
+        "node": "ROW_C20",
+        "country_name": "Rest of World",
+        "industry_name": "Chemicals manufacturing",
+        "value": 3788.0
+      },
+      {
+        "rank": 20,
+        "node": "IND_F",
+        "country_name": "India",
+        "industry_name": "Construction",
+        "value": 3787.0
+      }
+    ],
+    "top_weighted_pagerank": [
+      {
+        "rank": 1,
+        "node": "CHN_F",
+        "country_name": "China",
+        "industry_name": "Construction",
+        "value": 0.012084647245360099
+      },
+      {
+        "rank": 2,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 0.010293238469445506
+      },
+      {
+        "rank": 3,
+        "node": "USA_O",
+        "country_name": "United States",
+        "industry_name": "Public administration and defence",
+        "value": 0.008436908887158716
+      },
+      {
+        "rank": 4,
+        "node": "USA_L",
+        "country_name": "United States",
+        "industry_name": "Real estate activities",
+        "value": 0.005800245186388189
+      },
+      {
+        "rank": 5,
+        "node": "USA_Q",
+        "country_name": "United States",
+        "industry_name": "Human health and social work activities",
+        "value": 0.005735754287497107
+      },
+      {
+        "rank": 6,
+        "node": "CHN_G",
+        "country_name": "China",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 0.005220725712825132
+      },
+      {
+        "rank": 7,
+        "node": "USA_I",
+        "country_name": "United States",
+        "industry_name": "Accommodation and food services",
+        "value": 0.005193154497375214
+      },
+      {
+        "rank": 8,
+        "node": "CHN_C26",
+        "country_name": "China",
+        "industry_name": "Computer, electronic and optical products",
+        "value": 0.0051887935720792725
+      },
+      {
+        "rank": 9,
+        "node": "CHN_M",
+        "country_name": "China",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 0.004455358743123128
+      },
+      {
+        "rank": 10,
+        "node": "USA_F",
+        "country_name": "United States",
+        "industry_name": "Construction",
+        "value": 0.0042222620329421924
+      },
+      {
+        "rank": 11,
+        "node": "USA_M",
+        "country_name": "United States",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 0.004126353817921001
+      },
+      {
+        "rank": 12,
+        "node": "USA_C10T12",
+        "country_name": "United States",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 0.0040686963114088225
+      },
+      {
+        "rank": 13,
+        "node": "CHN_C28",
+        "country_name": "China",
+        "industry_name": "Machinery and equipment manufacturing",
+        "value": 0.003949321732038677
+      },
+      {
+        "rank": 14,
+        "node": "USA_K",
+        "country_name": "United States",
+        "industry_name": "Financial and insurance activities",
+        "value": 0.003947956945260379
+      },
+      {
+        "rank": 15,
+        "node": "CHN_C10T12",
+        "country_name": "China",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 0.0038746179828279405
+      },
+      {
+        "rank": 16,
+        "node": "DEU_C29",
+        "country_name": "DEU",
+        "industry_name": "C29",
+        "value": 0.0035683992560630964
+      },
+      {
+        "rank": 17,
+        "node": "USA_C29",
+        "country_name": "United States",
+        "industry_name": "C29",
+        "value": 0.003568007471213718
+      },
+      {
+        "rank": 18,
+        "node": "CHN_C27",
+        "country_name": "China",
+        "industry_name": "C27",
+        "value": 0.0034474395547548753
+      },
+      {
+        "rank": 19,
+        "node": "CHN_L",
+        "country_name": "China",
+        "industry_name": "Real estate activities",
+        "value": 0.003348514577825657
+      },
+      {
+        "rank": 20,
+        "node": "CHN_O",
+        "country_name": "China",
+        "industry_name": "Public administration and defence",
+        "value": 0.003329853141781187
+      }
+    ],
+    "top_gross_output": [
+      {
+        "rank": 1,
+        "node": "USA_G",
+        "country_name": "United States",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 4883.3636277000005
+      },
+      {
+        "rank": 2,
+        "node": "CHN_F",
+        "country_name": "China",
+        "industry_name": "Construction",
+        "value": 4684.1142966
+      },
+      {
+        "rank": 3,
+        "node": "USA_L",
+        "country_name": "United States",
+        "industry_name": "Real estate activities",
+        "value": 4501.7812474
+      },
+      {
+        "rank": 4,
+        "node": "USA_K",
+        "country_name": "United States",
+        "industry_name": "Financial and insurance activities",
+        "value": 3528.0940186000003
+      },
+      {
+        "rank": 5,
+        "node": "USA_O",
+        "country_name": "United States",
+        "industry_name": "Public administration and defence",
+        "value": 3428.3644137
+      },
+      {
+        "rank": 6,
+        "node": "USA_M",
+        "country_name": "United States",
+        "industry_name": "Professional, scientific and technical activities",
+        "value": 3258.6882538
+      },
+      {
+        "rank": 7,
+        "node": "USA_Q",
+        "country_name": "United States",
+        "industry_name": "Human health and social work activities",
+        "value": 3028.5297191
+      },
+      {
+        "rank": 8,
+        "node": "CHN_G",
+        "country_name": "China",
+        "industry_name": "Wholesale and retail trade; motor vehicle repair",
+        "value": 2648.7604997
+      },
+      {
+        "rank": 9,
+        "node": "CHN_A01",
+        "country_name": "China",
+        "industry_name": "Agriculture and hunting",
+        "value": 2326.3035646000003
+      },
+      {
+        "rank": 10,
+        "node": "CHN_C10T12",
+        "country_name": "China",
+        "industry_name": "Food, beverages and tobacco manufacturing",
+        "value": 2180.8314005999996
+      },
+      {
+        "rank": 11,
+        "node": "USA_F",
+        "country_name": "United States",
+        "industry_name": "Construction",
+        "value": 2164.368041
+      },
+      {
+        "rank": 12,
+        "node": "CHN_C26",
+        "country_name": "China",
+        "industry_name": "Computer, electronic and optical products",
+        "value": 2136.7211775
+      },
+      {
+        "rank": 13,
+        "node": "CHN_C13T15",
+        "country_name": "China",
+        "industry_name": "C13T15",
+        "value": 1918.5035782
+      },
+      {
+        "rank": 14,
+        "node": "USA_N",
+        "country_name": "United States",
+        "industry_name": "Administrative and support services",
+        "value": 1849.3476910000002
+      },
+      {
+        "rank": 15,
+        "node": "USA_P",
+        "country_name": "United States",
+        "industry_name": "P",
+        "value": 1717.5722331999998
+      },
+      {
+        "rank": 16,
+        "node": "CHN_C20",
+        "country_name": "China",
+        "industry_name": "Chemicals manufacturing",
+        "value": 1649.082932
+      },
+      {
+        "rank": 17,
+        "node": "CHN_K",
+        "country_name": "China",
+        "industry_name": "Financial and insurance activities",
+        "value": 1596.1869776
+      },
+      {
+        "rank": 18,
+        "node": "CHN_C28",
+        "country_name": "China",
+        "industry_name": "Machinery and equipment manufacturing",
+        "value": 1581.0297429
+      },
+      {
+        "rank": 19,
+        "node": "USA_I",
+        "country_name": "United States",
+        "industry_name": "Accommodation and food services",
+        "value": 1397.0558684
+      },
+      {
+        "rank": 20,
+        "node": "CHN_C24A",
+        "country_name": "China",
+        "industry_name": "Basic iron and steel manufacturing",
+        "value": 1391.1742023
+      }
+    ],
+    "edge_threshold_sensitivity": [
+      {
+        "min_flow_million_USD": 0.0,
+        "edge_count": 10166696,
+        "density": 0.6199790833889789,
+        "mean_out_degree": 2510.295308641975,
+        "isolates": 122,
+        "weak_component_count": 123,
+        "largest_weak_component_nodes": 3928
+      },
+      {
+        "min_flow_million_USD": 0.01,
+        "edge_count": 4531407,
+        "density": 0.2763314215672823,
+        "mean_out_degree": 1118.865925925926,
+        "isolates": 135,
+        "weak_component_count": 136,
+        "largest_weak_component_nodes": 3915
+      },
+      {
+        "min_flow_million_USD": 0.1,
+        "edge_count": 2320570,
+        "density": 0.14151154529848858,
+        "mean_out_degree": 572.9802469135802,
+        "isolates": 154,
+        "weak_component_count": 155,
+        "largest_weak_component_nodes": 3896
+      },
+      {
+        "min_flow_million_USD": 1.0,
+        "edge_count": 896358,
+        "density": 0.054661141754251165,
+        "mean_out_degree": 221.32296296296298,
+        "isolates": 207,
+        "weak_component_count": 208,
+        "largest_weak_component_nodes": 3843
+      },
+      {
+        "min_flow_million_USD": 10.0,
+        "edge_count": 256248,
+        "density": 0.015626354929886666,
+        "mean_out_degree": 63.27111111111111,
+        "isolates": 390,
+        "weak_component_count": 391,
+        "largest_weak_component_nodes": 3660
+      },
+      {
+        "min_flow_million_USD": 100.0,
+        "edge_count": 56563,
+        "density": 0.003449289414548326,
+        "mean_out_degree": 13.966172839506173,
+        "isolates": 1021,
+        "weak_component_count": 1027,
+        "largest_weak_component_nodes": 3019
+      }
+    ],
+    "units": "Flow and strength values in million current USD. Excludes self-loops for graph degree/strength metrics.",
+    "interpretation": "Structural results describe the annual 2022 ICIO table; they are not observed disruption outcomes."
+  },
+  "refined_model_metadata": {},
+  "sis_summary": [
+    {
+      "model": "unweighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "0.7",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.026143843915766133",
+      "peak_output_weighted_disruption_sd": "0.002119108702540721",
+      "peak_output_weighted_disruption_median": "0.025579745354002106",
+      "cumulative_output_weighted_disruption_mean": "0.10134226986964773",
+      "cumulative_output_weighted_disruption_sd": "0.08532176984231579",
+      "cumulative_output_weighted_disruption_median": "0.07673923606200632",
+      "final_output_weighted_disruption_mean": "1.2703539628822566e-06",
+      "final_output_weighted_disruption_sd": "1.2703539628822564e-05",
+      "final_output_weighted_disruption_median": "0.0",
+      "peak_node_fraction_mean": "0.0016524216524216526",
+      "peak_node_fraction_sd": "0.0012489833275547509",
+      "peak_node_fraction_median": "0.000949667616334283"
+    },
+    {
+      "model": "unweighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "1.0",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.027313872468291797",
+      "peak_output_weighted_disruption_sd": "0.004844898121947071",
+      "peak_output_weighted_disruption_median": "0.025612396787309373",
+      "cumulative_output_weighted_disruption_mean": "0.1429442652303669",
+      "cumulative_output_weighted_disruption_sd": "0.13510979710505538",
+      "cumulative_output_weighted_disruption_median": "0.1186036397093677",
+      "final_output_weighted_disruption_mean": "0.0013130921754880517",
+      "final_output_weighted_disruption_sd": "0.005329995007789418",
+      "final_output_weighted_disruption_median": "0.0",
+      "peak_node_fraction_mean": "0.0037321937321937323",
+      "peak_node_fraction_sd": "0.004865373975006148",
+      "peak_node_fraction_median": "0.001899335232668566"
+    },
+    {
+      "model": "unweighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "1.4",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.0514715377456528",
+      "peak_output_weighted_disruption_sd": "0.049310501989793316",
+      "peak_output_weighted_disruption_median": "0.02558041979920441",
+      "cumulative_output_weighted_disruption_mean": "0.4246753788046499",
+      "cumulative_output_weighted_disruption_sd": "0.5857216254888028",
+      "cumulative_output_weighted_disruption_median": "0.10357317026940718",
+      "final_output_weighted_disruption_mean": "0.02738512383721923",
+      "final_output_weighted_disruption_sd": "0.05314961106157418",
+      "final_output_weighted_disruption_median": "0.0",
+      "peak_node_fraction_mean": "0.02682811016144349",
+      "peak_node_fraction_sd": "0.044775975906666765",
+      "peak_node_fraction_median": "0.001899335232668566"
+    },
+    {
+      "model": "weighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "0.7",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.05264565274925706",
+      "peak_output_weighted_disruption_sd": "0.03572804398576547",
+      "peak_output_weighted_disruption_median": "0.03962963811940087",
+      "cumulative_output_weighted_disruption_mean": "0.3547676918636472",
+      "cumulative_output_weighted_disruption_sd": "0.4776397343778575",
+      "cumulative_output_weighted_disruption_median": "0.16718981252543968",
+      "final_output_weighted_disruption_mean": "0.0003177934745806228",
+      "final_output_weighted_disruption_sd": "0.0011119450551599175",
+      "final_output_weighted_disruption_median": "0.0",
+      "peak_node_fraction_mean": "0.008461538461538461",
+      "peak_node_fraction_sd": "0.007764681517329578",
+      "peak_node_fraction_median": "0.006172839506172839"
+    },
+    {
+      "model": "weighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "1.0",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.05908225520559914",
+      "peak_output_weighted_disruption_sd": "0.03872118045573965",
+      "peak_output_weighted_disruption_median": "0.04701967332200001",
+      "cumulative_output_weighted_disruption_mean": "0.48472427234290394",
+      "cumulative_output_weighted_disruption_sd": "0.5577236850760687",
+      "cumulative_output_weighted_disruption_median": "0.3076623805735432",
+      "final_output_weighted_disruption_mean": "0.0022977813129373055",
+      "final_output_weighted_disruption_sd": "0.006253588958459041",
+      "final_output_weighted_disruption_median": "0.0",
+      "peak_node_fraction_mean": "0.014871794871794873",
+      "peak_node_fraction_sd": "0.013118224784040204",
+      "peak_node_fraction_median": "0.011396011396011397"
+    },
+    {
+      "model": "weighted_SIS",
+      "source_type": "top_out_strength",
+      "beta_over_beta_critical": "1.4",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.10960376905687273",
+      "peak_output_weighted_disruption_sd": "0.08242889877047614",
+      "peak_output_weighted_disruption_median": "0.08811779729601725",
+      "cumulative_output_weighted_disruption_mean": "1.8939839850447078",
+      "cumulative_output_weighted_disruption_sd": "1.9585134387918013",
+      "cumulative_output_weighted_disruption_median": "1.0752584120753075",
+      "final_output_weighted_disruption_mean": "0.05696004998442228",
+      "final_output_weighted_disruption_sd": "0.07568109436500481",
+      "final_output_weighted_disruption_median": "0.03014436215488971",
+      "peak_node_fraction_mean": "0.07854700854700854",
+      "peak_node_fraction_sd": "0.06990866976429519",
+      "peak_node_fraction_median": "0.06362773029439696"
+    },
+    {
+      "model": "weighted_SIS",
+      "source_type": "top_page_rank",
+      "beta_over_beta_critical": "1.4",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.10358443339163642",
+      "peak_output_weighted_disruption_sd": "0.06257219523452207",
+      "peak_output_weighted_disruption_median": "0.07606066011544634",
+      "cumulative_output_weighted_disruption_mean": "1.642229567660627",
+      "cumulative_output_weighted_disruption_sd": "1.742601523005212",
+      "cumulative_output_weighted_disruption_median": "0.8466068128142454",
+      "final_output_weighted_disruption_mean": "0.04328979389478969",
+      "final_output_weighted_disruption_sd": "0.05723537877357297",
+      "final_output_weighted_disruption_median": "0.01608443316865403",
+      "peak_node_fraction_mean": "0.07266856600189935",
+      "peak_node_fraction_sd": "0.06016310400656839",
+      "peak_node_fraction_median": "0.05555555555555555"
+    }
+  ],
+  "intervention_summary": [
+    {
+      "strategy": "none",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.11644839290226758",
+      "peak_output_weighted_disruption_sd": "0.07874021335283497",
+      "peak_output_weighted_disruption_median": "0.11571510110408925",
+      "cumulative_output_weighted_disruption_mean": "2.016126950109311",
+      "cumulative_output_weighted_disruption_sd": "1.6912539999351737",
+      "cumulative_output_weighted_disruption_median": "1.8209214900519815",
+      "final_output_weighted_disruption_mean": "0.05426930752601252",
+      "final_output_weighted_disruption_sd": "0.059405140691623746",
+      "final_output_weighted_disruption_median": "0.03980048355864514"
+    },
+    {
+      "strategy": "top_out_strength",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.07371309787577643",
+      "peak_output_weighted_disruption_sd": "0.048855087550020077",
+      "peak_output_weighted_disruption_median": "0.0559695207681248",
+      "cumulative_output_weighted_disruption_mean": "0.8351212416348268",
+      "cumulative_output_weighted_disruption_sd": "0.8182125483639978",
+      "cumulative_output_weighted_disruption_median": "0.6574811427371441",
+      "final_output_weighted_disruption_mean": "0.011245613427846024",
+      "final_output_weighted_disruption_sd": "0.017590397188678913",
+      "final_output_weighted_disruption_median": "0.004450934112232848"
+    },
+    {
+      "strategy": "top_PageRank",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.07491451080558258",
+      "peak_output_weighted_disruption_sd": "0.048741123325964565",
+      "peak_output_weighted_disruption_median": "0.0624668341411894",
+      "cumulative_output_weighted_disruption_mean": "0.8810780697421998",
+      "cumulative_output_weighted_disruption_sd": "0.84536470514814",
+      "cumulative_output_weighted_disruption_median": "0.730137902468029",
+      "final_output_weighted_disruption_mean": "0.012914187096351297",
+      "final_output_weighted_disruption_sd": "0.019905114441996292",
+      "final_output_weighted_disruption_median": "0.005633983245828155"
+    },
+    {
+      "strategy": "random_protection",
+      "n_runs": "100",
+      "peak_output_weighted_disruption_mean": "0.10661363163919521",
+      "peak_output_weighted_disruption_sd": "0.06972901747999007",
+      "peak_output_weighted_disruption_median": "0.09675548143235378",
+      "cumulative_output_weighted_disruption_mean": "1.736752243536218",
+      "cumulative_output_weighted_disruption_sd": "1.4865815598253012",
+      "cumulative_output_weighted_disruption_median": "1.5958627587099383",
+      "final_output_weighted_disruption_mean": "0.040974652278915974",
+      "final_output_weighted_disruption_sd": "0.048318332523002105",
+      "final_output_weighted_disruption_median": "0.02484365934589724"
+    }
+  ],
+  "paired_intervention_tests": [
+    {
+      "metric": "peak_output_weighted_disruption",
+      "strategy": "top_out_strength",
+      "n_pairs": "100",
+      "baseline_mean": "0.11644839290226758",
+      "strategy_mean": "0.07371309787577643",
+      "mean_absolute_reduction": "0.04273529502649114",
+      "relative_reduction_vs_baseline": "0.36698913537053174",
+      "paired_difference_ci95_low": "0.03178587471850883",
+      "paired_difference_ci95_high": "0.05368471533447346",
+      "paired_t_pvalue": "8.434327900911352e-12"
+    },
+    {
+      "metric": "peak_output_weighted_disruption",
+      "strategy": "top_PageRank",
+      "n_pairs": "100",
+      "baseline_mean": "0.11644839290226758",
+      "strategy_mean": "0.07491451080558258",
+      "mean_absolute_reduction": "0.04153388209668499",
+      "relative_reduction_vs_baseline": "0.3566720077583501",
+      "paired_difference_ci95_low": "0.030947524182631542",
+      "paired_difference_ci95_high": "0.052120240010738436",
+      "paired_t_pvalue": "6.9185946811866916e-12"
+    },
+    {
+      "metric": "peak_output_weighted_disruption",
+      "strategy": "random_protection",
+      "n_pairs": "100",
+      "baseline_mean": "0.11644839290226758",
+      "strategy_mean": "0.10661363163919521",
+      "mean_absolute_reduction": "0.00983476126307236",
+      "relative_reduction_vs_baseline": "0.08445596386483793",
+      "paired_difference_ci95_low": "0.005134593902587841",
+      "paired_difference_ci95_high": "0.014534928623556879",
+      "paired_t_pvalue": "6.99485861607215e-05"
+    },
+    {
+      "metric": "cumulative_output_weighted_disruption",
+      "strategy": "top_out_strength",
+      "n_pairs": "100",
+      "baseline_mean": "2.016126950109311",
+      "strategy_mean": "0.8351212416348268",
+      "mean_absolute_reduction": "1.1810057084744843",
+      "relative_reduction_vs_baseline": "0.5857794363645861",
+      "paired_difference_ci95_low": "0.9425421182402597",
+      "paired_difference_ci95_high": "1.4194692987087087",
+      "paired_t_pvalue": "2.609361414079667e-16"
+    },
+    {
+      "metric": "cumulative_output_weighted_disruption",
+      "strategy": "top_PageRank",
+      "n_pairs": "100",
+      "baseline_mean": "2.016126950109311",
+      "strategy_mean": "0.8810780697421998",
+      "mean_absolute_reduction": "1.1350488803671113",
+      "relative_reduction_vs_baseline": "0.5629848260822915",
+      "paired_difference_ci95_low": "0.9047260889702619",
+      "paired_difference_ci95_high": "1.3653716717639608",
+      "paired_t_pvalue": "3.3306859724458943e-16"
+    },
+    {
+      "metric": "cumulative_output_weighted_disruption",
+      "strategy": "random_protection",
+      "n_pairs": "100",
+      "baseline_mean": "2.016126950109311",
+      "strategy_mean": "1.736752243536218",
+      "mean_absolute_reduction": "0.2793747065730932",
+      "relative_reduction_vs_baseline": "0.1385699975678347",
+      "paired_difference_ci95_low": "0.19821653975365666",
+      "paired_difference_ci95_high": "0.36053287339252976",
+      "paired_t_pvalue": "6.934924818348396e-10"
+    },
+    {
+      "metric": "final_output_weighted_disruption",
+      "strategy": "top_out_strength",
+      "n_pairs": "100",
+      "baseline_mean": "0.05426930752601252",
+      "strategy_mean": "0.011245613427846024",
+      "mean_absolute_reduction": "0.0430236940981665",
+      "relative_reduction_vs_baseline": "0.7927813355190548",
+      "paired_difference_ci95_low": "0.0326505605461541",
+      "paired_difference_ci95_high": "0.05339682765017889",
+      "paired_t_pvalue": "7.708603717432947e-13"
+    },
+    {
+      "metric": "final_output_weighted_disruption",
+      "strategy": "top_PageRank",
+      "n_pairs": "100",
+      "baseline_mean": "0.05426930752601252",
+      "strategy_mean": "0.012914187096351297",
+      "mean_absolute_reduction": "0.041355120429661225",
+      "relative_reduction_vs_baseline": "0.762035159741789",
+      "paired_difference_ci95_low": "0.0316249159960456",
+      "paired_difference_ci95_high": "0.051085324863276854",
+      "paired_t_pvalue": "2.8063193641204514e-13"
+    },
+    {
+      "metric": "final_output_weighted_disruption",
+      "strategy": "random_protection",
+      "n_pairs": "100",
+      "baseline_mean": "0.05426930752601252",
+      "strategy_mean": "0.040974652278915974",
+      "mean_absolute_reduction": "0.013294655247096549",
+      "relative_reduction_vs_baseline": "0.24497558294297594",
+      "paired_difference_ci95_low": "0.00826141003584463",
+      "paired_difference_ci95_high": "0.018327900458348468",
+      "paired_t_pvalue": "9.037885821412263e-07"
+    }
+  ],
+  "source_impact_correlations_exploratory": {
+    "out_strength_vs_peak_impact": {
+      "rho": 0.9108391608391608,
+      "pvalue": 6.742000927549565e-26
+    },
+    "out_strength_vs_cumulative_impact": {
+      "rho": 0.8822989510489511,
+      "pvalue": 2.724709668498288e-22
+    },
+    "pagerank_vs_peak_impact": {
+      "rho": 0.8714597902097901,
+      "pvalue": 3.686561159101599e-21
+    },
+    "pagerank_vs_cumulative_impact": {
+      "rho": 0.8244755244755245,
+      "pvalue": 3.1897717512719466e-17
+    },
+    "gross_output_vs_peak_impact": {
+      "rho": 0.9009178321678323,
+      "pvalue": 1.605194141814548e-24
+    },
+    "out_degree_vs_peak_impact": {
+      "rho": 0.3074912704701084,
+      "pvalue": 0.012714752931169911
+    },
+    "candidate_set_size": 65,
+    "candidate_set_note": "Stratified union of top-20 nodes by five structural/output metrics and 20 random active nodes; correlations are exploratory and not population-wide causal estimates."
+  },
+  "threshold_cascade_runs": [
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.1",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "12",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.15",
+      "cascade_nodes": "78",
+      "cascade_fraction": "0.07407407407407407",
+      "steps": "7",
+      "output_weighted_cascade_fraction": "0.2651764644759392"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.2",
+      "cascade_nodes": "77",
+      "cascade_fraction": "0.0731244064577398",
+      "steps": "11",
+      "output_weighted_cascade_fraction": "0.26515258634278843"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.025579745354002106"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.025579745354002106"
+    },
+    {
+      "source_type": "top_out_strength",
+      "source_node": "USA_Professional-admin_services",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.025579745354002106"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "4",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.1",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "11",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.15",
+      "cascade_nodes": "93",
+      "cascade_fraction": "0.08831908831908832",
+      "steps": "13",
+      "output_weighted_cascade_fraction": "0.09453835917923824"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.2",
+      "cascade_nodes": "18",
+      "cascade_fraction": "0.017094017094017096",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "0.07544280488903737"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.05150479391989187"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.05150479391989187"
+    },
+    {
+      "source_type": "top_page_rank",
+      "source_node": "CHN_Metals-machinery-electronics-transport",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.05150479391989187"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "10",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.05",
+      "cascade_nodes": "14",
+      "cascade_fraction": "0.013295346628679962",
+      "steps": "4",
+      "output_weighted_cascade_fraction": "0.000924627408687248"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.1",
+      "cascade_nodes": "14",
+      "cascade_fraction": "0.013295346628679962",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "0.000924627408687248"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.15",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "0.00092282337178196"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "6.272923232971726e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "6.272923232971726e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "6.272923232971726e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BGR_Construction",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "6.272923232971726e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "8",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "19",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.1",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.004835484406539008"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.15",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "4",
+      "output_weighted_cascade_fraction": "0.004835484406539008"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003976592934820553"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003976592934820553"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003976592934820553"
+    },
+    {
+      "source_type": "random",
+      "source_node": "AUT_Professional-admin_services",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003976592934820553"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "7",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "15",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.1",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "0.008115727824919983"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.15",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "7",
+      "output_weighted_cascade_fraction": "0.008115727824919983"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003894286376640482"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003894286376640482"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003894286376640482"
+    },
+    {
+      "source_type": "random",
+      "source_node": "TWN_Construction",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0003894286376640482"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.02",
+      "cascade_nodes": "26",
+      "cascade_fraction": "0.024691358024691357",
+      "steps": "4",
+      "output_weighted_cascade_fraction": "0.0012380190421427705"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.05",
+      "cascade_nodes": "26",
+      "cascade_fraction": "0.024691358024691357",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "0.0012380190421427705"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.1",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "SVN_Metals-machinery-electronics-transport",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012145292156076824"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.02",
+      "cascade_nodes": "26",
+      "cascade_fraction": "0.024691358024691357",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "0.0008308821511278661"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.05",
+      "cascade_nodes": "3",
+      "cascade_fraction": "0.002849002849002849",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "6.290113221693548e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.1",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CIV_Mining-quarrying",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.4208972941368994e-06"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "8",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "14",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.1",
+      "cascade_nodes": "2",
+      "cascade_fraction": "0.001899335232668566",
+      "steps": "2",
+      "output_weighted_cascade_fraction": "9.48976310001587e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "9.309359409487056e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "9.309359409487056e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "9.309359409487056e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "9.309359409487056e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "POL_Mining-quarrying",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "9.309359409487056e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.02",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.0036836821492436922"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.05",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "4",
+      "output_weighted_cascade_fraction": "0.0036836821492436922"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.1",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "PHL_Mining-quarrying",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "3.600403396315356e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "13",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.1",
+      "cascade_nodes": "26",
+      "cascade_fraction": "0.024691358024691357",
+      "steps": "9",
+      "output_weighted_cascade_fraction": "0.007861180423145292"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0007187451329985916"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0007187451329985916"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0007187451329985916"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0007187451329985916"
+    },
+    {
+      "source_type": "random",
+      "source_node": "BEL_Chemicals-petroleum-minerals",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0007187451329985916"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "6",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.05",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "10",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.1",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "20",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00029088045264678993"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00029088045264678993"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00029088045264678993"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00029088045264678993"
+    },
+    {
+      "source_type": "random",
+      "source_node": "NOR_Trade",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00029088045264678993"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.02",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.0011648058471787329"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.05",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.0011648058471787329"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.1",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "5",
+      "output_weighted_cascade_fraction": "0.0011648058471787329"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.15",
+      "cascade_nodes": "3",
+      "cascade_fraction": "0.002849002849002849",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.0003702458650914272"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0001652899562664711"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0001652899562664711"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0001652899562664711"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MAR_Food-textiles-wood-paper",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.0001652899562664711"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.02",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "2",
+      "output_weighted_cascade_fraction": "0.0005536715298776922"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.05",
+      "cascade_nodes": "13",
+      "cascade_fraction": "0.012345679012345678",
+      "steps": "3",
+      "output_weighted_cascade_fraction": "0.0005536715298776922"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.1",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "CRI_Finance-real_estate",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "5.366521700772136e-05"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.02",
+      "cascade_nodes": "1052",
+      "cascade_fraction": "0.9990503323836657",
+      "steps": "8",
+      "output_weighted_cascade_fraction": "1.0"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.05",
+      "cascade_nodes": "28",
+      "cascade_fraction": "0.026590693257359924",
+      "steps": "7",
+      "output_weighted_cascade_fraction": "0.005289040071080171"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.1",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.15",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.2",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.3",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.4",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    },
+    {
+      "source_type": "random",
+      "source_node": "MYS_Utilities",
+      "theta": "0.5",
+      "cascade_nodes": "1",
+      "cascade_fraction": "0.000949667616334283",
+      "steps": "1",
+      "output_weighted_cascade_fraction": "0.00012533457803703184"
+    }
+  ],
+  "interpretation": "ICIO observations are annual monetary flows. SIS and threshold-cascade results are counterfactual scenarios under assumed parameters; H(t) represents gross-output-weighted disrupted-node share, not observed lost output or GDP."
+}
