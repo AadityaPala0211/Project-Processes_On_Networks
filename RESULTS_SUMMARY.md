@@ -1,4 +1,26 @@
-# Computed Results Summary — OECD ICIO 2022
+# Results Summary — Signed Shock Propagation and Historical Baseline
+
+## New signed model: status and target comparisons
+
+The added model in `code/signed_shock_propagation.py` represents both (a) adverse pressure that travels from a disrupted supplier to its buyers and (b) positive opportunity signals allocated to plausible alternative suppliers. The signed state is dimensionless and bounded. It is not a measurement of actual output lost or gained.
+
+The raw OECD ICIO CSV was not present in the repository at this revision. Therefore, the model code and synthetic-network tests are committed, but **the full ICIO signed-shock scenario tables have not been computed in this commit**. Run the script on the same local `2022_SML.csv` used for the baseline to generate the tables and figures. No signed-scenario result values are invented here.
+
+Stored baseline structural rankings select these targets (flow-strength-based, not GDP-based):
+
+| Scenario | Representative target | Baseline flow evidence |
+|---|---|---|
+| Highest-flow activity | `USA_G` — wholesale/retail trade | Activity G totals about US$9.291T outgoing intermediate flows; USA_G contributes about US$1.971T |
+| Lowest positive-flow activity | `CHN_C301` — building of ships and boats | Activity C301 totals about US$83.3B; CHN_C301 contributes about US$22.9B |
+| Oil illustration | `RUS_B06` — crude petroleum and natural gas extraction | Node out-strength about US$165.5B in the stored baseline |
+
+Household own-use activity `T` is excluded from the low-industry target because it has zero positive supplier flow in the stored results. Venezuela may be grouped inside Rest of World in the country coverage; a modelled ROW opportunity must not be described as a Venezuela-specific gain without separate country-level evidence. B06 combines oil and natural gas extraction.
+
+## What was tested
+
+Four unit tests pass on a small synthetic network. They verify buyer input-share normalization, same-industry-only substitute edges, the appearance of both negative and positive states, and initial shock severity. These tests validate the code mechanics, not the realism of parameters or economic forecasts.
+
+## Historical results from the previous model
 
 ## Structural network (actual input data)
 
