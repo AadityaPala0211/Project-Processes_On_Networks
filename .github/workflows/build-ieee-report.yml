@@ -19,7 +19,7 @@ jobs:
       - name: Check out the report branch
         uses: actions/checkout@v4
         with:
-          ref: \${{ github.ref_name }}
+          ref: ${{ github.ref_name }}
           persist-credentials: true
 
       - name: Compile IEEEtran LaTeX report
