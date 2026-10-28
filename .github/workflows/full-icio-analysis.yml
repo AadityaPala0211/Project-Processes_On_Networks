@@ -1,0 +1,51 @@
+name: Full ICIO linear vs nonlinear analysis
+
+on:
+  push:
+    branches:
+      - analysis/linear-vs-nonlinear-icio
+    paths:
+      - "master.py"
+      - "analysis/**"
+      - "tests/**"
+      - "pyproject.toml"
+      - ".github/workflows/full-icio-analysis.yml"
+      - "data/2022_SML.csv"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  run-full-dataset:
+    runs-on: ubuntu-latest
+    timeout-minutes: 60
+    steps:
+      - name: Checkout branch including the full ICIO input
+        uses: actions/checkout@v4
+        with:
+          ref: \${{ github.ref_name }}
+          persist-credentials: true
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install uv
+        uses: astral-sh/setup-uv@v5
+        with:
+          enable-cache: true
+
+      - name: Run unit tests
+        run: uv run python -m unittest discover -s tests -v
+
+      - name: Run complete analysis from the single master
+        run: uv run master.py
+
+      - name: Commit generated results and images
+        uses: stefanzweifel/git-auto-commit-action@v5
+        with:
+          commit_message: "Add full ICIO structural and dynamic results"
+          file_pattern: results/linear_nonlinear/** images/linear_nonlinear/**
+          skip_fetch: false
