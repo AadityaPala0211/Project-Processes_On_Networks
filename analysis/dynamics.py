@@ -56,8 +56,8 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
     affected_max = (state >= 0.01).sum(axis=0).astype(int)
     affected_peak = affected_max.copy()
     affected_final = affected_max.copy()
-    converged = False
-    used_steps = 0
+    converged_each = np.zeros(count, dtype=bool)
+    actual_steps = np.zeros(count, dtype=int)
     traces = []
 
     def append_trace(step, values):
@@ -75,6 +75,7 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
     append_trace(0, state)
 
     for step in range(1, max_steps + 1):
+        was_converged = converged_each.copy()
         exposure = np.asarray(Q @ state)
         if model == "linear":
             next_state = (1.0 - recovery_rates)[None, :] * state + betas[None, :] * exposure
@@ -84,9 +85,19 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
         else:
             raise ValueError(f"Unknown model: {model}")
         next_state = np.clip(next_state, 0.0, 1.0)
-        # The source is externally held at the chosen severity for rounds 0..hold_steps-1.
+        # Externally hold the selected source during rounds 0..hold_steps-1.
         if step < hold_steps:
             next_state[sources, np.arange(count)] = severities
+        # Freeze columns that have already reached a stable state. We still count
+        # their stationary state in the cumulative metric through the common max_steps
+        # horizon, so cumulative values remain comparable across source scenarios.
+        if np.any(was_converged):
+            next_state[:, was_converged] = state[:, was_converged]
+        delta_by_source = np.max(np.abs(next_state - state), axis=0)
+        actual_steps[~was_converged] = step
+        newly_converged = (~was_converged) & (step >= hold_steps) & (delta_by_source < tolerance)
+        converged_each |= newly_converged
+
         current_share = np.asarray(weights @ next_state).ravel()
         newly_affected = (next_state >= 0.01).sum(axis=0).astype(int)
         bigger = current_share > peak
@@ -97,12 +108,7 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
         affected_final = newly_affected
         cum += current_share
         append_trace(step, next_state)
-        delta = float(np.max(np.abs(next_state - state)))
         state = next_state
-        used_steps = step
-        if step >= hold_steps and delta < tolerance:
-            converged = True
-            break
 
     final_share = np.asarray(weights @ state).ravel()
     metrics = []
@@ -111,7 +117,7 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
             "source_index": int(sources[j]), "model": model,
             "initial_disruption": float(severities[j]), "beta": float(betas[j]),
             "recovery_rate": float(recovery_rates[j]), "source_hold_steps": int(hold_steps),
-            "max_steps": int(max_steps), "actual_steps": int(used_steps),
+            "max_steps": int(max_steps), "actual_steps": int(actual_steps[j]),
             "peak_output_weighted_disruption": float(peak[j]), "peak_step": int(peak_step[j]),
             "cumulative_output_weighted_disruption_share_steps": float(cum[j]),
             "final_output_weighted_disruption": float(final_share[j]),
@@ -119,7 +125,7 @@ def simulate_batch(Q, output_weights, source_indices, severities, betas, recover
             "affected_nodes_at_peak_1pct": int(affected_peak[j]),
             "final_affected_nodes_at_1pct": int(affected_final[j]),
             "final_mean_node_disruption": float(state[:, j].mean()),
-            "converged": bool(converged),
+            "converged": bool(converged_each[j]),
         })
     return metrics, traces
 
