@@ -243,7 +243,7 @@ def main():
     )
 
     print(f"Nodes: {n}", flush=True)
-    print(f"Binary directed edges (excluding self-loops): {edge_count:,}", flush=True)
+    print(f"Binary directed edges (excluding self-loops): {nonself_edge_count:,}", flush=True)
     print(f"Binary density: {metadata['binary_density']:.6f}", flush=True)
     print(f"Saved weighted adjacency: {weighted_path}", flush=True)
     print(f"Saved binary adjacency: {binary_path}", flush=True)
