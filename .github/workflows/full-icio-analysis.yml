@@ -24,7 +24,7 @@ jobs:
       - name: Checkout branch including the full ICIO input
         uses: actions/checkout@v4
         with:
-          ref: \${{ github.ref_name }}
+          ref: ${{ github.ref_name }}
           persist-credentials: true
 
       - name: Set up Python
