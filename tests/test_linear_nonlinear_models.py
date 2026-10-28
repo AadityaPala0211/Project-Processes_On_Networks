@@ -20,7 +20,8 @@ class LinearNonlinearTests(unittest.TestCase):
         P = build_input_share_matrix(Z)
         # Supplier-to-buyer ratios use the full buyer input total as denominator.
         self.assertAlmostEqual(float(P[0, 1]), 6 / 10)
-        self.assertAlmostEqual(float(P[1, 1]), 3 / 10)
+        self.assertEqual(float(P[1, 1]), 0.0)
+        self.assertAlmostEqual(float(P[2, 1]), 1 / 10)
         # The diagonal flow is retained in the denominator but does not propagate.
         self.assertEqual(float(P[0, 0]), 0.0)
         self.assertLessEqual(float(np.asarray(P.sum(axis=0)).max()), 1.0 + 1e-12)
