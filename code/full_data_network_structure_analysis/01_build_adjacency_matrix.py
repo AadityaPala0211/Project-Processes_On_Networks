@@ -177,20 +177,24 @@ def main():
     header, nodes, positions, out_col = discover_layout(csv_path)
     flows, gross_output = read_intermediate_block(csv_path, nodes, positions, out_col)
 
-    # For flow-network semantics, negative values are not valid edge weights.
-    matrix = flows.copy() if args.keep_negative_flows else np.maximum(flows, 0.0)
-    if not args.include_self_loops:
-        np.fill_diagonal(matrix, 0.0)
+    # Preserve positive accounting flows before altering the source array.
+    # This also avoids a second dense copy of the 4,050 x 4,050 matrix.
+    raw_positive = sparse.csr_matrix(np.maximum(flows, 0.0))
+    raw_positive.eliminate_zeros()
+    self_total = float(raw_positive.diagonal().sum())
 
-    weighted = sparse.csr_matrix(matrix)
+    # For flow-network semantics, negative values are not valid edge weights.
+    # Modify in place to reduce peak memory usage.
+    if not args.keep_negative_flows:
+        np.maximum(flows, 0.0, out=flows)
+    if not args.include_self_loops:
+        np.fill_diagonal(flows, 0.0)
+
+    weighted = sparse.csr_matrix(flows)
     weighted.eliminate_zeros()
     adjacency = weighted.copy()
     adjacency.data = (adjacency.data > 0).astype(np.uint8)
     adjacency.eliminate_zeros()
-
-    # Preserve the raw intermediate block too, with self-flows, for accounting.
-    raw_positive = sparse.csr_matrix(np.maximum(flows, 0.0))
-    raw_positive.eliminate_zeros()
 
     weighted_path = out_dir / "adjacency_weighted_full.npz"
     binary_path = out_dir / "adjacency_binary_full.npz"
@@ -224,8 +228,9 @@ def main():
         "positive_self_flow_total_million_usd": self_total,
         "positive_intermediate_flow_total_excluding_self_loops_million_usd": weighted_total_ex_self,
         "binary_edge_count": edge_count,
+        "binary_edge_count_excluding_self_loops": nonself_edge_count,
         "possible_directed_edges_excluding_self_loops": possible,
-        "binary_density": float(edge_count / possible) if possible else 0.0,
+        "binary_density": float(nonself_edge_count / possible) if possible else 0.0,
         "weighted_matrix_file": weighted_path.name,
         "binary_matrix_file": binary_path.name,
         "raw_positive_flow_matrix_file": raw_flow_path.name,
