@@ -9,6 +9,7 @@ from pathlib import Path
 
 import numpy as np
 from scipy import sparse
+from scipy.sparse.linalg import eigs
 from scipy.stats import spearmanr
 
 BASELINE = {"initial_disruption": 0.20, "beta": 0.30, "recovery_rate": 0.10,
@@ -16,6 +17,31 @@ BASELINE = {"initial_disruption": 0.20, "beta": 0.30, "recovery_rate": 0.10,
 SENSITIVITY = {"initial_disruption": [0.10, 0.20, 0.40], "beta": [0.10, 0.30, 0.50],
                "recovery_rate": [0.05, 0.10, 0.20], "source_hold_steps": 3, "max_steps": 50}
 MODEL_LABELS = {"linear": "Clipped linear approximation", "nonlinear": "SIS-inspired saturating nonlinear model"}
+
+
+def estimate_spectral_radius(Q: sparse.csr_matrix) -> float:
+    """Estimate spectral radius of the nonnegative dependency influence matrix."""
+    Q = Q.tocsr()
+    if Q.shape[0] == 0 or Q.nnz == 0:
+        return 0.0
+    try:
+        values = eigs(Q, k=1, which="LM", return_eigenvectors=False, tol=1e-7, maxiter=10000)
+        return float(np.max(np.abs(values)))
+    except Exception:
+        # Deterministic power iteration fallback for unusual sparse eigensolver failures.
+        v = np.ones(Q.shape[0], dtype=float)
+        v /= np.linalg.norm(v)
+        previous = 0.0
+        for _ in range(10000):
+            w = np.asarray(Q @ v).ravel()
+            norm = float(np.linalg.norm(w))
+            if norm <= 1e-15:
+                return 0.0
+            v = w / norm
+            if abs(norm - previous) < 1e-10 * max(1.0, norm):
+                return norm
+            previous = norm
+        return previous
 
 
 def build_input_share_matrix(Z_aggregate: sparse.csr_matrix) -> sparse.csr_matrix:
@@ -222,6 +248,19 @@ def run_baseline_census(aggregate_nodes, Q, output, out_strength, pagerank, betw
         trajectories.extend(traces)
     write_csv(results_dir / "representative_trajectories.csv", trajectories)
     summary = summarize(rows, compare, out_strength, pagerank)
+    dependency_rho = estimate_spectral_radius(Q)
+    critical_beta = BASELINE["recovery_rate"] / dependency_rho if dependency_rho > 0 else None
+    summary["linearized_disease_free_stability"] = {
+        "dependency_matrix_spectral_radius": dependency_rho,
+        "approximate_beta_critical": critical_beta,
+        "baseline_beta": BASELINE["beta"],
+        "baseline_beta_over_beta_critical": BASELINE["beta"] / critical_beta if critical_beta else None,
+        "linearization_stable_at_baseline": bool(
+            critical_beta is not None and BASELINE["beta"] < critical_beta
+        ),
+        "derivation": "Near zero disruption, both models linearize to J=(1-rho)I+beta Q; the disease-free state is locally stable if beta*rho(Q)<rho.",
+        "caveat": "This is a local stability diagnostic for the un-clipped linearization, not an empirical crisis threshold. Clipping and nonlinear saturation change the global dynamics.",
+    }
     summary.update({
         "baseline_parameters": BASELINE, "sensitivity_grid": SENSITIVITY,
         "source_node_count": n, "models": MODEL_LABELS,
