@@ -1,0 +1,17 @@
+[project]
+name = "icio-network-dynamics"
+version = "0.1.0"
+description = "Full OECD ICIO structural and linear versus nonlinear disruption analysis"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26,<3",
+    "scipy>=1.11",
+    "matplotlib>=3.8",
+    "networkx>=3.2",
+]
+
+[tool.uv]
+package = false
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
