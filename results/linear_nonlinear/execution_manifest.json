@@ -1,0 +1,41 @@
+{
+  "entry_point": "master.py",
+  "run_command": "uv run master.py",
+  "input_file": "data/2022_SML.csv",
+  "results_directory": "results/linear_nonlinear",
+  "images_directory": "images/linear_nonlinear",
+  "completed_at_utc": "2026-10-28T18:22:21.585463+00:00",
+  "elapsed_seconds": 35.687656266999994,
+  "result_files": [
+    "aggregation_validation.json",
+    "analysis_report.md",
+    "baseline_dynamics_all_sources.csv",
+    "dataset_metadata.json",
+    "edge_threshold_sensitivity.csv",
+    "full_analysis_summary.json",
+    "linear_vs_nonlinear_source_comparison.csv",
+    "model_comparison_summary.json",
+    "representative_node_sensitivity.csv",
+    "representative_nodes.csv",
+    "representative_trajectories.csv",
+    "sector_flow_summary_full.csv",
+    "sensitivity_parameter_summary.csv",
+    "structural_node_metrics_country_sector.csv",
+    "structural_node_metrics_full.csv",
+    "structural_summary.json",
+    "top20_in_strength_full.csv",
+    "top20_out_strength_full.csv",
+    "top20_weighted_pagerank_full.csv"
+  ],
+  "image_files": [
+    "degree_distributions_full.png",
+    "edge_threshold_sensitivity_full.png",
+    "linear_vs_nonlinear_scatter.png",
+    "linear_vs_nonlinear_top20.png",
+    "representative_trajectories.png",
+    "sector_flow_heatmap_full.png",
+    "top20_in_strength.png",
+    "top20_out_strength.png",
+    "top20_weighted_pagerank.png"
+  ]
+}

@@ -1,0 +1,6 @@
+case,selection_rule,source_index,source_node,out_strength_million_USD,weighted_pagerank,weighted_betweenness_approx,gross_output_million_USD,baseline_nonlinear_peak_disruption,baseline_nonlinear_cumulative_disruption
+A,Highest weighted out-strength,934,USA_Finance_real_estate_professional_admin,4589124.7275,0.016389468313595782,0.12026417525773196,13137911.2108,0.3332192568000559,6.761447901017689
+B,Highest weighted PageRank as downstream-influence proxy,172,CHN_Other_manufacturing,2443363.0051999995,0.02188456907303547,0.22480670103092784,10285025.712,0.26245561224188796,4.266313809475632
+C,Highest approximate weighted betweenness,268,DEU_Other_manufacturing,461384.28140000004,0.008833562743453805,0.06465850515463918,1541738.6395999999,0.13373772169316583,1.6727671001777031
+D,Highest nonlinear cumulative impact in source census,931,USA_Wholesale_retail_trade,1971284.5843000002,0.011763717922080974,0.00977770618556701,4883363.6277,0.25402409628799266,4.1863355482975715
+E,Seeded random control from middle out-strength band,699,PAK_Chemicals_petroleum_minerals,15315.989000000003,0.00067900403235946,0.0005154639175257732,31992.9924,0.0021964795571708024,0.027905165969090477

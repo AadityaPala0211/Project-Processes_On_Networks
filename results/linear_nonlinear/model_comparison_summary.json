@@ -1,0 +1,134 @@
+{
+  "linear_model": {
+    "source_scenario_count": 972,
+    "mean_peak_disruption": 0.031342511903530414,
+    "median_peak_disruption": 0.006933349394776555,
+    "p95_peak_disruption": 0.12870015580914781,
+    "mean_cumulative_disruption_share_steps": 0.3409573890550811,
+    "mean_final_disruption": 0.031342511903530414,
+    "mean_max_affected_nodes_at_1pct": 470.8744855967078,
+    "runs_converged": 0
+  },
+  "nonlinear_model": {
+    "source_scenario_count": 972,
+    "mean_peak_disruption": 0.020744584034558693,
+    "median_peak_disruption": 0.006172747342699683,
+    "p95_peak_disruption": 0.08775575342656786,
+    "mean_cumulative_disruption_share_steps": 0.25256540586817405,
+    "mean_final_disruption": 0.020744584034558693,
+    "mean_max_affected_nodes_at_1pct": 455.798353909465,
+    "runs_converged": 0
+  },
+  "mean_paired_nonlinear_minus_linear_peak": -0.01059792786897172,
+  "median_paired_nonlinear_minus_linear_peak": -0.000653702700320025,
+  "mean_paired_nonlinear_minus_linear_cumulative": -0.08839198318690705,
+  "spearman_out_strength_vs_nonlinear_cumulative": 0.9755823477813957,
+  "spearman_pagerank_vs_nonlinear_cumulative": 0.7560489786778787,
+  "largest_nonlinear_peak_source": "USA_Finance_real_estate_professional_admin",
+  "largest_nonlinear_cumulative_source": "USA_Finance_real_estate_professional_admin",
+  "accuracy_note": "No observed outage time series are available, so this compares simulated behaviour and sensitivity, not predictive accuracy.",
+  "baseline_parameters": {
+    "initial_disruption": 0.2,
+    "beta": 0.3,
+    "recovery_rate": 0.1,
+    "source_hold_steps": 3,
+    "max_steps": 50,
+    "convergence_tolerance": 1e-07
+  },
+  "sensitivity_grid": {
+    "initial_disruption": [
+      0.1,
+      0.2,
+      0.4
+    ],
+    "beta": [
+      0.1,
+      0.3,
+      0.5
+    ],
+    "recovery_rate": [
+      0.05,
+      0.1,
+      0.2
+    ],
+    "source_hold_steps": 3,
+    "max_steps": 50
+  },
+  "source_node_count": 972,
+  "models": {
+    "linear": "Clipped linear approximation",
+    "nonlinear": "SIS-inspired saturating nonlinear model"
+  },
+  "simulation_wall_time_seconds": 22.303793643999995,
+  "representative_nodes": [
+    {
+      "case": "A",
+      "selection_rule": "Highest weighted out-strength",
+      "source_index": 934,
+      "source_node": "USA_Finance_real_estate_professional_admin",
+      "out_strength_million_USD": 4589124.7275,
+      "weighted_pagerank": 0.016389468313595782,
+      "weighted_betweenness_approx": 0.12026417525773196,
+      "gross_output_million_USD": 13137911.2108,
+      "baseline_nonlinear_peak_disruption": 0.3332192568000559,
+      "baseline_nonlinear_cumulative_disruption": 6.761447901017689
+    },
+    {
+      "case": "B",
+      "selection_rule": "Highest weighted PageRank as downstream-influence proxy",
+      "source_index": 172,
+      "source_node": "CHN_Other_manufacturing",
+      "out_strength_million_USD": 2443363.0051999995,
+      "weighted_pagerank": 0.02188456907303547,
+      "weighted_betweenness_approx": 0.22480670103092784,
+      "gross_output_million_USD": 10285025.712,
+      "baseline_nonlinear_peak_disruption": 0.26245561224188796,
+      "baseline_nonlinear_cumulative_disruption": 4.266313809475632
+    },
+    {
+      "case": "C",
+      "selection_rule": "Highest approximate weighted betweenness",
+      "source_index": 268,
+      "source_node": "DEU_Other_manufacturing",
+      "out_strength_million_USD": 461384.28140000004,
+      "weighted_pagerank": 0.008833562743453805,
+      "weighted_betweenness_approx": 0.06465850515463918,
+      "gross_output_million_USD": 1541738.6395999999,
+      "baseline_nonlinear_peak_disruption": 0.13373772169316583,
+      "baseline_nonlinear_cumulative_disruption": 1.6727671001777031
+    },
+    {
+      "case": "D",
+      "selection_rule": "Highest nonlinear cumulative impact in source census",
+      "source_index": 931,
+      "source_node": "USA_Wholesale_retail_trade",
+      "out_strength_million_USD": 1971284.5843000002,
+      "weighted_pagerank": 0.011763717922080974,
+      "weighted_betweenness_approx": 0.00977770618556701,
+      "gross_output_million_USD": 4883363.6277,
+      "baseline_nonlinear_peak_disruption": 0.25402409628799266,
+      "baseline_nonlinear_cumulative_disruption": 4.1863355482975715
+    },
+    {
+      "case": "E",
+      "selection_rule": "Seeded random control from middle out-strength band",
+      "source_index": 699,
+      "source_node": "PAK_Chemicals_petroleum_minerals",
+      "out_strength_million_USD": 15315.989000000003,
+      "weighted_pagerank": 0.00067900403235946,
+      "weighted_betweenness_approx": 0.0005154639175257732,
+      "gross_output_million_USD": 31992.9924,
+      "baseline_nonlinear_peak_disruption": 0.0021964795571708024,
+      "baseline_nonlinear_cumulative_disruption": 0.027905165969090477
+    }
+  ],
+  "representative_selection_note": {
+    "distinct_sources": 5,
+    "random_control_quantile_band": [
+      0.2,
+      0.8
+    ]
+  },
+  "sensitivity_scenario_count": 270,
+  "interpretation": "Comparison quantifies behaviour under matched assumptions, not predictive accuracy: annual ICIO contains no time-stamped disruption labels."
+}

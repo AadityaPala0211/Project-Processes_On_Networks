@@ -1,0 +1,1328 @@
+{
+  "dataset": {
+    "source_file": "/home/runner/work/Project-Processes_On_Networks/Project-Processes_On_Networks/data/2022_SML.csv",
+    "source_file_bytes": 90116498,
+    "raw_country_industry_nodes": 4050,
+    "flow_matrix_shape": [
+      4050,
+      4050
+    ],
+    "parsed_country_industry_rows": 4050,
+    "negative_flow_entries_clipped_to_zero": 0,
+    "gross_output_fallback_used_OUT_row": false,
+    "flow_units": "millions of current USD",
+    "direction": "supplier row -> purchasing industry column",
+    "sha256": "c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc",
+    "run_timestamp_utc": "2026-10-28T18:22:21.582887+00:00",
+    "python_version": "3.12.15",
+    "numpy_version": "2.5.4",
+    "scipy_version": "1.18.1",
+    "detailed_node_count": 4050
+  },
+  "structural_summary": {
+    "node_count": 4050,
+    "raw_positive_intermediate_flow_total_million_USD": 103410084.84310001,
+    "self_flow_total_million_USD": 22282244.719400004,
+    "self_flow_share_of_positive_intermediate_flow": 0.2154745811610924,
+    "off_diagonal_flow_total_million_USD": 81127840.1237,
+    "positive_off_diagonal_edge_count": 10166696,
+    "possible_off_diagonal_edge_count": 16398450,
+    "positive_off_diagonal_density": 0.6199790833889789,
+    "out_strength_gini": 0.8625271265976338,
+    "in_strength_gini": 0.8524693475099212,
+    "active_node_count": 3928,
+    "spearman_out_vs_in_strength": 0.9216961560287044,
+    "spearman_out_strength_vs_weighted_pagerank": 0.7986206391276127,
+    "spearman_out_strength_vs_gross_output": 0.9091194738485648,
+    "top20_out_strength": [
+      {
+        "node": "USA_M",
+        "country_code": "USA",
+        "activity_code": "M",
+        "out_degree": 3884,
+        "in_degree": 3809,
+        "out_strength_million_USD": 2196154.3839000002,
+        "in_strength_million_USD": 743423.4460000002,
+        "weighted_pagerank": 0.004126353811015348,
+        "gross_output_million_USD": 3258688.2538
+      },
+      {
+        "node": "USA_G",
+        "country_code": "USA",
+        "activity_code": "G",
+        "out_degree": 3901,
+        "in_degree": 3854,
+        "out_strength_million_USD": 1971284.5843,
+        "in_strength_million_USD": 2058016.2272999994,
+        "weighted_pagerank": 0.010293238452870931,
+        "gross_output_million_USD": 4883363.6277
+      },
+      {
+        "node": "CHN_G",
+        "country_code": "CHN",
+        "activity_code": "G",
+        "out_degree": 3913,
+        "in_degree": 3773,
+        "out_strength_million_USD": 1803377.7056999998,
+        "in_strength_million_USD": 847543.7831999958,
+        "weighted_pagerank": 0.005220725714985998,
+        "gross_output_million_USD": 2648760.4997
+      },
+      {
+        "node": "USA_N",
+        "country_code": "USA",
+        "activity_code": "N",
+        "out_degree": 3864,
+        "in_degree": 3780,
+        "out_strength_million_USD": 1442330.9358,
+        "in_strength_million_USD": 576656.4848999996,
+        "weighted_pagerank": 0.00297025959460857,
+        "gross_output_million_USD": 1849347.691
+      },
+      {
+        "node": "USA_K",
+        "country_code": "USA",
+        "activity_code": "K",
+        "out_degree": 3892,
+        "in_degree": 3709,
+        "out_strength_million_USD": 1366581.4158,
+        "in_strength_million_USD": 829228.0819999995,
+        "weighted_pagerank": 0.0039479569383756834,
+        "gross_output_million_USD": 3528094.0186
+      },
+      {
+        "node": "USA_L",
+        "country_code": "USA",
+        "activity_code": "L",
+        "out_degree": 3584,
+        "in_degree": 3793,
+        "out_strength_million_USD": 1248494.4446999999,
+        "in_strength_million_USD": 1201306.8926000006,
+        "weighted_pagerank": 0.00580024517583882,
+        "gross_output_million_USD": 4501781.2474
+      },
+      {
+        "node": "CHN_A01",
+        "country_code": "CHN",
+        "activity_code": "A01",
+        "out_degree": 3227,
+        "in_degree": 3680,
+        "out_strength_million_USD": 1167973.6390999998,
+        "in_strength_million_USD": 542716.868000001,
+        "weighted_pagerank": 0.0028235168872248464,
+        "gross_output_million_USD": 2326303.5646
+      },
+      {
+        "node": "CHN_C20",
+        "country_code": "CHN",
+        "activity_code": "C20",
+        "out_degree": 3887,
+        "in_degree": 3784,
+        "out_strength_million_USD": 1023041.028,
+        "in_strength_million_USD": 715009.162699998,
+        "weighted_pagerank": 0.0030038978139338667,
+        "gross_output_million_USD": 1649082.932
+      },
+      {
+        "node": "CHN_C23",
+        "country_code": "CHN",
+        "activity_code": "C23",
+        "out_degree": 3782,
+        "in_degree": 3755,
+        "out_strength_million_USD": 1017113.4706000001,
+        "in_strength_million_USD": 620028.4691999934,
+        "weighted_pagerank": 0.0025501186056394068,
+        "gross_output_million_USD": 1262076.1708
+      },
+      {
+        "node": "CHN_C24A",
+        "country_code": "CHN",
+        "activity_code": "C24A",
+        "out_degree": 3773,
+        "in_degree": 3704,
+        "out_strength_million_USD": 1000466.3243999998,
+        "in_strength_million_USD": 710807.107699993,
+        "weighted_pagerank": 0.0029196939552163354,
+        "gross_output_million_USD": 1391174.2023
+      },
+      {
+        "node": "CHN_D",
+        "country_code": "CHN",
+        "activity_code": "D",
+        "out_degree": 1076,
+        "in_degree": 3703,
+        "out_strength_million_USD": 902007.9389999999,
+        "in_strength_million_USD": 731543.3517999959,
+        "weighted_pagerank": 0.0032981735541867166,
+        "gross_output_million_USD": 1344274.0391
+      },
+      {
+        "node": "CHN_M",
+        "country_code": "CHN",
+        "activity_code": "M",
+        "out_degree": 3845,
+        "in_degree": 3760,
+        "out_strength_million_USD": 813896.1185,
+        "in_strength_million_USD": 634382.3474999961,
+        "weighted_pagerank": 0.004455358745019179,
+        "gross_output_million_USD": 1343362.2024
+      },
+      {
+        "node": "CHN_H49",
+        "country_code": "CHN",
+        "activity_code": "H49",
+        "out_degree": 3891,
+        "in_degree": 3701,
+        "out_strength_million_USD": 808914.3264,
+        "in_strength_million_USD": 458971.34510000265,
+        "weighted_pagerank": 0.002587748082567074,
+        "gross_output_million_USD": 1113707.9803
+      },
+      {
+        "node": "CHN_K",
+        "country_code": "CHN",
+        "activity_code": "K",
+        "out_degree": 3791,
+        "in_degree": 3555,
+        "out_strength_million_USD": 806398.6748,
+        "in_strength_million_USD": 300412.28090000333,
+        "weighted_pagerank": 0.0019974034420944128,
+        "gross_output_million_USD": 1596186.9776
+      },
+      {
+        "node": "CHN_C10T12",
+        "country_code": "CHN",
+        "activity_code": "C10T12",
+        "out_degree": 3631,
+        "in_degree": 3675,
+        "out_strength_million_USD": 766961.1282,
+        "in_strength_million_USD": 1253375.7918000037,
+        "weighted_pagerank": 0.0038746179838416413,
+        "gross_output_million_USD": 2180831.4006
+      },
+      {
+        "node": "USA_J62_63",
+        "country_code": "USA",
+        "activity_code": "J62_63",
+        "out_degree": 3859,
+        "in_degree": 3608,
+        "out_strength_million_USD": 746692.359,
+        "in_strength_million_USD": 300396.41690000036,
+        "weighted_pagerank": 0.001475615845079098,
+        "gross_output_million_USD": 1337497.2332
+      },
+      {
+        "node": "CHN_C25",
+        "country_code": "CHN",
+        "activity_code": "C25",
+        "out_degree": 3882,
+        "in_degree": 3709,
+        "out_strength_million_USD": 721643.5319000001,
+        "in_strength_million_USD": 692223.9425999935,
+        "weighted_pagerank": 0.0026834608464343574,
+        "gross_output_million_USD": 1083196.8052
+      },
+      {
+        "node": "CHN_C19",
+        "country_code": "CHN",
+        "activity_code": "C19",
+        "out_degree": 3761,
+        "in_degree": 3532,
+        "out_strength_million_USD": 717470.0363,
+        "in_strength_million_USD": 566305.2158000034,
+        "weighted_pagerank": 0.001892574645378109,
+        "gross_output_million_USD": 824951.449
+      },
+      {
+        "node": "ROW_B06",
+        "country_code": "ROW",
+        "activity_code": "B06",
+        "out_degree": 3791,
+        "in_degree": 3816,
+        "out_strength_million_USD": 660870.3718999999,
+        "in_strength_million_USD": 141094.53430000003,
+        "weighted_pagerank": 0.001754752860000047,
+        "gross_output_million_USD": 794086.3198
+      },
+      {
+        "node": "USA_B06",
+        "country_code": "USA",
+        "activity_code": "B06",
+        "out_degree": 3765,
+        "in_degree": 3775,
+        "out_strength_million_USD": 629534.1388999999,
+        "in_strength_million_USD": 324297.7432,
+        "weighted_pagerank": 0.001445109906648498,
+        "gross_output_million_USD": 714042.1196
+      }
+    ],
+    "top20_in_strength": [
+      {
+        "node": "CHN_F",
+        "country_code": "CHN",
+        "activity_code": "F",
+        "out_degree": 447,
+        "in_degree": 3852,
+        "out_strength_million_USD": 65809.26350000002,
+        "in_strength_million_USD": 3263462.4154999782,
+        "weighted_pagerank": 0.012084647250216966,
+        "gross_output_million_USD": 4684114.2966
+      },
+      {
+        "node": "USA_G",
+        "country_code": "USA",
+        "activity_code": "G",
+        "out_degree": 3901,
+        "in_degree": 3854,
+        "out_strength_million_USD": 1971284.5843,
+        "in_strength_million_USD": 2058016.2272999994,
+        "weighted_pagerank": 0.010293238452870931,
+        "gross_output_million_USD": 4883363.6277
+      },
+      {
+        "node": "USA_O",
+        "country_code": "USA",
+        "activity_code": "O",
+        "out_degree": 3765,
+        "in_degree": 3834,
+        "out_strength_million_USD": 421842.47650000005,
+        "in_strength_million_USD": 1311091.7036000004,
+        "weighted_pagerank": 0.008436908872475082,
+        "gross_output_million_USD": 3428364.4137
+      },
+      {
+        "node": "CHN_C10T12",
+        "country_code": "CHN",
+        "activity_code": "C10T12",
+        "out_degree": 3631,
+        "in_degree": 3675,
+        "out_strength_million_USD": 766961.1282,
+        "in_strength_million_USD": 1253375.7918000037,
+        "weighted_pagerank": 0.0038746179838416413,
+        "gross_output_million_USD": 2180831.4006
+      },
+      {
+        "node": "USA_L",
+        "country_code": "USA",
+        "activity_code": "L",
+        "out_degree": 3584,
+        "in_degree": 3793,
+        "out_strength_million_USD": 1248494.4446999999,
+        "in_strength_million_USD": 1201306.8926000006,
+        "weighted_pagerank": 0.00580024517583882,
+        "gross_output_million_USD": 4501781.2474
+      },
+      {
+        "node": "USA_Q",
+        "country_code": "USA",
+        "activity_code": "Q",
+        "out_degree": 3545,
+        "in_degree": 3814,
+        "out_strength_million_USD": 41284.1861,
+        "in_strength_million_USD": 964945.6933999999,
+        "weighted_pagerank": 0.005735754278311034,
+        "gross_output_million_USD": 3028529.7191
+      },
+      {
+        "node": "CHN_C26",
+        "country_code": "CHN",
+        "activity_code": "C26",
+        "out_degree": 3824,
+        "in_degree": 3745,
+        "out_strength_million_USD": 603450.7351,
+        "in_strength_million_USD": 942340.5311999933,
+        "weighted_pagerank": 0.005188793573327505,
+        "gross_output_million_USD": 2136721.1775
+      },
+      {
+        "node": "USA_F",
+        "country_code": "USA",
+        "activity_code": "F",
+        "out_degree": 1660,
+        "in_degree": 3836,
+        "out_strength_million_USD": 312111.79510000005,
+        "in_strength_million_USD": 937670.5775000011,
+        "weighted_pagerank": 0.0042222620272189025,
+        "gross_output_million_USD": 2164368.041
+      },
+      {
+        "node": "CHN_C28",
+        "country_code": "CHN",
+        "activity_code": "C28",
+        "out_degree": 3852,
+        "in_degree": 3761,
+        "out_strength_million_USD": 470717.5216,
+        "in_strength_million_USD": 863996.7093999913,
+        "weighted_pagerank": 0.003949321733359679,
+        "gross_output_million_USD": 1581029.7429
+      },
+      {
+        "node": "CHN_G",
+        "country_code": "CHN",
+        "activity_code": "G",
+        "out_degree": 3913,
+        "in_degree": 3773,
+        "out_strength_million_USD": 1803377.7056999998,
+        "in_strength_million_USD": 847543.7831999958,
+        "weighted_pagerank": 0.005220725714985998,
+        "gross_output_million_USD": 2648760.4997
+      },
+      {
+        "node": "USA_K",
+        "country_code": "USA",
+        "activity_code": "K",
+        "out_degree": 3892,
+        "in_degree": 3709,
+        "out_strength_million_USD": 1366581.4158,
+        "in_strength_million_USD": 829228.0819999995,
+        "weighted_pagerank": 0.0039479569383756834,
+        "gross_output_million_USD": 3528094.0186
+      },
+      {
+        "node": "USA_C10T12",
+        "country_code": "USA",
+        "activity_code": "C10T12",
+        "out_degree": 3757,
+        "in_degree": 3824,
+        "out_strength_million_USD": 156295.76770000005,
+        "in_strength_million_USD": 760892.7848999999,
+        "weighted_pagerank": 0.00406869630592453,
+        "gross_output_million_USD": 1125141.5083
+      },
+      {
+        "node": "USA_M",
+        "country_code": "USA",
+        "activity_code": "M",
+        "out_degree": 3884,
+        "in_degree": 3809,
+        "out_strength_million_USD": 2196154.3839000002,
+        "in_strength_million_USD": 743423.4460000002,
+        "weighted_pagerank": 0.004126353811015348,
+        "gross_output_million_USD": 3258688.2538
+      },
+      {
+        "node": "CHN_D",
+        "country_code": "CHN",
+        "activity_code": "D",
+        "out_degree": 1076,
+        "in_degree": 3703,
+        "out_strength_million_USD": 902007.9389999999,
+        "in_strength_million_USD": 731543.3517999959,
+        "weighted_pagerank": 0.0032981735541867166,
+        "gross_output_million_USD": 1344274.0391
+      },
+      {
+        "node": "CHN_C20",
+        "country_code": "CHN",
+        "activity_code": "C20",
+        "out_degree": 3887,
+        "in_degree": 3784,
+        "out_strength_million_USD": 1023041.028,
+        "in_strength_million_USD": 715009.162699998,
+        "weighted_pagerank": 0.0030038978139338667,
+        "gross_output_million_USD": 1649082.932
+      },
+      {
+        "node": "CHN_C24A",
+        "country_code": "CHN",
+        "activity_code": "C24A",
+        "out_degree": 3773,
+        "in_degree": 3704,
+        "out_strength_million_USD": 1000466.3243999998,
+        "in_strength_million_USD": 710807.107699993,
+        "weighted_pagerank": 0.0029196939552163354,
+        "gross_output_million_USD": 1391174.2023
+      },
+      {
+        "node": "CHN_C27",
+        "country_code": "CHN",
+        "activity_code": "C27",
+        "out_degree": 3804,
+        "in_degree": 3742,
+        "out_strength_million_USD": 594411.8798999999,
+        "in_strength_million_USD": 701365.8144999914,
+        "weighted_pagerank": 0.0034474395558435618,
+        "gross_output_million_USD": 1201186.5041
+      },
+      {
+        "node": "CHN_C25",
+        "country_code": "CHN",
+        "activity_code": "C25",
+        "out_degree": 3882,
+        "in_degree": 3709,
+        "out_strength_million_USD": 721643.5319000001,
+        "in_strength_million_USD": 692223.9425999935,
+        "weighted_pagerank": 0.0026834608464343574,
+        "gross_output_million_USD": 1083196.8052
+      },
+      {
+        "node": "USA_I",
+        "country_code": "USA",
+        "activity_code": "I",
+        "out_degree": 3695,
+        "in_degree": 3790,
+        "out_strength_million_USD": 171416.34870000003,
+        "in_strength_million_USD": 686520.4553999997,
+        "weighted_pagerank": 0.005193154489157749,
+        "gross_output_million_USD": 1397055.8684
+      },
+      {
+        "node": "CHN_M",
+        "country_code": "CHN",
+        "activity_code": "M",
+        "out_degree": 3845,
+        "in_degree": 3760,
+        "out_strength_million_USD": 813896.1185,
+        "in_strength_million_USD": 634382.3474999961,
+        "weighted_pagerank": 0.004455358745019179,
+        "gross_output_million_USD": 1343362.2024
+      }
+    ],
+    "top20_weighted_pagerank": [
+      {
+        "node": "CHN_F",
+        "country_code": "CHN",
+        "activity_code": "F",
+        "out_degree": 447,
+        "in_degree": 3852,
+        "out_strength_million_USD": 65809.26350000002,
+        "in_strength_million_USD": 3263462.4154999782,
+        "weighted_pagerank": 0.012084647250216966,
+        "gross_output_million_USD": 4684114.2966
+      },
+      {
+        "node": "USA_G",
+        "country_code": "USA",
+        "activity_code": "G",
+        "out_degree": 3901,
+        "in_degree": 3854,
+        "out_strength_million_USD": 1971284.5843,
+        "in_strength_million_USD": 2058016.2272999994,
+        "weighted_pagerank": 0.010293238452870931,
+        "gross_output_million_USD": 4883363.6277
+      },
+      {
+        "node": "USA_O",
+        "country_code": "USA",
+        "activity_code": "O",
+        "out_degree": 3765,
+        "in_degree": 3834,
+        "out_strength_million_USD": 421842.47650000005,
+        "in_strength_million_USD": 1311091.7036000004,
+        "weighted_pagerank": 0.008436908872475082,
+        "gross_output_million_USD": 3428364.4137
+      },
+      {
+        "node": "USA_L",
+        "country_code": "USA",
+        "activity_code": "L",
+        "out_degree": 3584,
+        "in_degree": 3793,
+        "out_strength_million_USD": 1248494.4446999999,
+        "in_strength_million_USD": 1201306.8926000006,
+        "weighted_pagerank": 0.00580024517583882,
+        "gross_output_million_USD": 4501781.2474
+      },
+      {
+        "node": "USA_Q",
+        "country_code": "USA",
+        "activity_code": "Q",
+        "out_degree": 3545,
+        "in_degree": 3814,
+        "out_strength_million_USD": 41284.1861,
+        "in_strength_million_USD": 964945.6933999999,
+        "weighted_pagerank": 0.005735754278311034,
+        "gross_output_million_USD": 3028529.7191
+      },
+      {
+        "node": "CHN_G",
+        "country_code": "CHN",
+        "activity_code": "G",
+        "out_degree": 3913,
+        "in_degree": 3773,
+        "out_strength_million_USD": 1803377.7056999998,
+        "in_strength_million_USD": 847543.7831999958,
+        "weighted_pagerank": 0.005220725714985998,
+        "gross_output_million_USD": 2648760.4997
+      },
+      {
+        "node": "USA_I",
+        "country_code": "USA",
+        "activity_code": "I",
+        "out_degree": 3695,
+        "in_degree": 3790,
+        "out_strength_million_USD": 171416.34870000003,
+        "in_strength_million_USD": 686520.4553999997,
+        "weighted_pagerank": 0.005193154489157749,
+        "gross_output_million_USD": 1397055.8684
+      },
+      {
+        "node": "CHN_C26",
+        "country_code": "CHN",
+        "activity_code": "C26",
+        "out_degree": 3824,
+        "in_degree": 3745,
+        "out_strength_million_USD": 603450.7351,
+        "in_strength_million_USD": 942340.5311999933,
+        "weighted_pagerank": 0.005188793573327505,
+        "gross_output_million_USD": 2136721.1775
+      },
+      {
+        "node": "CHN_M",
+        "country_code": "CHN",
+        "activity_code": "M",
+        "out_degree": 3845,
+        "in_degree": 3760,
+        "out_strength_million_USD": 813896.1185,
+        "in_strength_million_USD": 634382.3474999961,
+        "weighted_pagerank": 0.004455358745019179,
+        "gross_output_million_USD": 1343362.2024
+      },
+      {
+        "node": "USA_F",
+        "country_code": "USA",
+        "activity_code": "F",
+        "out_degree": 1660,
+        "in_degree": 3836,
+        "out_strength_million_USD": 312111.79510000005,
+        "in_strength_million_USD": 937670.5775000011,
+        "weighted_pagerank": 0.0042222620272189025,
+        "gross_output_million_USD": 2164368.041
+      },
+      {
+        "node": "USA_M",
+        "country_code": "USA",
+        "activity_code": "M",
+        "out_degree": 3884,
+        "in_degree": 3809,
+        "out_strength_million_USD": 2196154.3839000002,
+        "in_strength_million_USD": 743423.4460000002,
+        "weighted_pagerank": 0.004126353811015348,
+        "gross_output_million_USD": 3258688.2538
+      },
+      {
+        "node": "USA_C10T12",
+        "country_code": "USA",
+        "activity_code": "C10T12",
+        "out_degree": 3757,
+        "in_degree": 3824,
+        "out_strength_million_USD": 156295.76770000005,
+        "in_strength_million_USD": 760892.7848999999,
+        "weighted_pagerank": 0.00406869630592453,
+        "gross_output_million_USD": 1125141.5083
+      },
+      {
+        "node": "CHN_C28",
+        "country_code": "CHN",
+        "activity_code": "C28",
+        "out_degree": 3852,
+        "in_degree": 3761,
+        "out_strength_million_USD": 470717.5216,
+        "in_strength_million_USD": 863996.7093999913,
+        "weighted_pagerank": 0.003949321733359679,
+        "gross_output_million_USD": 1581029.7429
+      },
+      {
+        "node": "USA_K",
+        "country_code": "USA",
+        "activity_code": "K",
+        "out_degree": 3892,
+        "in_degree": 3709,
+        "out_strength_million_USD": 1366581.4158,
+        "in_strength_million_USD": 829228.0819999995,
+        "weighted_pagerank": 0.0039479569383756834,
+        "gross_output_million_USD": 3528094.0186
+      },
+      {
+        "node": "CHN_C10T12",
+        "country_code": "CHN",
+        "activity_code": "C10T12",
+        "out_degree": 3631,
+        "in_degree": 3675,
+        "out_strength_million_USD": 766961.1282,
+        "in_strength_million_USD": 1253375.7918000037,
+        "weighted_pagerank": 0.0038746179838416413,
+        "gross_output_million_USD": 2180831.4006
+      },
+      {
+        "node": "DEU_C29",
+        "country_code": "DEU",
+        "activity_code": "C29",
+        "out_degree": 3863,
+        "in_degree": 3745,
+        "out_strength_million_USD": 110915.9072,
+        "in_strength_million_USD": 253551.85240000117,
+        "weighted_pagerank": 0.0035683992565855287,
+        "gross_output_million_USD": 496516.1028
+      },
+      {
+        "node": "USA_C29",
+        "country_code": "USA",
+        "activity_code": "C29",
+        "out_degree": 3749,
+        "in_degree": 3738,
+        "out_strength_million_USD": 74228.237,
+        "in_strength_million_USD": 484207.5778999999,
+        "weighted_pagerank": 0.003568007468185674,
+        "gross_output_million_USD": 733534.8849
+      },
+      {
+        "node": "CHN_C27",
+        "country_code": "CHN",
+        "activity_code": "C27",
+        "out_degree": 3804,
+        "in_degree": 3742,
+        "out_strength_million_USD": 594411.8798999999,
+        "in_strength_million_USD": 701365.8144999914,
+        "weighted_pagerank": 0.0034474395558435618,
+        "gross_output_million_USD": 1201186.5041
+      },
+      {
+        "node": "CHN_L",
+        "country_code": "CHN",
+        "activity_code": "L",
+        "out_degree": 3565,
+        "in_degree": 3514,
+        "out_strength_million_USD": 239521.60730000003,
+        "in_strength_million_USD": 233468.0759000021,
+        "weighted_pagerank": 0.0033485145794729487,
+        "gross_output_million_USD": 1237186.6496
+      },
+      {
+        "node": "CHN_O",
+        "country_code": "CHN",
+        "activity_code": "O",
+        "out_degree": 363,
+        "in_degree": 3667,
+        "out_strength_million_USD": 16826.203700000002,
+        "in_strength_million_USD": 377718.5893000039,
+        "weighted_pagerank": 0.003329853143266284,
+        "gross_output_million_USD": 1167933.6858
+      }
+    ],
+    "top20_gross_output": [
+      {
+        "node": "USA_G",
+        "country_code": "USA",
+        "activity_code": "G",
+        "out_degree": 3901,
+        "in_degree": 3854,
+        "out_strength_million_USD": 1971284.5843,
+        "in_strength_million_USD": 2058016.2272999994,
+        "weighted_pagerank": 0.010293238452870931,
+        "gross_output_million_USD": 4883363.6277
+      },
+      {
+        "node": "CHN_F",
+        "country_code": "CHN",
+        "activity_code": "F",
+        "out_degree": 447,
+        "in_degree": 3852,
+        "out_strength_million_USD": 65809.26350000002,
+        "in_strength_million_USD": 3263462.4154999782,
+        "weighted_pagerank": 0.012084647250216966,
+        "gross_output_million_USD": 4684114.2966
+      },
+      {
+        "node": "USA_L",
+        "country_code": "USA",
+        "activity_code": "L",
+        "out_degree": 3584,
+        "in_degree": 3793,
+        "out_strength_million_USD": 1248494.4446999999,
+        "in_strength_million_USD": 1201306.8926000006,
+        "weighted_pagerank": 0.00580024517583882,
+        "gross_output_million_USD": 4501781.2474
+      },
+      {
+        "node": "USA_K",
+        "country_code": "USA",
+        "activity_code": "K",
+        "out_degree": 3892,
+        "in_degree": 3709,
+        "out_strength_million_USD": 1366581.4158,
+        "in_strength_million_USD": 829228.0819999995,
+        "weighted_pagerank": 0.0039479569383756834,
+        "gross_output_million_USD": 3528094.0186
+      },
+      {
+        "node": "USA_O",
+        "country_code": "USA",
+        "activity_code": "O",
+        "out_degree": 3765,
+        "in_degree": 3834,
+        "out_strength_million_USD": 421842.47650000005,
+        "in_strength_million_USD": 1311091.7036000004,
+        "weighted_pagerank": 0.008436908872475082,
+        "gross_output_million_USD": 3428364.4137
+      },
+      {
+        "node": "USA_M",
+        "country_code": "USA",
+        "activity_code": "M",
+        "out_degree": 3884,
+        "in_degree": 3809,
+        "out_strength_million_USD": 2196154.3839000002,
+        "in_strength_million_USD": 743423.4460000002,
+        "weighted_pagerank": 0.004126353811015348,
+        "gross_output_million_USD": 3258688.2538
+      },
+      {
+        "node": "USA_Q",
+        "country_code": "USA",
+        "activity_code": "Q",
+        "out_degree": 3545,
+        "in_degree": 3814,
+        "out_strength_million_USD": 41284.1861,
+        "in_strength_million_USD": 964945.6933999999,
+        "weighted_pagerank": 0.005735754278311034,
+        "gross_output_million_USD": 3028529.7191
+      },
+      {
+        "node": "CHN_G",
+        "country_code": "CHN",
+        "activity_code": "G",
+        "out_degree": 3913,
+        "in_degree": 3773,
+        "out_strength_million_USD": 1803377.7056999998,
+        "in_strength_million_USD": 847543.7831999958,
+        "weighted_pagerank": 0.005220725714985998,
+        "gross_output_million_USD": 2648760.4997
+      },
+      {
+        "node": "CHN_A01",
+        "country_code": "CHN",
+        "activity_code": "A01",
+        "out_degree": 3227,
+        "in_degree": 3680,
+        "out_strength_million_USD": 1167973.6390999998,
+        "in_strength_million_USD": 542716.868000001,
+        "weighted_pagerank": 0.0028235168872248464,
+        "gross_output_million_USD": 2326303.5646
+      },
+      {
+        "node": "CHN_C10T12",
+        "country_code": "CHN",
+        "activity_code": "C10T12",
+        "out_degree": 3631,
+        "in_degree": 3675,
+        "out_strength_million_USD": 766961.1282,
+        "in_strength_million_USD": 1253375.7918000037,
+        "weighted_pagerank": 0.0038746179838416413,
+        "gross_output_million_USD": 2180831.4006
+      },
+      {
+        "node": "USA_F",
+        "country_code": "USA",
+        "activity_code": "F",
+        "out_degree": 1660,
+        "in_degree": 3836,
+        "out_strength_million_USD": 312111.79510000005,
+        "in_strength_million_USD": 937670.5775000011,
+        "weighted_pagerank": 0.0042222620272189025,
+        "gross_output_million_USD": 2164368.041
+      },
+      {
+        "node": "CHN_C26",
+        "country_code": "CHN",
+        "activity_code": "C26",
+        "out_degree": 3824,
+        "in_degree": 3745,
+        "out_strength_million_USD": 603450.7351,
+        "in_strength_million_USD": 942340.5311999933,
+        "weighted_pagerank": 0.005188793573327505,
+        "gross_output_million_USD": 2136721.1775
+      },
+      {
+        "node": "CHN_C13T15",
+        "country_code": "CHN",
+        "activity_code": "C13T15",
+        "out_degree": 3819,
+        "in_degree": 3648,
+        "out_strength_million_USD": 462923.9479,
+        "in_strength_million_USD": 481907.08460000204,
+        "weighted_pagerank": 0.0020706958735808145,
+        "gross_output_million_USD": 1918503.5782
+      },
+      {
+        "node": "USA_N",
+        "country_code": "USA",
+        "activity_code": "N",
+        "out_degree": 3864,
+        "in_degree": 3780,
+        "out_strength_million_USD": 1442330.9358,
+        "in_strength_million_USD": 576656.4848999996,
+        "weighted_pagerank": 0.00297025959460857,
+        "gross_output_million_USD": 1849347.691
+      },
+      {
+        "node": "USA_P",
+        "country_code": "USA",
+        "activity_code": "P",
+        "out_degree": 3718,
+        "in_degree": 3748,
+        "out_strength_million_USD": 77881.80290000002,
+        "in_strength_million_USD": 447864.64790000004,
+        "weighted_pagerank": 0.002575639818896256,
+        "gross_output_million_USD": 1717572.2332
+      },
+      {
+        "node": "CHN_C20",
+        "country_code": "CHN",
+        "activity_code": "C20",
+        "out_degree": 3887,
+        "in_degree": 3784,
+        "out_strength_million_USD": 1023041.028,
+        "in_strength_million_USD": 715009.162699998,
+        "weighted_pagerank": 0.0030038978139338667,
+        "gross_output_million_USD": 1649082.932
+      },
+      {
+        "node": "CHN_K",
+        "country_code": "CHN",
+        "activity_code": "K",
+        "out_degree": 3791,
+        "in_degree": 3555,
+        "out_strength_million_USD": 806398.6748,
+        "in_strength_million_USD": 300412.28090000333,
+        "weighted_pagerank": 0.0019974034420944128,
+        "gross_output_million_USD": 1596186.9776
+      },
+      {
+        "node": "CHN_C28",
+        "country_code": "CHN",
+        "activity_code": "C28",
+        "out_degree": 3852,
+        "in_degree": 3761,
+        "out_strength_million_USD": 470717.5216,
+        "in_strength_million_USD": 863996.7093999913,
+        "weighted_pagerank": 0.003949321733359679,
+        "gross_output_million_USD": 1581029.7429
+      },
+      {
+        "node": "USA_I",
+        "country_code": "USA",
+        "activity_code": "I",
+        "out_degree": 3695,
+        "in_degree": 3790,
+        "out_strength_million_USD": 171416.34870000003,
+        "in_strength_million_USD": 686520.4553999997,
+        "weighted_pagerank": 0.005193154489157749,
+        "gross_output_million_USD": 1397055.8684
+      },
+      {
+        "node": "CHN_C24A",
+        "country_code": "CHN",
+        "activity_code": "C24A",
+        "out_degree": 3773,
+        "in_degree": 3704,
+        "out_strength_million_USD": 1000466.3243999998,
+        "in_strength_million_USD": 710807.107699993,
+        "weighted_pagerank": 0.0029196939552163354,
+        "gross_output_million_USD": 1391174.2023
+      }
+    ],
+    "edge_threshold_sensitivity": [
+      {
+        "flow_cutoff_million_USD": 0.0,
+        "flow_cutoff_USD": 0.0,
+        "positive_edges": 10166696,
+        "possible_off_diagonal_edges": 16398450,
+        "directed_density": 0.6199790833889789,
+        "weak_component_count": 123,
+        "largest_weak_component_nodes": 3928,
+        "strong_component_count": 124,
+        "largest_strong_component_nodes": 3927
+      },
+      {
+        "flow_cutoff_million_USD": 1.0,
+        "flow_cutoff_USD": 1000000.0,
+        "positive_edges": 896358,
+        "possible_off_diagonal_edges": 16398450,
+        "directed_density": 0.054661141754251165,
+        "weak_component_count": 208,
+        "largest_weak_component_nodes": 3843,
+        "strong_component_count": 288,
+        "largest_strong_component_nodes": 3763
+      },
+      {
+        "flow_cutoff_million_USD": 10.0,
+        "flow_cutoff_USD": 10000000.0,
+        "positive_edges": 256248,
+        "possible_off_diagonal_edges": 16398450,
+        "directed_density": 0.015626354929886666,
+        "weak_component_count": 391,
+        "largest_weak_component_nodes": 3660,
+        "strong_component_count": 644,
+        "largest_strong_component_nodes": 3407
+      },
+      {
+        "flow_cutoff_million_USD": 100.0,
+        "flow_cutoff_USD": 100000000.0,
+        "positive_edges": 56563,
+        "possible_off_diagonal_edges": 16398450,
+        "directed_density": 0.003449289414548326,
+        "weak_component_count": 1027,
+        "largest_weak_component_nodes": 3019,
+        "strong_component_count": 1629,
+        "largest_strong_component_nodes": 2406
+      }
+    ],
+    "interpretation": "Structural measures are derived from recorded annual intermediate flows; they are not direct measures of failure probability or realised economic loss."
+  },
+  "aggregation": {
+    "aggregate_node_count": 972,
+    "country_count": 81,
+    "broad_sector_count": 12,
+    "flow_conservation_error_relative": 0.0,
+    "output_conservation_error_relative": 0.0,
+    "betweenness_method": "NetworkX approximate weighted directed betweenness, k=64, edge cutoff US$10m",
+    "betweenness_edge_cutoff_million_USD": 10.0,
+    "sector_groups": [
+      "Agriculture_forestry_fishing",
+      "Mining_quarrying",
+      "Food_textiles_wood_paper",
+      "Chemicals_petroleum_minerals",
+      "Other_manufacturing",
+      "Utilities",
+      "Construction",
+      "Wholesale_retail_trade",
+      "Transport_accommodation_food",
+      "Information_communications",
+      "Finance_real_estate_professional_admin",
+      "Public_social_other_services"
+    ]
+  },
+  "conservation": {
+    "raw_flow_total_million_USD": 103410084.84310001,
+    "aggregated_flow_total_million_USD": 103410084.84310001,
+    "flow_relative_error": 0.0,
+    "raw_gross_output_total_million_USD": 199690648.75779998,
+    "aggregated_gross_output_total_million_USD": 199690648.75779998,
+    "output_relative_error": 0.0
+  },
+  "model_comparison": {
+    "linear_model": {
+      "source_scenario_count": 972,
+      "mean_peak_disruption": 0.031342511903530414,
+      "median_peak_disruption": 0.006933349394776555,
+      "p95_peak_disruption": 0.12870015580914781,
+      "mean_cumulative_disruption_share_steps": 0.3409573890550811,
+      "mean_final_disruption": 0.031342511903530414,
+      "mean_max_affected_nodes_at_1pct": 470.8744855967078,
+      "runs_converged": 0
+    },
+    "nonlinear_model": {
+      "source_scenario_count": 972,
+      "mean_peak_disruption": 0.020744584034558693,
+      "median_peak_disruption": 0.006172747342699683,
+      "p95_peak_disruption": 0.08775575342656786,
+      "mean_cumulative_disruption_share_steps": 0.25256540586817405,
+      "mean_final_disruption": 0.020744584034558693,
+      "mean_max_affected_nodes_at_1pct": 455.798353909465,
+      "runs_converged": 0
+    },
+    "mean_paired_nonlinear_minus_linear_peak": -0.01059792786897172,
+    "median_paired_nonlinear_minus_linear_peak": -0.000653702700320025,
+    "mean_paired_nonlinear_minus_linear_cumulative": -0.08839198318690705,
+    "spearman_out_strength_vs_nonlinear_cumulative": 0.9755823477813957,
+    "spearman_pagerank_vs_nonlinear_cumulative": 0.7560489786778787,
+    "largest_nonlinear_peak_source": "USA_Finance_real_estate_professional_admin",
+    "largest_nonlinear_cumulative_source": "USA_Finance_real_estate_professional_admin",
+    "accuracy_note": "No observed outage time series are available, so this compares simulated behaviour and sensitivity, not predictive accuracy.",
+    "baseline_parameters": {
+      "initial_disruption": 0.2,
+      "beta": 0.3,
+      "recovery_rate": 0.1,
+      "source_hold_steps": 3,
+      "max_steps": 50,
+      "convergence_tolerance": 1e-07
+    },
+    "sensitivity_grid": {
+      "initial_disruption": [
+        0.1,
+        0.2,
+        0.4
+      ],
+      "beta": [
+        0.1,
+        0.3,
+        0.5
+      ],
+      "recovery_rate": [
+        0.05,
+        0.1,
+        0.2
+      ],
+      "source_hold_steps": 3,
+      "max_steps": 50
+    },
+    "source_node_count": 972,
+    "models": {
+      "linear": "Clipped linear approximation",
+      "nonlinear": "SIS-inspired saturating nonlinear model"
+    },
+    "simulation_wall_time_seconds": 22.303793643999995,
+    "representative_nodes": [
+      {
+        "case": "A",
+        "selection_rule": "Highest weighted out-strength",
+        "source_index": 934,
+        "source_node": "USA_Finance_real_estate_professional_admin",
+        "out_strength_million_USD": 4589124.7275,
+        "weighted_pagerank": 0.016389468313595782,
+        "weighted_betweenness_approx": 0.12026417525773196,
+        "gross_output_million_USD": 13137911.2108,
+        "baseline_nonlinear_peak_disruption": 0.3332192568000559,
+        "baseline_nonlinear_cumulative_disruption": 6.761447901017689
+      },
+      {
+        "case": "B",
+        "selection_rule": "Highest weighted PageRank as downstream-influence proxy",
+        "source_index": 172,
+        "source_node": "CHN_Other_manufacturing",
+        "out_strength_million_USD": 2443363.0051999995,
+        "weighted_pagerank": 0.02188456907303547,
+        "weighted_betweenness_approx": 0.22480670103092784,
+        "gross_output_million_USD": 10285025.712,
+        "baseline_nonlinear_peak_disruption": 0.26245561224188796,
+        "baseline_nonlinear_cumulative_disruption": 4.266313809475632
+      },
+      {
+        "case": "C",
+        "selection_rule": "Highest approximate weighted betweenness",
+        "source_index": 268,
+        "source_node": "DEU_Other_manufacturing",
+        "out_strength_million_USD": 461384.28140000004,
+        "weighted_pagerank": 0.008833562743453805,
+        "weighted_betweenness_approx": 0.06465850515463918,
+        "gross_output_million_USD": 1541738.6395999999,
+        "baseline_nonlinear_peak_disruption": 0.13373772169316583,
+        "baseline_nonlinear_cumulative_disruption": 1.6727671001777031
+      },
+      {
+        "case": "D",
+        "selection_rule": "Highest nonlinear cumulative impact in source census",
+        "source_index": 931,
+        "source_node": "USA_Wholesale_retail_trade",
+        "out_strength_million_USD": 1971284.5843000002,
+        "weighted_pagerank": 0.011763717922080974,
+        "weighted_betweenness_approx": 0.00977770618556701,
+        "gross_output_million_USD": 4883363.6277,
+        "baseline_nonlinear_peak_disruption": 0.25402409628799266,
+        "baseline_nonlinear_cumulative_disruption": 4.1863355482975715
+      },
+      {
+        "case": "E",
+        "selection_rule": "Seeded random control from middle out-strength band",
+        "source_index": 699,
+        "source_node": "PAK_Chemicals_petroleum_minerals",
+        "out_strength_million_USD": 15315.989000000003,
+        "weighted_pagerank": 0.00067900403235946,
+        "weighted_betweenness_approx": 0.0005154639175257732,
+        "gross_output_million_USD": 31992.9924,
+        "baseline_nonlinear_peak_disruption": 0.0021964795571708024,
+        "baseline_nonlinear_cumulative_disruption": 0.027905165969090477
+      }
+    ],
+    "representative_selection_note": {
+      "distinct_sources": 5,
+      "random_control_quantile_band": [
+        0.2,
+        0.8
+      ]
+    },
+    "sensitivity_scenario_count": 270,
+    "interpretation": "Comparison quantifies behaviour under matched assumptions, not predictive accuracy: annual ICIO contains no time-stamped disruption labels."
+  },
+  "baseline_parameters": {
+    "initial_disruption": 0.2,
+    "beta": 0.3,
+    "recovery_rate": 0.1,
+    "source_hold_steps": 3,
+    "max_steps": 50,
+    "convergence_tolerance": 1e-07
+  },
+  "sensitivity_summary": [
+    {
+      "model": "linear",
+      "factor": "initial_disruption",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.40318726110686876,
+      "mean_cumulative_disruption_share_steps": 7.8985187624059465,
+      "mean_final_disruption": 0.4024366172091554,
+      "mean_max_affected_nodes_at_1pct": 518.7777777777778
+    },
+    {
+      "model": "linear",
+      "factor": "initial_disruption",
+      "factor_value": 0.2,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.443689545751929,
+      "mean_cumulative_disruption_share_steps": 9.677698315741116,
+      "mean_final_disruption": 0.44218825795650213,
+      "mean_max_affected_nodes_at_1pct": 577.7777777777778
+    },
+    {
+      "model": "linear",
+      "factor": "initial_disruption",
+      "factor_value": 0.4,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.47553844092342695,
+      "mean_cumulative_disruption_share_steps": 11.654251106878233,
+      "mean_final_disruption": 0.4725358653325732,
+      "mean_max_affected_nodes_at_1pct": 648.7555555555556
+    },
+    {
+      "model": "linear",
+      "factor": "beta",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.010321116381277935,
+      "mean_cumulative_disruption_share_steps": 0.2743552068155732,
+      "mean_final_disruption": 0.005549552346043777,
+      "mean_max_affected_nodes_at_1pct": 107.91111111111111
+    },
+    {
+      "model": "linear",
+      "factor": "beta",
+      "factor_value": 0.3,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.41959689020849006,
+      "mean_cumulative_disruption_share_steps": 7.212143593833539,
+      "mean_final_disruption": 0.41911394695973014,
+      "mean_max_affected_nodes_at_1pct": 682.9111111111112
+    },
+    {
+      "model": "linear",
+      "factor": "beta",
+      "factor_value": 0.5,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.8924972411924568,
+      "mean_cumulative_disruption_share_steps": 21.743969384376186,
+      "mean_final_disruption": 0.8924972411924568,
+      "mean_max_affected_nodes_at_1pct": 954.4888888888889
+    },
+    {
+      "model": "linear",
+      "factor": "recovery_rate",
+      "factor_value": 0.05,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.5967895441574567,
+      "mean_cumulative_disruption_share_steps": 14.134316501058171,
+      "mean_final_disruption": 0.5967895441574567,
+      "mean_max_affected_nodes_at_1pct": 737.9333333333333
+    },
+    {
+      "model": "linear",
+      "factor": "recovery_rate",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.4685572311728536,
+      "mean_cumulative_disruption_share_steps": 10.326449661897755,
+      "mean_final_disruption": 0.46638794088634716,
+      "mean_max_affected_nodes_at_1pct": 591.4222222222222
+    },
+    {
+      "model": "linear",
+      "factor": "recovery_rate",
+      "factor_value": 0.2,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.25706847245191433,
+      "mean_cumulative_disruption_share_steps": 4.769702022069369,
+      "mean_final_disruption": 0.25398325545442657,
+      "mean_max_affected_nodes_at_1pct": 415.9555555555556
+    },
+    {
+      "model": "nonlinear",
+      "factor": "initial_disruption",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.23735648183517466,
+      "mean_cumulative_disruption_share_steps": 4.842265742605573,
+      "mean_final_disruption": 0.23657046961104827,
+      "mean_max_affected_nodes_at_1pct": 508.31111111111113
+    },
+    {
+      "model": "nonlinear",
+      "factor": "initial_disruption",
+      "factor_value": 0.2,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.2582310659255837,
+      "mean_cumulative_disruption_share_steps": 5.793744798559042,
+      "mean_final_disruption": 0.2565958434381076,
+      "mean_max_affected_nodes_at_1pct": 568.8444444444444
+    },
+    {
+      "model": "nonlinear",
+      "factor": "initial_disruption",
+      "factor_value": 0.4,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.2771208044309696,
+      "mean_cumulative_disruption_share_steps": 6.854266107609685,
+      "mean_final_disruption": 0.273667325691048,
+      "mean_max_affected_nodes_at_1pct": 639.4
+    },
+    {
+      "model": "nonlinear",
+      "factor": "beta",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.009501293744327576,
+      "mean_cumulative_disruption_share_steps": 0.2564918636771264,
+      "mean_final_disruption": 0.004704095815115703,
+      "mean_max_affected_nodes_at_1pct": 101.88888888888889
+    },
+    {
+      "model": "nonlinear",
+      "factor": "beta",
+      "factor_value": 0.3,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.22480016064347424,
+      "mean_cumulative_disruption_share_steps": 4.0703678305494195,
+      "mean_final_disruption": 0.223722645121162,
+      "mean_max_affected_nodes_at_1pct": 664.2888888888889
+    },
+    {
+      "model": "nonlinear",
+      "factor": "beta",
+      "factor_value": 0.5,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.5384068978039261,
+      "mean_cumulative_disruption_share_steps": 13.163416954547754,
+      "mean_final_disruption": 0.5384068978039261,
+      "mean_max_affected_nodes_at_1pct": 950.3777777777777
+    },
+    {
+      "model": "nonlinear",
+      "factor": "recovery_rate",
+      "factor_value": 0.05,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.422324236577703,
+      "mean_cumulative_disruption_share_steps": 9.631998351308248,
+      "mean_final_disruption": 0.422324236577703,
+      "mean_max_affected_nodes_at_1pct": 729.0888888888888
+    },
+    {
+      "model": "nonlinear",
+      "factor": "recovery_rate",
+      "factor_value": 0.1,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.26158778768324753,
+      "mean_cumulative_disruption_share_steps": 5.971002246418383,
+      "mean_final_disruption": 0.25939097339821054,
+      "mean_max_affected_nodes_at_1pct": 590.4444444444445
+    },
+    {
+      "model": "nonlinear",
+      "factor": "recovery_rate",
+      "factor_value": 0.2,
+      "scenario_count": 45,
+      "mean_peak_disruption": 0.0887963279307773,
+      "mean_cumulative_disruption_share_steps": 1.88727605104767,
+      "mean_final_disruption": 0.0851184287642902,
+      "mean_max_affected_nodes_at_1pct": 397.02222222222224
+    }
+  ]
+}
