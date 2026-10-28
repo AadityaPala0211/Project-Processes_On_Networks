@@ -25,9 +25,9 @@ This bundle contains the signed-shock report and source, Python code, historical
 
 ## Input data
 
-The raw input file is **not bundled** because it is about 90 MB and was supplied separately. Use the official OECD regular ICIO 2022_SML table. The expected file is a CSV with country–industry rows/columns, an intermediate-input block, and an `OUT` vector/column.
+The repository currently contains `data/2022_SML.csv` (about 90 MB). It is expected to be the OECD regular ICIO table with country–industry rows/columns, an intermediate-input block, and an `OUT` vector/column. The earlier report, however, was computed from a separately supplied file named `2022_SML(1).csv`; **do not assume the tracked file is byte-for-byte identical**. The full-data adjacency builder records the current input file size and SHA-256 in `adjacency_matrix_metadata.json`, so the exact data artifact can be verified before comparing result numbers.
 
-The file analysed for this report was `2022_SML(1).csv`, 90,120,552 bytes, SHA-256:
+The file analysed for the earlier report was `2022_SML(1).csv`, 90,120,552 bytes, SHA-256:
 
 `fbab8fd2727bda9fd8c6cfee8227816db82d33bef6aa4b90194ca5dcbc5ad14b`
 
@@ -89,3 +89,17 @@ Structural statistics derive from the actual 2022 ICIO matrix. SIS, threshold-ca
 The paper's key refinements are (a) edge-threshold sensitivity, since raw binary density counts tiny monetary flows; (b) a weighted versus unweighted SIS comparison; (c) threshold-cascade sensitivity; and (d) equal-budget protection comparisons using 100 paired Monte Carlo runs.
 
 Fill the group/member/institution placeholders in the paper before submission.
+
+
+## Full-resolution structural analysis
+
+A dedicated full-data adjacency-first workflow is available in [`code/full_data_network_structure_analysis/`](code/full_data_network_structure_analysis/README.md). It builds sparse weighted and binary adjacency matrices for the full country–industry network, writes the matrix-index mapping, then runs structural metrics, connectivity and sampled shortest paths, centrality, flow-threshold sensitivity, and country/sector visualizations.
+
+Run it from the repository root:
+
+```bash
+python -m pip install -r code/full_data_network_structure_analysis/requirements.txt
+python code/full_data_network_structure_analysis/run_full_structural_analysis.py data/2022_SML.csv --out results_full_network
+```
+
+Generated matrices and result tables are not committed by default; their exact source-file checksum is stored in the output metadata.
