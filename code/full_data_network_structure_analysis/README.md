@@ -38,9 +38,9 @@ The pipeline executes the scripts in this order:
 2. Compute degree, strength, weighted PageRank, Gini coefficients and degree/strength distributions.
 3. Measure weak/strong connected components and shortest paths from a reproducible sample of source nodes.
 4. Compute weighted PageRank/eigenvector centrality and an estimate of directed betweenness from sampled sources.
-5. Compute local clustering on the undirected projection of the directed production network (sampled by default; optionally all nodes).
-6. Test sensitivity to different minimum-flow thresholds.
-7. Summarize flows by country and broad sector and generate network/sector figures.
+5. Test sensitivity to different minimum-flow thresholds.
+6. Summarize flows by country and broad sector and generate network/sector figures.
+7. Compute local clustering on the undirected projection of the directed production network (sampled by default; optionally all nodes).
 
 Useful options:
 
@@ -114,15 +114,17 @@ Computes weighted PageRank, weighted eigenvector centrality, degrees/strengths, 
 
 Rebuilds binary topology under several minimum-flow cutoffs. The default thresholds are 0, 0.01, 0.1, 1, 10 and 100 million current USD. It reports density, edge count, isolate count, component counts and the fraction of flow retained. This is essential because treating every tiny positive accounting flow as a meaningful structural link can make binary density misleading.
 
+### `06_flow_aggregation_and_visualization.py`
+
+Produces country-level and broad-sector flow summaries, a supplier-sector → purchasing-sector heatmap, and a subnetwork of high-total-strength nodes with selected high-flow edges. The visualization is a readable selected subgraph; calculations and summaries use the full network.
+
 ### `07_clustering_analysis.py`
 
 Computes local clustering coefficients on the **undirected projection** of the production network, where an undirected edge exists if either supplier direction is present. By default it calculates coefficients for a reproducible random sample of 100 nodes; use `--all-clustering-nodes` with the runner (or `--all-nodes` when running the script directly) to calculate the coefficients for every node. Outputs are `clustering_coefficients_full.csv`, `clustering_summary_full.json`, and `clustering_distribution_full.png`.
 
 The projection is used only for clustering; the source-to-buyer direction remains intact in the other analyses.
 
-### `06_flow_aggregation_and_visualization.py`
 
-Produces country-level and broad-sector flow summaries, a supplier-sector → purchasing-sector heatmap, and a subnetwork of high-total-strength nodes with selected high-flow edges. The visualization is a readable selected subgraph; calculations and summaries use the full network.
 
 ### `run_full_structural_analysis.py`
 
