@@ -210,9 +210,9 @@ def main():
     n = len(nodes)
     possible = n * (n - 1)
     edge_count = int(adjacency.nnz)
-    weighted_total_ex_self = float(weighted.sum())
+    nonself_edge_count = int(edge_count - np.count_nonzero(adjacency.diagonal()))
+    weighted_total_ex_self = float(weighted.sum() - weighted.diagonal().sum())
     raw_total = float(raw_positive.sum())
-    self_total = float(np.trace(raw_positive.toarray())) if n <= 5000 else float(np.trace(flows.clip(min=0)))
     metadata = {
         "source_csv": str(csv_path),
         "source_csv_size_bytes": csv_path.stat().st_size,
