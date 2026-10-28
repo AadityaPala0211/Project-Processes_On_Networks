@@ -5,7 +5,7 @@ This folder contains a separate, reproducible structural-analysis pipeline for t
 ## Network definition and matrix orientation
 
 - **Node:** one country/region × one detailed industry, for example `USA_C20`.
-- **Directed edge:** `i → j) means country-industry `i` supplies an intermediate input used by country-industry `j`.
+- **Directed edge:** `i → j` means country-industry `i` supplies an intermediate input used by country-industry `j`.
 - **Weighted adjacency value:** intermediate flow in **million current USD**.
 - **Binary adjacency value:** 1 when the flow is positive at the chosen threshold; otherwise 0.
 - **Self-flows:** the default structural adjacency matrices remove diagonal entries. The separate `intermediate_flows_positive_full.npz` retains positive diagonal/self-flows for accounting checks.
@@ -53,8 +53,8 @@ python code/full_data_network_structure_analysis/run_full_structural_analysis.py
 python code/full_data_network_structure_analysis/03_connectivity_and_paths.py \
   --matrix-dir results_full_network --sample-sources 128 --seed 2022
 
-# Skip sampled betweenness if runtime is a concern; PageRank/eigenvector and all
-# other stages still run.
+# Skip the centrality stage, including eigenvector and sampled betweenness.
+# Stage 2 still provides weighted PageRank and the other stages still run.
 python code/full_data_network_structure_analysis/run_full_structural_analysis.py \
   data/2022_SML.csv --out results_full_network --skip-centrality
 ```
