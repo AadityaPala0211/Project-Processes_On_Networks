@@ -25,6 +25,10 @@ def main():
     parser.add_argument("--betweenness-sources", type=int, default=12)
     parser.add_argument("--seed", type=int, default=2022)
     parser.add_argument("--top-edges", type=int, default=120)
+    parser.add_argument("--clustering-sample-nodes", type=int, default=100,
+                        help="Sample size for local clustering; ignored with --all-clustering-nodes")
+    parser.add_argument("--all-clustering-nodes", action="store_true",
+                        help="Calculate exact local clustering for every node")
     parser.add_argument("--include-self-loops", action="store_true")
     parser.add_argument("--skip-centrality", action="store_true",
                         help="Skip the centrality stage (e.g. to run it later separately)")
@@ -46,6 +50,11 @@ def main():
                                           "--out", str(output_dir),
                                           "--sample-sources", str(args.sample_sources),
                                           "--seed", str(args.seed)]),
+        ("07_clustering_analysis.py", ["--matrix-dir", str(output_dir),
+                                       "--out", str(output_dir),
+                                       "--sample-nodes", str(args.clustering_sample_nodes),
+                                       "--seed", str(args.seed)] +
+         (["--all-nodes"] if args.all_clustering_nodes else [])),
     ]
     if not args.skip_centrality:
         stages.append(("04_centrality_analysis.py", ["--matrix-dir", str(output_dir),
