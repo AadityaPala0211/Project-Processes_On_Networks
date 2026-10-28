@@ -50,11 +50,6 @@ def main():
                                           "--out", str(output_dir),
                                           "--sample-sources", str(args.sample_sources),
                                           "--seed", str(args.seed)]),
-        ("07_clustering_analysis.py", ["--matrix-dir", str(output_dir),
-                                       "--out", str(output_dir),
-                                       "--sample-nodes", str(args.clustering_sample_nodes),
-                                       "--seed", str(args.seed)] +
-         (["--all-nodes"] if args.all_clustering_nodes else [])),
     ]
     if not args.skip_centrality:
         stages.append(("04_centrality_analysis.py", ["--matrix-dir", str(output_dir),
@@ -69,6 +64,11 @@ def main():
                                                        "--out", str(output_dir),
                                                        "--top-nodes", str(args.topn),
                                                        "--top-edges", str(args.top_edges)]),
+        ("07_clustering_analysis.py", ["--matrix-dir", str(output_dir),
+                                       "--out", str(output_dir),
+                                       "--sample-nodes", str(args.clustering_sample_nodes),
+                                       "--seed", str(args.seed)] +
+         (["--all-nodes"] if args.all_clustering_nodes else [])),
     ])
 
     for number, (script_name, script_args) in enumerate(stages, start=1):
