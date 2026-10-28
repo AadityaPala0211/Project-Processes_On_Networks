@@ -27,5 +27,24 @@ jobs:
         run: python -m pip install -r code/full_data_network_structure_analysis/requirements.txt
       - name: Compile all structural-analysis scripts
         run: python -m py_compile code/full_data_network_structure_analysis/*.py
+      - name: Build adjacency from the repository's full ICIO dataset
+        run: python code/full_data_network_structure_analysis/01_build_adjacency_matrix.py data/2022_SML.csv --out results_full_network
+      - name: Verify full-data matrix dimensions
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          from scipy import sparse
+          output = Path("results_full_network")
+          metadata = json.loads((output / "adjacency_matrix_metadata.json").read_text())
+          weighted = sparse.load_npz(output / "adjacency_weighted_full.npz")
+          binary = sparse.load_npz(output / "adjacency_binary_full.npz")
+          assert metadata["node_count"] == 4050, metadata["node_count"]
+          assert weighted.shape == (4050, 4050), weighted.shape
+          assert binary.shape == (4050, 4050), binary.shape
+          assert metadata["binary_edge_count_excluding_self_loops"] > 0
+          print("Full-data adjacency validation passed:", weighted.shape, "nodes;",
+                metadata["binary_edge_count_excluding_self_loops"], "edges")
+          PY
       - name: Run synthetic adjacency-builder tests
         run: python -m unittest discover -s tests -p "test_full_data_adjacency_matrix.py" -v
