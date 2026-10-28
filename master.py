@@ -18,7 +18,7 @@ from scipy import sparse
 import scipy
 
 from analysis.data import SECTORS, aggregate_country_sector, load_icio
-from analysis.dynamics import BASELINE, run_baseline_census
+from analysis.dynamics import BASELINE, build_input_share_matrix, run_baseline_census
 from analysis.structural import build_aggregate_metrics, build_full_metrics, write_csv
 from analysis.visuals import create_structural_figures
 
