@@ -159,7 +159,7 @@ The output-weighted index is not actual production lost, GDP loss, or welfare lo
 
 Input: data/2022_SML.csv
 Input SHA-256: c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc
-Run timestamp UTC: 2026-10-28T18:27:38.870604+00:00
+Run timestamp UTC: 2026-10-28T18:29:15.239540+00:00
 Python 3.12.15; NumPy 2.5.4; SciPy 1.18.1.
 
 Reproduce all stages by running only: uv run master.py

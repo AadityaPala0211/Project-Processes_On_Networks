@@ -28,10 +28,10 @@
   "largest_nonlinear_cumulative_source": "USA_Finance_real_estate_professional_admin",
   "accuracy_note": "No observed outage time series are available, so this compares simulated behaviour and sensitivity, not predictive accuracy.",
   "linearized_disease_free_stability": {
-    "dependency_matrix_spectral_radius": 0.6828628414618775,
-    "approximate_beta_critical": 0.14644229254870467,
+    "dependency_matrix_spectral_radius": 0.6828628432002235,
+    "approximate_beta_critical": 0.14644229217591037,
     "baseline_beta": 0.3,
-    "baseline_beta_over_beta_critical": 2.0485885243856323,
+    "baseline_beta_over_beta_critical": 2.0485885296006705,
     "linearization_stable_at_baseline": false,
     "derivation": "Near zero disruption, both models linearize to J=(1-rho)I+beta Q; the disease-free state is locally stable if beta*rho(Q)<rho.",
     "caveat": "This is a local stability diagnostic for the un-clipped linearization, not an empirical crisis threshold. Clipping and nonlinear saturation change the global dynamics."
@@ -68,7 +68,7 @@
     "linear": "Clipped linear approximation",
     "nonlinear": "SIS-inspired saturating nonlinear model"
   },
-  "simulation_wall_time_seconds": 22.487204794000007,
+  "simulation_wall_time_seconds": 22.597206846,
   "representative_nodes": [
     {
       "case": "A",

@@ -4,8 +4,8 @@
   "input_file": "data/2022_SML.csv",
   "results_directory": "results/linear_nonlinear",
   "images_directory": "images/linear_nonlinear",
-  "completed_at_utc": "2026-10-28T18:27:38.874156+00:00",
-  "elapsed_seconds": 36.141353553,
+  "completed_at_utc": "2026-10-28T18:29:15.242652+00:00",
+  "elapsed_seconds": 35.820794976,
   "result_files": [
     "aggregation_validation.json",
     "analysis_report.md",
