@@ -69,7 +69,7 @@ def sensitivity_summary(rows):
     return summary
 
 
-def make_report(structural, aggregate, comparison, conservation, metadata):
+def make_report(structural, aggregate, comparison, conservation, metadata, sensitivity):
     lin, non = comparison["linear_model"], comparison["nonlinear_model"]
     reps = comparison["representative_nodes"]
     lines = [
@@ -124,6 +124,12 @@ def make_report(structural, aggregate, comparison, conservation, metadata):
         "",
         "The update is linear before clipping. Clipping bounds severity between zero and one, but means the implemented baseline is a clipped-linear model.",
         "",
+        "### Local stability diagnostic",
+        "",
+        f"Spectral radius of the dependency influence matrix Q is **{comparison['linearized_disease_free_stability']['dependency_matrix_spectral_radius']:.5f}**; approximate linearized critical beta is **{comparison['linearized_disease_free_stability']['approximate_beta_critical']:.5f}**.",
+        f"The chosen beta is **{comparison['linearized_disease_free_stability']['baseline_beta']:.2f}** (beta/beta-critical = **{comparison['linearized_disease_free_stability']['baseline_beta_over_beta_critical']:.2f}**), so the near-zero disease-free state is **{'locally stable' if comparison['linearized_disease_free_stability']['linearization_stable_at_baseline'] else 'not locally stable'}** under the un-clipped linearization.",
+        "This is a mathematical local-stability check, not an empirically estimated economic tipping point. The clipping/nonlinear terms bound states but do not guarantee that every source trajectory settles during the 50-step horizon.",
+        "",
         "### Nonlinear SIS-inspired model",
         r"$$d_j(t+1)=\operatorname{clip}_{[0,1]}\left[(1-\rho)d_j(t)+(1-d_j(t))(1-e^{-\beta e_j(t)})\right].$$",
         "",
@@ -154,6 +160,8 @@ def make_report(structural, aggregate, comparison, conservation, metadata):
         "",
         f"Mean paired peak difference (nonlinear minus linear): {100*comparison['mean_paired_nonlinear_minus_linear_peak']:.4f} percentage points. Mean paired cumulative difference: {comparison['mean_paired_nonlinear_minus_linear_cumulative']:.4f} share-steps.",
         "",
+        f"Runs converged before the 50-step cap: linear **{lin['runs_converged']}/{lin['source_scenario_count']}**, nonlinear **{non['runs_converged']}/{non['source_scenario_count']}**. A non-converged trajectory's final value is a horizon value, not a steady-state estimate.",
+        "",
         "Interpret these numbers as differences between mathematical models under matched assumptions. Without a separate dataset of observed outages and recovery trajectories, neither model can be called more accurate in the predictive sense.",
         "",
         "## 4. Five representative sources",
@@ -170,6 +178,14 @@ def make_report(structural, aggregate, comparison, conservation, metadata):
         "Betweenness is approximated on the aggregate graph after filtering edges below US$10 million; this limits the influence of very small flows. The random control uses a fixed seed.",
         "",
         "Each of the five sources is tested over 27 combinations: initial severity 0.10/0.20/0.40, beta 0.10/0.30/0.50, and recovery 0.05/0.10/0.20. Both models are run for all 27 combinations (270 runs total).",
+        "",
+        "### Sensitivity results (averaged over representative sources)",
+        "",
+        "| Model | Parameter | Value | Mean peak disruption | Mean cumulative share-steps |",
+        "|---|---|---:|---:|---:|",
+        *[f"| {r['model']} | {r['factor']} | {float(r['factor_value']):.2f} | {100*float(r['mean_peak_disruption']):.3f}% | {float(r['mean_cumulative_disruption_share_steps']):.3f} |" for r in sensitivity],
+        "",
+        "Across both models, greater beta and lower recovery generally lead to larger and longer cascades in this parameter grid. Nonlinear saturation reduces average impact relative to linear propagation at the same beta, while higher initial severity raises impact. These trends are conditional on the selected five nodes and the stipulated parameter values.",
         "",
         "## 5. Metrics and caveats",
         "",
@@ -255,6 +271,7 @@ def main():
         rows = list(csv.DictReader(stream))
     sensitivity_summary = sensitivity_summary_fn(rows)
     metadata.update({
+        "source_file": str(data_path.relative_to(ROOT)) if data_path.is_relative_to(ROOT) else str(data_path),
         "sha256": file_sha256(data_path),
         "run_timestamp_utc": datetime.now(timezone.utc).isoformat(),
         "python_version": platform.python_version(),
@@ -270,7 +287,7 @@ def main():
     }
     (RESULTS / "full_analysis_summary.json").write_text(json.dumps(complete, indent=2), encoding="utf-8")
     print("[6/6] Write report and execution manifest...")
-    make_report(structural, aggregate_summary, model_summary, conservation, metadata)
+    make_report(structural, aggregate_summary, model_summary, conservation, metadata, sensitivity_summary)
     manifest = {
         "entry_point": "master.py", "run_command": "uv run master.py",
         "input_file": str(data_path.relative_to(ROOT)) if data_path.is_relative_to(ROOT) else str(data_path),
