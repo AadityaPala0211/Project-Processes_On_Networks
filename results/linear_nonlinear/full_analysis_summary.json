@@ -1,6 +1,6 @@
 {
   "dataset": {
-    "source_file": "/home/runner/work/Project-Processes_On_Networks/Project-Processes_On_Networks/data/2022_SML.csv",
+    "source_file": "data/2022_SML.csv",
     "source_file_bytes": 90116498,
     "raw_country_industry_nodes": 4050,
     "flow_matrix_shape": [
@@ -13,7 +13,7 @@
     "flow_units": "millions of current USD",
     "direction": "supplier row -> purchasing industry column",
     "sha256": "c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc",
-    "run_timestamp_utc": "2026-10-28T18:24:47.213480+00:00",
+    "run_timestamp_utc": "2026-10-28T18:27:38.870604+00:00",
     "python_version": "3.12.15",
     "numpy_version": "2.5.4",
     "scipy_version": "1.18.1",
@@ -1030,6 +1030,15 @@
     "largest_nonlinear_peak_source": "USA_Finance_real_estate_professional_admin",
     "largest_nonlinear_cumulative_source": "USA_Finance_real_estate_professional_admin",
     "accuracy_note": "No observed outage time series are available, so this compares simulated behaviour and sensitivity, not predictive accuracy.",
+    "linearized_disease_free_stability": {
+      "dependency_matrix_spectral_radius": 0.6828628414618775,
+      "approximate_beta_critical": 0.14644229254870467,
+      "baseline_beta": 0.3,
+      "baseline_beta_over_beta_critical": 2.0485885243856323,
+      "linearization_stable_at_baseline": false,
+      "derivation": "Near zero disruption, both models linearize to J=(1-rho)I+beta Q; the disease-free state is locally stable if beta*rho(Q)<rho.",
+      "caveat": "This is a local stability diagnostic for the un-clipped linearization, not an empirical crisis threshold. Clipping and nonlinear saturation change the global dynamics."
+    },
     "baseline_parameters": {
       "initial_disruption": 0.2,
       "beta": 0.3,
@@ -1062,7 +1071,7 @@
       "linear": "Clipped linear approximation",
       "nonlinear": "SIS-inspired saturating nonlinear model"
     },
-    "simulation_wall_time_seconds": 22.381077417,
+    "simulation_wall_time_seconds": 22.487204794000007,
     "representative_nodes": [
       {
         "case": "A",

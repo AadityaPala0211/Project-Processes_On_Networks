@@ -1,5 +1,5 @@
 {
-  "source_file": "/home/runner/work/Project-Processes_On_Networks/Project-Processes_On_Networks/data/2022_SML.csv",
+  "source_file": "data/2022_SML.csv",
   "source_file_bytes": 90116498,
   "raw_country_industry_nodes": 4050,
   "flow_matrix_shape": [
@@ -12,7 +12,7 @@
   "flow_units": "millions of current USD",
   "direction": "supplier row -> purchasing industry column",
   "sha256": "c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc",
-  "run_timestamp_utc": "2026-10-28T18:24:47.213480+00:00",
+  "run_timestamp_utc": "2026-10-28T18:27:38.870604+00:00",
   "python_version": "3.12.15",
   "numpy_version": "2.5.4",
   "scipy_version": "1.18.1",

@@ -67,6 +67,12 @@ $$d_j(t+1)=\operatorname{clip}_{[0,1]}\left[(1-\rho)d_j(t)+\beta e_j(t)\right].$
 
 The update is linear before clipping. Clipping bounds severity between zero and one, but means the implemented baseline is a clipped-linear model.
 
+### Local stability diagnostic
+
+Spectral radius of the dependency influence matrix Q is **0.68286**; approximate linearized critical beta is **0.14644**.
+The chosen beta is **0.30** (beta/beta-critical = **2.05**), so the near-zero disease-free state is **not locally stable** under the un-clipped linearization.
+This is a mathematical local-stability check, not an empirically estimated economic tipping point. The clipping/nonlinear terms bound states but do not guarantee that every source trajectory settles during the 50-step horizon.
+
 ### Nonlinear SIS-inspired model
 $$d_j(t+1)=\operatorname{clip}_{[0,1]}\left[(1-\rho)d_j(t)+(1-d_j(t))(1-e^{-\beta e_j(t)})\right].$$
 
@@ -97,6 +103,8 @@ The baseline experiment shocks every country-sector node once, with all other no
 
 Mean paired peak difference (nonlinear minus linear): -1.0598 percentage points. Mean paired cumulative difference: -0.0884 share-steps.
 
+Runs converged before the 50-step cap: linear **0/972**, nonlinear **0/972**. A non-converged trajectory's final value is a horizon value, not a steady-state estimate.
+
 Interpret these numbers as differences between mathematical models under matched assumptions. Without a separate dataset of observed outages and recovery trajectories, neither model can be called more accurate in the predictive sense.
 
 ## 4. Five representative sources
@@ -115,6 +123,31 @@ Betweenness is approximated on the aggregate graph after filtering edges below U
 
 Each of the five sources is tested over 27 combinations: initial severity 0.10/0.20/0.40, beta 0.10/0.30/0.50, and recovery 0.05/0.10/0.20. Both models are run for all 27 combinations (270 runs total).
 
+### Sensitivity results (averaged over representative sources)
+
+| Model | Parameter | Value | Mean peak disruption | Mean cumulative share-steps |
+|---|---|---:|---:|---:|
+| linear | initial_disruption | 0.10 | 40.319% | 7.899 |
+| linear | initial_disruption | 0.20 | 44.369% | 9.678 |
+| linear | initial_disruption | 0.40 | 47.554% | 11.654 |
+| linear | beta | 0.10 | 1.032% | 0.274 |
+| linear | beta | 0.30 | 41.960% | 7.212 |
+| linear | beta | 0.50 | 89.250% | 21.744 |
+| linear | recovery_rate | 0.05 | 59.679% | 14.134 |
+| linear | recovery_rate | 0.10 | 46.856% | 10.326 |
+| linear | recovery_rate | 0.20 | 25.707% | 4.770 |
+| nonlinear | initial_disruption | 0.10 | 23.736% | 4.842 |
+| nonlinear | initial_disruption | 0.20 | 25.823% | 5.794 |
+| nonlinear | initial_disruption | 0.40 | 27.712% | 6.854 |
+| nonlinear | beta | 0.10 | 0.950% | 0.256 |
+| nonlinear | beta | 0.30 | 22.480% | 4.070 |
+| nonlinear | beta | 0.50 | 53.841% | 13.163 |
+| nonlinear | recovery_rate | 0.05 | 42.232% | 9.632 |
+| nonlinear | recovery_rate | 0.10 | 26.159% | 5.971 |
+| nonlinear | recovery_rate | 0.20 | 8.880% | 1.887 |
+
+Across both models, greater beta and lower recovery generally lead to larger and longer cascades in this parameter grid. Nonlinear saturation reduces average impact relative to linear propagation at the same beta, while higher initial severity raises impact. These trends are conditional on the selected five nodes and the stipulated parameter values.
+
 ## 5. Metrics and caveats
 
 - Peak disruption: maximum over time of gross-output-weighted node severity.
@@ -124,9 +157,9 @@ Each of the five sources is tested over 27 combinations: initial severity 0.10/0
 
 The output-weighted index is not actual production lost, GDP loss, or welfare loss. Gross output counts intermediate production at multiple stages. The model also does not include spare capacity, inventories, price changes, or explicit positive substitution gains. Those require data and equations beyond these two requested disruption models.
 
-Input: /home/runner/work/Project-Processes_On_Networks/Project-Processes_On_Networks/data/2022_SML.csv
+Input: data/2022_SML.csv
 Input SHA-256: c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc
-Run timestamp UTC: 2026-10-28T18:24:47.213480+00:00
+Run timestamp UTC: 2026-10-28T18:27:38.870604+00:00
 Python 3.12.15; NumPy 2.5.4; SciPy 1.18.1.
 
 Reproduce all stages by running only: uv run master.py
