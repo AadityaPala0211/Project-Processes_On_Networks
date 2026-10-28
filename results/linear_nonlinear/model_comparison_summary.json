@@ -59,7 +59,7 @@
     "linear": "Clipped linear approximation",
     "nonlinear": "SIS-inspired saturating nonlinear model"
   },
-  "simulation_wall_time_seconds": 22.303793643999995,
+  "simulation_wall_time_seconds": 22.381077417,
   "representative_nodes": [
     {
       "case": "A",
