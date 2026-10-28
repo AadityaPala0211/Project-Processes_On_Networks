@@ -13,6 +13,10 @@ on:
       - "data/2022_SML.csv"
   workflow_dispatch:
 
+concurrency:
+  group: full-icio-analysis-${{ github.ref }}
+  cancel-in-progress: true
+
 permissions:
   contents: write
 
