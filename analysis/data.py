@@ -79,14 +79,28 @@ def load_icio(path: Path) -> tuple[list[str], np.ndarray, np.ndarray, dict]:
         if key and key not in header_positions:
             header_positions[key] = idx
 
-    nodes = [name.strip() for name in header if NODE_RE.fullmatch(name.strip())]
+    # Use the row-label block to distinguish true country-industry nodes from
+    # final-demand columns that can also look like CODE_CODE (e.g. AGO_HFCE).
+    # The ICIO file lists all country-industry rows first, followed by final-demand
+    # and accounting rows. Every selected node must also have a matching header label.
+    nodes = []
+    with path.open("r", newline="", encoding="utf-8-sig") as f:
+        reader = csv.reader(f)
+        next(reader)
+        for row in reader:
+            if not row:
+                break
+            label = row[0].strip()
+            if not NODE_RE.fullmatch(label) or label not in header_positions:
+                break
+            nodes.append(label)
     if not nodes:
         raise ValueError(
-            "No country-industry columns were found in the CSV header. "
-            "Expected labels such as USA_C20."
+            "No country-industry rows were found in the CSV. "
+            "Expected row labels such as USA_C20."
         )
     if len(set(nodes)) != len(nodes):
-        raise ValueError("Duplicate country-industry labels found in the CSV header.")
+        raise ValueError("Duplicate country-industry row labels detected.")
 
     node_columns = np.asarray([header_positions[name] - 1 for name in nodes], dtype=np.int64)
     if np.any(node_columns < 0):
