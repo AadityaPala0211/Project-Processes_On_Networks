@@ -1,3 +1,38 @@
+# Full ICIO Analysis — Single Entry Point
+
+## Run the complete project
+
+From the repository root, run only:
+
+```bash
+uv run master.py
+```
+
+No command-line options or manual paths are needed. The master automatically finds `data/2022_SML.csv`, creates the output folders, runs the full structural analysis, aggregates into 12 broad sectors per economy for dynamical simulations, compares clipped-linear and nonlinear models for every country-sector source, selects five representative nodes, runs the 27-combination parameter grid, and writes plots and a Markdown report.
+
+### Output locations
+
+- `results/linear_nonlinear/`: structural metrics, all-source dynamic results, linear/nonlinear source comparison, five representative nodes, sensitivity runs, summaries, run metadata, and `analysis_report.md`.
+- `images/linear_nonlinear/`: structural and dynamical plots.
+- `master.py`: the one file the user runs.
+- `analysis/`: implementation modules called by the master; do not run these individually.
+
+### Default dynamics
+
+The baseline for every source node is initial disruption 0.20, propagation strength beta 0.30, recovery rate rho 0.10, source held for 3 rounds, maximum 50 model steps. All other nodes start at zero. The two models use the same dependency matrix, initial conditions, parameters, and measurement definitions:
+
+`linear: d_j(t+1) = clip((1-rho)d_j(t) + beta e_j(t), 0, 1)`
+
+`nonlinear: d_j(t+1) = clip((1-rho)d_j(t) + (1-d_j(t))(1-exp(-beta e_j(t))), 0, 1)`
+
+where `e_j(t)` is the sum of disrupted supplier states weighted by each supplier's share of the buyer's intermediate inputs. The nonlinear model saturates as disruption approaches one.
+
+Sensitivity on the five representative nodes tests initial disruption `{0.10, 0.20, 0.40}`, beta `{0.10, 0.30, 0.50}`, and recovery `{0.05, 0.10, 0.20}` for both models. The automatic source roles are highest out-strength, highest PageRank excluding prior picks, highest approximate weighted betweenness excluding prior picks, highest nonlinear cumulative baseline impact, and a seeded random control node.
+
+### Interpretation
+
+All time constants are shared assumptions because the annual ICIO table does not identify propagation or recovery rates. Output-weighted disruption is an index of gross output associated with disrupted nodes, not real production loss, GDP loss, or predictive accuracy. The full 4,050-node network is used for structural analysis; the 12-sector country-sector network (typically 972 nodes) is used for repeated dynamics to keep the analysis tractable. The automatic workflow tests the code and runs the full data pipeline whenever analysis source files change on this branch, then commits generated outputs.
+
 # Global Production Network Project — Reproducible Analysis Bundle
 
 ## New primary model: signed shock propagation
