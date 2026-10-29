@@ -28,3 +28,12 @@ jobs:
         run: python -m compileall -q code/dynamical_shock_propagation
       - name: Run unit tests
         run: python -m unittest discover -s code/dynamical_shock_propagation/tests -v
+      - name: Full-data 4,050-node smoke run (two sources)
+        run: >-
+          python code/dynamical_shock_propagation/run_all.py
+          --csv data/2022_SML.csv
+          --matrix-dir results_full_network
+          --out /tmp/dynamical-shock-smoke
+          --source-mode top-k --top-k 2
+          --skip-sensitivity --skip-interventions
+          --batch-size 2 --edge-chunk-size 250000
