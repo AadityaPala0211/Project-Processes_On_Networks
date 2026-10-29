@@ -1,0 +1,28 @@
+{
+  "source_csv": "/home/aaditya/Desktop/SC452/Project/data/2022_SML.csv",
+  "source_csv_size_bytes": 90116498,
+  "source_csv_sha256": "c27bf2ab425692b376965b90d12b73b34bd87047894cd0b1bcabdd8a8416b5cc",
+  "node_count": 4050,
+  "matrix_shape": [
+    4050,
+    4050
+  ],
+  "matrix_orientation": "row supplier i -> column buyer j",
+  "edge_definition": "positive intermediate input flow",
+  "flow_units": "million current USD",
+  "self_loops_in_structural_matrices": false,
+  "negative_flows_clipped_to_zero": true,
+  "positive_intermediate_flow_total_including_self_flows_million_usd": 103410084.84310001,
+  "positive_self_flow_total_million_usd": 22282244.719400004,
+  "positive_intermediate_flow_total_excluding_self_loops_million_usd": 81127840.1237,
+  "binary_edge_count": 10166696,
+  "binary_edge_count_excluding_self_loops": 10166696,
+  "possible_directed_edges_excluding_self_loops": 16398450,
+  "binary_density": 0.6199790833889789,
+  "weighted_matrix_file": "adjacency_weighted_full.npz",
+  "binary_matrix_file": "adjacency_binary_full.npz",
+  "raw_positive_flow_matrix_file": "intermediate_flows_positive_full.npz",
+  "node_index_file": "node_index.csv",
+  "gross_output_file": "gross_output_million_usd.csv",
+  "note": "Sparse NPZ files use zero-based row/column indices mapped by node_index.csv."
+}

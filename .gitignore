@@ -1,4 +1,4 @@
 # Generated outputs from the full-resolution structural pipeline
-results_full_network/
+# results_full_network/
 __pycache__/
 *.py[cod]

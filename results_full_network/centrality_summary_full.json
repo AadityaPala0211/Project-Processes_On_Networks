@@ -1,0 +1,10 @@
+{
+  "nodes": 4050,
+  "weighted_pagerank_iterations": 92,
+  "eigenvector_method": "scipy_eigs_eigenvalue=(0.823514737948019+0j)",
+  "eigenvector_power_iterations": 0,
+  "betweenness_method": "unweighted directed Brandes; sampled sources; scaled estimate",
+  "betweenness_sample_count": 12,
+  "betweenness_seed": 2022,
+  "caveat": "Betweenness is an approximation from sampled source nodes. It uses hop-count shortest paths, not monetary flow weights. The other weighted centralities use the monetary-flow adjacency matrix."
+}

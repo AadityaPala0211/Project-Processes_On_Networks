@@ -1,0 +1,15 @@
+{
+  "network_node_count": 4050,
+  "directed_edge_count_in_input": 10166696,
+  "undirected_projection_edge_count": 6071200,
+  "calculated_node_count": 100,
+  "all_nodes_calculated": false,
+  "seed": 2022,
+  "definition": "local clustering coefficient on undirected projection A_u=max(A,A.T)",
+  "mean_local_clustering": 0.8550013312531113,
+  "median_local_clustering": 0.897094382306622,
+  "standard_deviation_local_clustering": 0.2044860307771017,
+  "minimum_local_clustering": 0.0,
+  "maximum_local_clustering": 0.9881922128799213,
+  "method_note": "Summary statistics describe the sampled nodes unless all_nodes_calculated is true. Directed edges are symmetrized only for this clustering measure; all other analyses retain the supplier-to-buyer direction."
+}

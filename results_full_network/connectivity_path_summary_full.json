@@ -1,0 +1,20 @@
+{
+  "node_count": 4050,
+  "directed_edge_count": 10166696,
+  "weakly_connected_component_count": 123,
+  "largest_weak_component_size": 3928,
+  "largest_weak_component_fraction": 0.9698765432098766,
+  "strongly_connected_component_count": 124,
+  "largest_strong_component_size": 3927,
+  "largest_strong_component_fraction": 0.9696296296296296,
+  "isolated_nodes": 122,
+  "shortest_path_method": "exact directed unweighted distances from a reproducible random source sample",
+  "sampled_source_count": 64,
+  "sample_seed": 2022,
+  "sampled_pair_count_reachable": 247401,
+  "sampled_mean_shortest_path_reachable_pairs": 1.285128192691218,
+  "sampled_median_shortest_path_reachable_pairs": 1.0,
+  "sampled_90th_percentile_shortest_path": 2.0,
+  "sampled_maximum_shortest_path": 3,
+  "note": "Mean/path percentiles are estimates from sampled sources, not exact all-pairs statistics."
+}

@@ -1,0 +1,46 @@
+{
+  "node_count": 4050,
+  "directed_edge_count_excluding_self_loops": 10166696,
+  "possible_directed_edges_excluding_self_loops": 16398450,
+  "directed_density": 0.6199790833889789,
+  "out_degree": {
+    "mean": 2510.295308641975,
+    "median": 2921.5,
+    "p90": 3782.0,
+    "max": 3913
+  },
+  "in_degree": {
+    "mean": 2510.295308641975,
+    "median": 2705.5,
+    "p90": 3422.1,
+    "max": 3858
+  },
+  "out_strength_gini": 0.8625271265976338,
+  "in_strength_gini": 0.8524693475099212,
+  "total_off_diagonal_flow_million_current_usd": 81127840.1237,
+  "total_gross_output_million_current_usd": 199690648.75779998,
+  "weighted_pagerank_iterations": 92,
+  "interpretation": "Out-strength is value of intermediate flows supplied to other nodes; in-strength is value of intermediate inputs purchased. Neither is GDP, exports, nor a measure of actual disruption.",
+  "spearman_correlations": {
+    "out_degree_vs_out_strength": {
+      "spearman_rho": 0.7635843562520434,
+      "p_value": 0.0
+    },
+    "in_degree_vs_in_strength": {
+      "spearman_rho": 0.9450684736336915,
+      "p_value": 0.0
+    },
+    "out_strength_vs_weighted_pagerank": {
+      "spearman_rho": 0.7986206391276127,
+      "p_value": 0.0
+    },
+    "out_strength_vs_gross_output": {
+      "spearman_rho": 0.9091194738485648,
+      "p_value": 0.0
+    },
+    "in_strength_vs_gross_output": {
+      "spearman_rho": 0.9669343165585463,
+      "p_value": 0.0
+    }
+  }
+}
