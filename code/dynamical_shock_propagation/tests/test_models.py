@@ -11,6 +11,8 @@ from dynamical_shock_propagation.data_loader import build_dependency_matrix
 from dynamical_shock_propagation.simulator import simulate_source, simulate_batch, prepare_model3_edges
 from dynamical_shock_propagation.stability_analysis import analyze
 from dynamical_shock_propagation.structural_metrics import core_numbers_undirected
+from dynamical_shock_propagation.intervention_analysis import simulate_intervention_batch
+from dynamical_shock_propagation.config import Parameters
 
 class DynamicalModelTests(unittest.TestCase):
     def setUp(self):
@@ -87,6 +89,26 @@ class DynamicalModelTests(unittest.TestCase):
         ], dtype=float))
         core = core_numbers_undirected(A)
         self.assertEqual(core.tolist(), [2,2,2,1])
+
+    def test_batched_intervention_protects_downstream_nodes(self):
+        P = sparse.csr_matrix(np.array([
+            [0.0, 0.9, 0.0],
+            [0.0, 0.0, 0.9],
+            [0.0, 0.0, 0.0],
+        ]))
+        params = Parameters(initial_disruption=0.2, beta=0.9, recovery_rate=0.1,
+                            source_hold_steps=1, max_steps=12, convergence_tolerance=1e-10,
+                            affected_threshold=0.01)
+        sources = np.array([0])
+        masks_none = np.zeros((3, 1), dtype=bool)
+        masks_downstream = np.array([[False], [True], [True]])
+        edge_arrays = prepare_model3_edges(P)
+        baseline = simulate_intervention_batch(P, np.ones(3), sources, "model2_bilinear_sis",
+            params, masks_none, 1.0, edge_arrays, 10)[0]
+        protected = simulate_intervention_batch(P, np.ones(3), sources, "model2_bilinear_sis",
+            params, masks_downstream, 0.0, edge_arrays, 10)[0]
+        self.assertLess(protected["cumulative_disruption_share_steps"],
+                        baseline["cumulative_disruption_share_steps"])
 
 if __name__ == "__main__":
     unittest.main()
