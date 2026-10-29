@@ -1,0 +1,30 @@
+name: Test full-resolution dynamical shock propagation
+
+on:
+  push:
+    branches: [dynamical-shock-propogation]
+    paths:
+      - "code/dynamical_shock_propagation/**"
+      - ".github/workflows/test-dynamical-shock-propogation.yml"
+  pull_request:
+    branches: [dynamical-shock-propogation]
+    paths:
+      - "code/dynamical_shock_propagation/**"
+      - ".github/workflows/test-dynamical-shock-propogation.yml"
+  workflow_dispatch:
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+          cache: pip
+      - name: Install dependencies
+        run: python -m pip install -r code/dynamical_shock_propagation/requirements.txt
+      - name: Compile package
+        run: python -m compileall -q code/dynamical_shock_propagation
+      - name: Run unit tests
+        run: python -m unittest discover -s code/dynamical_shock_propagation/tests -v
