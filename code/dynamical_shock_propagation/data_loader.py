@@ -6,7 +6,7 @@ import numpy as np
 from scipy import sparse
 
 PACKAGE_DIR = Path(__file__).resolve().parent
-ROOT = PACKAGE_DIR.parents[2]
+ROOT = PACKAGE_DIR.parents[1]
 BUILDER = ROOT / "code" / "full_data_network_structure_analysis" / "01_build_adjacency_matrix.py"
 
 def sha256_file(path):
