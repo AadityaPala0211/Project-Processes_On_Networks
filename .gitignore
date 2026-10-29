@@ -2,3 +2,7 @@
 # results_full_network/
 __pycache__/
 *.py[cod]
+
+# Generated full-resolution dynamics outputs (reproducible from committed code)
+results_dynamics/
+results_dynamics_*/
