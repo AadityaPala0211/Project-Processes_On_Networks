@@ -37,7 +37,7 @@ python -m code.dynamical_shock_propagation.run_all --csv data/2022_SML.csv --mat
 A fast smoke run still uses the full 4,050-node network, but restricts source nodes:
 
 ```bash
-python -m code.dynamical_shock_propagation.run_all --csv data/2022_SML.csv --matrix-dir results_full_network --out results_dynamics_smoke --source-mode top-k --top-k 12 --skip-sensitivity --skip-interventions
+python code/dynamical_shock_propagation/run_all.py --csv data/2022_SML.csv --matrix-dir results_full_network --out results_dynamics_smoke --source-mode top-k --top-k 12 --skip-sensitivity --skip-interventions
 ```
 
 Subset modes select source shocks only; they never reduce or aggregate the network. Derived matrices and result tables should generally remain local rather than be committed.
