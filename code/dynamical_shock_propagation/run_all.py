@@ -31,12 +31,22 @@ def main():
     ap.add_argument("--stratified-per-bin",type=int,default=5)
     ap.add_argument("--batch-size",type=int,default=16)
     ap.add_argument("--edge-chunk-size",type=int,default=500_000)
+    ap.add_argument("--intervention-source-mode",choices=("all","top-k","stratified"),default="stratified")
+    ap.add_argument("--intervention-top-k",type=int,default=10)
+    ap.add_argument("--intervention-stratified-per-bin",type=int,default=1)
+    ap.add_argument("--intervention-budget-fraction",type=float,default=0.01)
+    ap.add_argument("--protection-factor",type=float,default=0.5)
     ap.add_argument("--intervention-reps",type=int,default=20)
+    ap.add_argument("--intervention-batch-size",type=int,default=16)
     ap.add_argument("--seed",type=int,default=2022)
     ap.add_argument("--skip-sensitivity",action="store_true")
     ap.add_argument("--skip-interventions",action="store_true")
     args=ap.parse_args()
-    if args.batch_size<1 or args.edge_chunk_size<1: ap.error("batch/chunk sizes must be positive")
+    if args.batch_size<1 or args.intervention_batch_size<1 or args.edge_chunk_size<1:
+        ap.error("batch/chunk sizes must be positive")
+    if args.intervention_reps<1: ap.error("--intervention-reps must be >= 1")
+    if not 0 < args.intervention_budget_fraction <= 1: ap.error("--intervention-budget-fraction must be in (0,1]")
+    if not 0 <= args.protection_factor <= 1: ap.error("--protection-factor must be in [0,1]")
     out=args.out.expanduser().resolve(); out.mkdir(parents=True,exist_ok=True)
     figures=out/"figures"; figures.mkdir(parents=True,exist_ok=True)
     started=time.perf_counter(); params=Parameters()
@@ -49,7 +59,9 @@ def main():
         "dependency_definition":"cross-node supplier flow divided by buyer's total intermediate purchases including self-use",
         "parameters":parameters_dict(params),"sensitivity_grid":parameters_dict(SensitivityGrid()),
         "source_mode":args.source_mode,"sensitivity_source_mode":args.sensitivity_source_mode,
-        "full_resolution":True,"signed_substitution_included":False,"leontief_included":False}
+        "intervention_source_mode":args.intervention_source_mode,"intervention_budget_fraction":args.intervention_budget_fraction,
+        "protection_factor":args.protection_factor,"full_resolution":True,
+        "signed_substitution_included":False,"leontief_included":False}
     (out/"run_metadata.json").write_text(json.dumps(metadata,indent=2),encoding="utf-8")
     print(f"Loaded {len(nodes):,} detailed nodes; {W.nnz:,} positive cross-node flows; P.nnz={P.nnz:,}",flush=True)
     stability=analyze_stability(P,params.beta,params.recovery_rate)
@@ -83,8 +95,15 @@ def main():
         plot_sensitivity(out/"parameter_sensitivity.csv",figures)
     if not args.skip_interventions:
         print("[3/3] Equal-budget interventions",flush=True)
-        intervention_meta=run_interventions(P,nodes,output,W,args.matrix_dir,out,params,
-                                             reps=args.intervention_reps,seed=args.seed)
+        intervention_meta=run_interventions(
+            P,nodes,output,W,args.matrix_dir,out,params,
+            source_mode=args.intervention_source_mode,
+            top_k=args.intervention_top_k,
+            stratified_per_bin=args.intervention_stratified_per_bin,
+            budget_fraction=args.intervention_budget_fraction,
+            protection_factor=args.protection_factor,
+            reps=args.intervention_reps,seed=args.seed,
+            batch_size=args.intervention_batch_size,edge_chunk_size=args.edge_chunk_size)
         (out/"intervention_metadata.json").write_text(json.dumps(intervention_meta,indent=2),encoding="utf-8")
         plot_interventions(out/"intervention_runs.csv",figures)
     summary={"metadata":metadata,"stability":stability,"model_ordering":order_check,
