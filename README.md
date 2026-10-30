@@ -103,3 +103,7 @@ python code/full_data_network_structure_analysis/run_full_structural_analysis.py
 ```
 
 Generated matrices and result tables are not committed by default; their exact source-file checksum is stored in the output metadata.
+
+## SC452 full-network structural analysis
+
+For the integrated, course-aligned analysis of the full 4,050-node OECD ICIO production network, see [STRUCTURAL_ANALYSIS_SC452.md](STRUCTURAL_ANALYSIS_SC452.md). It interprets the saved structural outputs, explains the graph measures and threshold sensitivity, connects them to the full-resolution dynamical shock models, maps coverage to the SC452 syllabus, and documents limitations and reproducibility commands. The short [deliverables guide](STRUCTURAL_ANALYSIS_README_ADDITION.md) provides an entry point.
